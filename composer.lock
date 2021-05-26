@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c83be1f838c81b2da38401c399983b83",
+    "content-hash": "04ef1a56d01f5c8e42fd9907b136ef89",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -244,6 +244,79 @@
                 }
             ],
             "time": "2020-12-28T12:54:39+00:00"
+        },
+        {
+            "name": "jg/kirby-fields-block",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jongacnik/kirby-fields-block.git",
+                "reference": "ec5e8d98dfe3ca507d9c48b599526a7fdfbad8aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jongacnik/kirby-fields-block/zipball/ec5e8d98dfe3ca507d9c48b599526a7fdfbad8aa",
+                "reference": "ec5e8d98dfe3ca507d9c48b599526a7fdfbad8aa",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Gacnik",
+                    "email": "jon@folderstudio.com"
+                }
+            ],
+            "description": "Kirby Fields Block",
+            "support": {
+                "issues": "https://github.com/jongacnik/kirby-fields-block/issues",
+                "source": "https://github.com/jongacnik/kirby-fields-block/tree/v1.0.1"
+            },
+            "time": "2021-05-18T18:44:15+00:00"
+        },
+        {
+            "name": "kirbyzone/formbuilder",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/kirbyzone/formbuilder.git",
+                "reference": "0170ecf2807bec8297ec4a0fcb767e6388e514ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/kirbyzone%2Fformbuilder/repository/archive.zip?sha=0170ecf2807bec8297ec4a0fcb767e6388e514ca",
+                "reference": "0170ecf2807bec8297ec4a0fcb767e6388e514ca",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cre8iv Click",
+                    "email": "hello@cre8iv.click",
+                    "homepage": "https://cre8iv.click"
+                }
+            ],
+            "description": "Cre8iv Click's Form Builder Plugin for Kirby",
+            "homepage": "https://gitlab.com/cre8ivclick/formbuilder",
+            "support": {
+                "issues": "https://gitlab.com/cre8ivclick/formbuilder/issues",
+                "source": "https://gitlab.com/cre8ivclick/formbuilder",
+                "wiki": "https://gitlab.com/cre8ivclick/formbuilder/wikis/home"
+            },
+            "time": "2019-12-11T15:20:19+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -533,6 +606,223 @@
             "time": "2019-09-10T13:16:29+00:00"
         },
         {
+            "name": "mzur/kirby-flash",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mzur/kirby-flash.git",
+                "reference": "a48131bad4a5178a883223f2f83a6a59d8f5cc6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mzur/kirby-flash/zipball/a48131bad4a5178a883223f2f83a6a59d8f5cc6a",
+                "reference": "a48131bad4a5178a883223f2f83a6a59d8f5cc6a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "getkirby/kirby": "^3.0",
+                "mzur/kirby-defuse-session": "^1.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "kirby-cms-path": "vendor/getkirby/kirby"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jevets\\Kirby\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Jamesson",
+                    "email": "steve@evendev.com"
+                },
+                {
+                    "name": "Martin Zurowietz",
+                    "email": "martin@the-inspired-ones.de"
+                }
+            ],
+            "description": "Stores data in the session for the next request. Data is removed after the next page load.",
+            "keywords": [
+                "flash",
+                "kirby",
+                "session"
+            ],
+            "support": {
+                "issues": "https://github.com/mzur/kirby-flash/issues",
+                "source": "https://github.com/mzur/kirby-flash/tree/master"
+            },
+            "time": "2019-01-15T19:28:31+00:00"
+        },
+        {
+            "name": "mzur/kirby-form",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mzur/kirby-form.git",
+                "reference": "21fd4b4929bf03e2be644665e09d2100d6a55b6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mzur/kirby-form/zipball/21fd4b4929bf03e2be644665e09d2100d6a55b6b",
+                "reference": "21fd4b4929bf03e2be644665e09d2100d6a55b6b",
+                "shasum": ""
+            },
+            "require": {
+                "mzur/kirby-flash": "^2.0"
+            },
+            "require-dev": {
+                "getkirby/kirby": "^3.0",
+                "mzur/kirby-defuse-session": "^1.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "kirby-cms-path": "vendor/getkirby/kirby"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jevets\\Kirby\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Jamesson",
+                    "email": "steve@evendev.com"
+                },
+                {
+                    "name": "Martin Zurowietz",
+                    "email": "martin@the-inspired-ones.de"
+                }
+            ],
+            "description": "A form helper for Kirby-based websites, using the Post/Redirect/Get pattern.",
+            "keywords": [
+                "form",
+                "kirby"
+            ],
+            "support": {
+                "issues": "https://github.com/mzur/kirby-form/issues",
+                "source": "https://github.com/mzur/kirby-form/tree/v2.1.1"
+            },
+            "time": "2021-05-20T18:13:00+00:00"
+        },
+        {
+            "name": "mzur/kirby-uniform",
+            "version": "v4.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mzur/kirby-uniform.git",
+                "reference": "9f190fd41ae7238fab6ffc75d0b20deafa452517"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/9f190fd41ae7238fab6ffc75d0b20deafa452517",
+                "reference": "9f190fd41ae7238fab6ffc75d0b20deafa452517",
+                "shasum": ""
+            },
+            "require": {
+                "mzur/kirby-form": "^2.0"
+            },
+            "require-dev": {
+                "getkirby/cms": "^3.5",
+                "mzur/kirby-defuse-session": "^1.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "kirby-cms-path": "vendor/getkirby/kirby"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Uniform\\": "src/"
+                },
+                "files": [
+                    "config.php",
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Zurowietz",
+                    "email": "martin@the-inspired-ones.de"
+                }
+            ],
+            "description": "A versatile Kirby plugin to handle web form actions.",
+            "keywords": [
+                "form",
+                "kirby"
+            ],
+            "support": {
+                "docs": "http://kirby-uniform.readthedocs.io",
+                "issues": "https://github.com/mzur/kirby-uniform/issues",
+                "source": "https://github.com/mzur/kirby-uniform"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/mzur/10eur",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-05-26T08:48:53+00:00"
+        },
+        {
+            "name": "oblik/kirby-json",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OblikStudio/kirby-json.git",
+                "reference": "306e32d22bd45bf2635813293d5ba5a798a3f3ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OblikStudio/kirby-json/zipball/306e32d22bd45bf2635813293d5ba5a798a3f3ef",
+                "reference": "306e32d22bd45bf2635813293d5ba5a798a3f3ef",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "json"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hristiyan Dodov",
+                    "email": "h.dodov@gmail.com"
+                }
+            ],
+            "description": "JSON editor and field for Kirby.",
+            "support": {
+                "issues": "https://github.com/OblikStudio/kirby-json/issues",
+                "source": "https://github.com/OblikStudio/kirby-json/tree/1.0.1"
+            },
+            "time": "2019-09-25T05:10:48+00:00"
+        },
+        {
             "name": "phpmailer/phpmailer",
             "version": "v6.4.1",
             "source": {
@@ -737,6 +1027,56 @@
                 }
             ],
             "time": "2021-01-22T09:19:47+00:00"
+        },
+        {
+            "name": "timoetting/kirby-builder",
+            "version": "2.0.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TimOetting/kirby-builder.git",
+                "reference": "6e8f6f4239dfe9836a394d32c2aeb9ceb5800780"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TimOetting/kirby-builder/zipball/6e8f6f4239dfe9836a394d32c2aeb9ceb5800780",
+                "reference": "6e8f6f4239dfe9836a394d32c2aeb9ceb5800780",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1",
+                "php": ">=7.1.0"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Ötting",
+                    "email": "email@tim-oetting.de"
+                }
+            ],
+            "description": "This versatile plugin for Kirby CMS (v3) lets you predefine content blocks with different field sets that can then be added, edited and arranged inside Kirby's panel.",
+            "keywords": [
+                "builder",
+                "kirby-builder",
+                "kirby3",
+                "kirby3-cms",
+                "kirby3-plugin",
+                "page-builder"
+            ],
+            "support": {
+                "issues": "https://github.com/TimOetting/kirby-builder/issues",
+                "source": "https://github.com/TimOetting/kirby-builder/tree/v2.0.16"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/TimOetting/10",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-11-18T23:15:15+00:00"
         },
         {
             "name": "true/punycode",

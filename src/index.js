@@ -1,11 +1,7 @@
-import View from "./components/View.vue";
+import FormText from './previews/FormText.vue'
 
-panel.plugin("vendor/plugin", {
-  views: {
-    example: {
-      component: View,
-      icon: "preview",
-      label: "Example"
-    }
+panel.plugin("arnoson/kirby-forms", {
+  blocks: {
+    'form-text': FormText
   }
 });

@@ -1,0 +1,14 @@
+type: group
+fields:
+  name:
+    type: text
+    label: Name
+    required: true
+    width: 5/12
+  label:
+    type: text
+    width: 5/12
+  required:
+    type: toggle
+    default: false
+    width: 2/12

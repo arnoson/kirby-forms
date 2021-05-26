@@ -1,0 +1,15 @@
+name: Text
+fields:
+  extends: fields/form-field-basic
+  min:
+    extends: fields/form-field-min
+    width: 1/6
+  max:
+    extends: fields/form-field-max
+    width: 1/6
+  placeholder:
+    extends: fields/form-field-placeholder
+    width: 2/6
+  pattern:
+    extends: fields/form-field-pattern
+    width: 2/6

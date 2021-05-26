@@ -1,0 +1,9 @@
+Title: My Form
+
+----
+
+Fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"name":"email","label":"","required":"false","validators":"[\"email\"]","placeholder":"","pattern":""},"id":"cf42a84c-b926-4781-b0b2-4c46ee39a90b","isHidden":false,"type":"form-email"}],"id":"43e0c19f-4efc-44d0-82a3-c0336f8a0f43","width":"1\/1"}],"id":"fa4bda9c-c81a-42e2-9f2c-5882e3f151fb"}]
+
+----
+
+Entries: [{"my-field":"arno300","first_name":"Arno","last_name":"Schlipf"},{"my-field":"","first_name":"","my_checkbox":""},{"my-field":"","first_name":"","my_checkbox":"on"},{"my-field":"","first_name":"","my_checkbox":""},{"email":""},{"email":""},{"email":""},{"email":""},{"email":""},{"email":""},{"email":""},{"email":""}]

@@ -1,0 +1,3 @@
+name: Checkbox
+fields:
+  extends: fields/form-field-basic

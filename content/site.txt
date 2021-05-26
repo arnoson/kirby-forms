@@ -1,1 +1,114 @@
 Title: Plugin
+
+----
+
+Fb-form-settings: true
+
+----
+
+Fb-form-id: my-form
+
+----
+
+Fb-form-class: 
+
+----
+
+Fb-usediv: true
+
+----
+
+Fb-builder:
+
+- 
+  field_name: name
+  field_class: ""
+  req: 'true'
+  field_label: My Label
+  placeholder: ""
+  default: ""
+  min: null
+  max: null
+  pattern: ""
+  _key: fb_text
+  _uid: fb_text_1622017746494_97
+
+----
+
+Fb-submit-label: Send
+
+----
+
+Fb-cancel-label: Reset
+
+----
+
+Fb-formbtns-class: 
+
+----
+
+Fb-captcha: false
+
+----
+
+Fb-captcha-theme: false
+
+----
+
+Fb-captcha-secretkey: 
+
+----
+
+Fb-captcha-sitekey: 
+
+----
+
+Fb-is-ajax: false
+
+----
+
+Fb-msg-position: false
+
+----
+
+Fb-success-page: 
+
+----
+
+Fb-error-page: 
+
+----
+
+Fb-success-msg: 
+
+----
+
+Fb-error-msg: 
+
+----
+
+Fb-send-email: false
+
+----
+
+Fb-email-recipient: 
+
+----
+
+Fb-email-sender-type: false
+
+----
+
+Fb-email-sender: 
+
+----
+
+Fb-email-subject: 
+
+----
+
+Fb-save-submissions: false
+
+----
+
+Fb-received-submissions: 

@@ -1,0 +1,8 @@
+name: Forms
+icon: template
+sections:
+  pages:
+    headline: Forms
+    type: pages
+    templates: form
+    empty: "No forms yet"

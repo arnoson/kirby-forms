@@ -1,0 +1,10 @@
+# sections:
+#   # name your section anything you wish:
+#   fb_builder:
+#     extends: formbuilder
+
+fields:
+  main:
+    type: blocks
+    fieldsets:
+      - form
