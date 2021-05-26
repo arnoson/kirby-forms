@@ -1,17 +1,30 @@
-# OS files
 .DS_Store
+node_modules/
+.phpunit.result.cache
 
-# npm modules
-/node_modules
-
-# Parcel cache folder
+# Frontend
+/public/assets
+/public/dist/
 /.cache
 
-# Composer files
-/vendor
+# Kirby
+.lock
+kirby
+vendor
 
-# Site files
-/kirby
-/media
-/site/accounts
-/site/sessions
+/public/media/*
+!/public/media/index.html
+
+/storage/accounts/*
+!/storage/accounts/.gitkeep
+
+/storage/cache/*
+!/storage/cache/.gitkeep
+
+/storage/logs/*
+!/storage/logs/.gitkeep
+
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+
+/site/config/.license
