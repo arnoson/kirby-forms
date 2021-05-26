@@ -1,9 +1,20 @@
 {
   "scripts": {
-    "dev": "parcel watch src/index.js --no-source-maps -d ./",
+    "dev": "concurrently \"npm:server\" \"npm:watch\"",
+    "server": "php -S localhost:8888 -t public server.php",
+    "watch": "parcel watch src/index.js --no-source-maps -d ./",
     "build": "parcel build src/index.js --no-source-maps --experimental-scope-hoisting -d ./"
   },
   "posthtml": {
     "recognizeSelfClosing": true
-  }  
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
+    "concurrently": "^6.2.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "vue": "^2.6.12",
+    "vue-hot-reload-api": "^2.3.4"
+  }
 }

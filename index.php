@@ -1,3 +1,3 @@
 <?php
 
-Kirby::plugin('vendor/plugin', []);
+Kirby\Cms\App::plugin('vendor/plugin', []);
