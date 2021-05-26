@@ -1,3 +1,3 @@
 <?php
 
-Kirby\Cms\App::plugin('vendor/plugin', []);
+Kirby\Cms\App::plugin('arnoson/kirby-forms', []);
