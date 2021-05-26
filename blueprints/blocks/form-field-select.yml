@@ -1,0 +1,25 @@
+name: Select
+fields:
+  extends: fields/form-field-basic
+  placeholder:
+    extends: fields/form-field-placeholder
+    placeholder: ' — '
+    width: 5/12
+  default:
+    type: text
+    width: 5/12
+  empty:
+    label: Allow empty
+    type: toggle
+    width: 2/12
+    default: true
+  options:
+    type: structure
+    fields:
+      value:
+        type: text
+        width: 1/2
+        required: true
+      text:
+        type: text
+        width: 1/2

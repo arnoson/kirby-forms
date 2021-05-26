@@ -1,0 +1,13 @@
+name: Date
+fields:
+  extends: fields/form-field-basic
+  validators:
+    type: hidden
+    default: '["date"]'
+  default:
+    type: date
+    time: false
+    width: 1/2
+  placeholder:
+    extends: fields/form-field-placeholder
+    width: 1/2

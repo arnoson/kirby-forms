@@ -1,6 +1,9 @@
 <?php return [
   'form' => __DIR__ . '/form.php',
-  'blocks/form-text' => __DIR__ . '/blocks/form-text.php',
-  'blocks/form-checkbox' => __DIR__ . '/blocks/form-checkbox.php',
-  'blocks/form-email' => __DIR__ . '/blocks/form-email.php'
+  'blocks/form-field-text' => __DIR__ . '/blocks/form-field-text.php',
+  'blocks/form-field-email' => __DIR__ . '/blocks/form-field-email.php',
+  'blocks/form-field-date' => __DIR__ . '/blocks/form-field-date.php',
+  'blocks/form-field-checkboxes' => __DIR__ . '/blocks/form-field-checkboxes.php',
+  'blocks/form-field-radio' => __DIR__ . '/blocks/form-field-radio.php',
+  'blocks/form-field-select' => __DIR__ . '/blocks/form-field-select.php'
 ];

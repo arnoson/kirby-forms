@@ -3,10 +3,12 @@ fields:
   name:
     type: text
     label: Name
+    placeholder: field_name
     required: true
     width: 5/12
   label:
     type: text
+    placeholder: Field Name
     width: 5/12
   required:
     type: toggle

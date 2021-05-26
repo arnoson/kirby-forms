@@ -1,9 +1,15 @@
-name: Email
+name: Text
 fields:
   extends: fields/form-field-basic
-  validators:
-    type: hidden
-    default: '["email"]'
+  min:
+    extends: fields/form-field-min
+    width: 1/6
+  max:
+    extends: fields/form-field-max
+    width: 1/6
+  default:
+    type: text
+    width: 4/6
   placeholder:
     extends: fields/form-field-placeholder
     width: 1/2

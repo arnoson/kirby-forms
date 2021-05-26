@@ -1,0 +1,16 @@
+name: Checkboxes
+fields:
+  extends: fields/form-field-basic
+  default:
+    type: text
+    placeholder: 'option1, option2'
+  options:
+    type: structure
+    fields:
+      value:
+        type: text
+        width: 1/2
+        required: true
+      text:
+        type: text
+        width: 1/2

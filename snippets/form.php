@@ -14,11 +14,13 @@ $formId = $form->slug();
         $label = $block->label()->isNotEmpty() ? $block->label() : $name;
         $id = "$formId/$name";
       ?>
-      <label for="<?= $id ?>"><?= $label ?></label>
-      <?php snippet('blocks/' . $block->type(), [
-        'block' => $block,
-        'id' => $id
-      ]) ?>
+      <div class="form-field">
+        <?php snippet('blocks/' . $block->type(), [
+          'block' => $block,
+          'id' => $id,
+          'label' => $label
+        ]) ?>
+      </div>
       <?php endforeach ?>
     </div>
     <?php endforeach ?>

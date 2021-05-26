@@ -1,0 +1,16 @@
+name: Radio
+fields:
+  extends: fields/form-field-basic
+  default:
+    type: text
+    placeholder: 'value'
+  options:
+    type: structure
+    fields:
+      value:
+        type: text
+        width: 1/2
+        required: true
+      text:
+        type: text
+        width: 1/2

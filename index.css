@@ -1,3 +1,12 @@
-.arnoson-forms-text > * {
+/* The fields are only a preview of the form and not meant for interaction */
+.arnoson-forms-preview > * {
   pointer-events: none;
+}
+
+/* Fake kirby's required asterisk without making the preview fields actually
+required */
+.arnoson-forms-preview.required .k-field-label::after {
+  content: '*';
+  color: #999;
+  padding-left: .25rem;
 }

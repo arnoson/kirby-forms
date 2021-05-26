@@ -1,0 +1,15 @@
+name: Email
+fields:
+  extends: fields/form-field-basic
+  validators:
+    type: hidden
+    default: '["email"]'
+  default:
+    type: email
+    width: 1/3
+  placeholder:
+    extends: fields/form-field-placeholder
+    width: 1/3
+  pattern:
+    extends: fields/form-field-pattern
+    width: 1/3

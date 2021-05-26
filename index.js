@@ -117,74 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+})({"../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -8884,7 +8817,7 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"previews/FormText.vue":[function(require,module,exports) {
+},{}],"previews/FormFieldText.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8895,33 +8828,43 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default = {
-  mounted: function mounted() {
-    console.log(this.content);
-  },
   computed: {
+    required: function required() {
+      return this.content.required;
+    },
     label: function label() {
-      var label = this.content.label || this.content.name;
-      return label + (this.content.required ? ' *' : '');
+      return this.content.label || this.content.name;
     }
   }
 };
 exports.default = _default;
-        var $684771 = exports.default || module.exports;
+        var $f30deb = exports.default || module.exports;
       
-      if (typeof $684771 === 'function') {
-        $684771 = $684771.options;
+      if (typeof $f30deb === 'function') {
+        $f30deb = $f30deb.options;
       }
     
         /* template */
-        Object.assign($684771, (function () {
+        Object.assign($f30deb, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("k-text-field", {
-    staticClass: "arnoson-forms-text",
-    attrs: { label: _vm.label }
+    staticClass: "arnoson-forms-preview",
+    class: { required: _vm.required },
+    attrs: {
+      placeholder: _vm.content.placeholder,
+      label: _vm.label,
+      value: _vm.content.default
+    }
   })
 }
 var staticRenderFns = []
@@ -8944,32 +8887,477 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$684771', $684771);
+            api.createRecord('$f30deb', $f30deb);
           } else {
-            api.reload('$684771', $684771);
+            api.reload('$f30deb', $f30deb);
           }
         }
 
         
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
       }
     })();
-},{"_css_loader":"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"index.js":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldEmail.vue":[function(require,module,exports) {
 "use strict";
 
-var _FormText = _interopRequireDefault(require("./previews/FormText.vue"));
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  computed: {
+    required: function required() {
+      return this.content.required;
+    },
+    label: function label() {
+      return this.content.label || this.content.name;
+    }
+  }
+};
+exports.default = _default;
+        var $da3585 = exports.default || module.exports;
+      
+      if (typeof $da3585 === 'function') {
+        $da3585 = $da3585.options;
+      }
+    
+        /* template */
+        Object.assign($da3585, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("k-email-field", {
+    staticClass: "arnoson-forms-preview",
+    class: { required: _vm.required },
+    attrs: {
+      value: _vm.content.default,
+      placeholder: _vm.content.placeholder,
+      label: _vm.label
+    }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$da3585', $da3585);
+          } else {
+            api.reload('$da3585', $da3585);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldDate.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  computed: {
+    required: function required() {
+      return this.content.required;
+    },
+    label: function label() {
+      return this.content.label || this.content.name;
+    }
+  }
+};
+exports.default = _default;
+        var $028043 = exports.default || module.exports;
+      
+      if (typeof $028043 === 'function') {
+        $028043 = $028043.options;
+      }
+    
+        /* template */
+        Object.assign($028043, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("k-date-field", {
+    staticClass: "arnoson-forms-preview",
+    class: { required: _vm.required },
+    attrs: {
+      time: false,
+      placeholder: _vm.content.placeholder,
+      label: _vm.label,
+      value: _vm.content.default
+    }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$028043', $028043);
+          } else {
+            api.reload('$028043', $028043);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldCheckboxes.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  computed: {
+    required: function required() {
+      return this.content.required;
+    },
+    defaultValue: function defaultValue() {
+      var _this$content$default;
+
+      return (_this$content$default = this.content.default) === null || _this$content$default === void 0 ? void 0 : _this$content$default.split(',').map(function (el) {
+        return el.trim();
+      });
+    },
+    label: function label() {
+      return this.content.label || this.content.name;
+    },
+    options: function options() {
+      return this.content.options.map(function (_ref) {
+        var value = _ref.value,
+            text = _ref.text;
+        return {
+          value: value,
+          text: text || value
+        };
+      });
+    }
+  }
+};
+exports.default = _default;
+        var $c6516d = exports.default || module.exports;
+      
+      if (typeof $c6516d === 'function') {
+        $c6516d = $c6516d.options;
+      }
+    
+        /* template */
+        Object.assign($c6516d, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("k-checkboxes-field", {
+    staticClass: "arnoson-forms-preview",
+    class: { required: _vm.required },
+    attrs: { label: _vm.label, options: _vm.options, value: _vm.defaultValue }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$c6516d', $c6516d);
+          } else {
+            api.reload('$c6516d', $c6516d);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldRadio.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  computed: {
+    required: function required() {
+      return this.content.required;
+    },
+    label: function label() {
+      return this.content.label || this.content.name;
+    },
+    options: function options() {
+      return this.content.options.map(function (_ref) {
+        var value = _ref.value,
+            text = _ref.text;
+        return {
+          value: value,
+          text: text || value
+        };
+      });
+    }
+  }
+};
+exports.default = _default;
+        var $be258b = exports.default || module.exports;
+      
+      if (typeof $be258b === 'function') {
+        $be258b = $be258b.options;
+      }
+    
+        /* template */
+        Object.assign($be258b, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("k-radio-field", {
+    staticClass: "arnoson-forms-preview",
+    class: { required: _vm.required },
+    attrs: {
+      label: _vm.label,
+      options: _vm.options,
+      value: _vm.content.default
+    }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$be258b', $be258b);
+          } else {
+            api.reload('$be258b', $be258b);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldSelect.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  computed: {
+    required: function required() {
+      return this.content.required;
+    },
+    label: function label() {
+      return this.content.label || this.content.name;
+    },
+    options: function options() {
+      return this.content.options.map(function (_ref) {
+        var value = _ref.value,
+            text = _ref.text;
+        return {
+          value: value,
+          text: text || value
+        };
+      });
+    }
+  }
+};
+exports.default = _default;
+        var $df3fa3 = exports.default || module.exports;
+      
+      if (typeof $df3fa3 === 'function') {
+        $df3fa3 = $df3fa3.options;
+      }
+    
+        /* template */
+        Object.assign($df3fa3, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("k-select-field", {
+    staticClass: "arnoson-forms-preview",
+    class: { required: _vm.required },
+    attrs: {
+      label: _vm.label,
+      options: _vm.options,
+      placeholder: _vm.content.placeholder,
+      value: _vm.content.default,
+      empty: _vm.content.empty
+    }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$df3fa3', $df3fa3);
+          } else {
+            api.reload('$df3fa3', $df3fa3);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"index.js":[function(require,module,exports) {
+"use strict";
+
+var _FormFieldText = _interopRequireDefault(require("./previews/FormFieldText.vue"));
+
+var _FormFieldEmail = _interopRequireDefault(require("./previews/FormFieldEmail.vue"));
+
+var _FormFieldDate = _interopRequireDefault(require("./previews/FormFieldDate.vue"));
+
+var _FormFieldCheckboxes = _interopRequireDefault(require("./previews/FormFieldCheckboxes.vue"));
+
+var _FormFieldRadio = _interopRequireDefault(require("./previews/FormFieldRadio.vue"));
+
+var _FormFieldSelect = _interopRequireDefault(require("./previews/FormFieldSelect.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 panel.plugin("arnoson/kirby-forms", {
   blocks: {
-    'form-text': _FormText.default
+    'form-field-text': _FormFieldText.default,
+    'form-field-email': _FormFieldEmail.default,
+    'form-field-date': _FormFieldDate.default,
+    'form-field-checkboxes': _FormFieldCheckboxes.default,
+    'form-field-radio': _FormFieldRadio.default,
+    'form-field-select': _FormFieldSelect.default
   }
 });
-},{"./previews/FormText.vue":"previews/FormText.vue"}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./previews/FormFieldText.vue":"previews/FormFieldText.vue","./previews/FormFieldEmail.vue":"previews/FormFieldEmail.vue","./previews/FormFieldDate.vue":"previews/FormFieldDate.vue","./previews/FormFieldCheckboxes.vue":"previews/FormFieldCheckboxes.vue","./previews/FormFieldRadio.vue":"previews/FormFieldRadio.vue","./previews/FormFieldSelect.vue":"previews/FormFieldSelect.vue"}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -8997,7 +9385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32869" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34079" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

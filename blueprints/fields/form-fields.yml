@@ -6,6 +6,9 @@ layouts:
   - "1/3, 2/3"
   - "2/3, 1/3"
 fieldsets:
-  - form-text
-  - form-checkbox
-  - form-email
+  - form-field-text
+  - form-field-email
+  - form-field-date
+  - form-field-checkboxes
+  - form-field-radio
+  - form-field-select

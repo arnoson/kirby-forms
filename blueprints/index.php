@@ -1,7 +1,10 @@
 <?php return [
-  'blocks/form-text' => __DIR__ . '/blocks/form-text.yml',
-  'blocks/form-checkbox' => __DIR__ . '/blocks/form-checkbox.yml',
-  'blocks/form-email' => __DIR__ . '/blocks/form-email.yml',
+  'blocks/form-field-text' => __DIR__ . '/blocks/form-field-text.yml',
+  'blocks/form-field-email' => __DIR__ . '/blocks/form-field-email.yml',
+  'blocks/form-field-date' => __DIR__ . '/blocks/form-field-date.yml',
+  'blocks/form-field-checkboxes' => __DIR__ . '/blocks/form-field-checkboxes.yml',
+  'blocks/form-field-radio' => __DIR__ . '/blocks/form-field-radio.yml',
+  'blocks/form-field-select' => __DIR__ . '/blocks/form-field-select.yml',
 
   'pages/forms' => __DIR__ . '/pages/forms.yml',
   'pages/form' => __DIR__ . '/pages/form.yml',

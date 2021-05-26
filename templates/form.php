@@ -1,4 +1,3 @@
-<h1>FUUUUU</h1>
 <?php
 
 namespace Uniform\Actions;
