@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+
+# npm modules
+/node_modules
+
+# Parcel cache folder
+/.cache
+
+# Composer files
+/vendor
+
+# Site files
+/kirby
+/media
+/site/accounts
+/site/sessions
