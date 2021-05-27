@@ -1,0 +1,7 @@
+label: Entries
+type: json
+array: true
+keys: false
+values: true
+mutate: true
+sort: false

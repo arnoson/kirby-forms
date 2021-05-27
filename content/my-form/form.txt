@@ -1,0 +1,9 @@
+Title: my-form
+
+----
+
+Fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"name":"name","label":"Name","required":"false","min":null,"max":null,"default":"","placeholder":"","pattern":""},"id":"16091c27-0786-4294-a5a0-7ebea74cfe72","isHidden":false,"type":"form-field-text"}],"id":"b5dddc90-35ff-49b2-8e65-8833b65a81a7","width":"1\/1"}],"id":"04811157-6eb0-422a-b340-2322bdb51da1"}]
+
+----
+
+Entries: [{"name":"Arno"},{"name":"Arno"}]
