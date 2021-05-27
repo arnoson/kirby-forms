@@ -2,8 +2,8 @@ Title: my-form
 
 ----
 
-Fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"name":"name","label":"Name","required":"false","min":null,"max":null,"default":"","placeholder":"","pattern":""},"id":"16091c27-0786-4294-a5a0-7ebea74cfe72","isHidden":false,"type":"form-field-text"}],"id":"b5dddc90-35ff-49b2-8e65-8833b65a81a7","width":"1\/1"}],"id":"04811157-6eb0-422a-b340-2322bdb51da1"}]
+Fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"name":"name","label":"Name","required":"true","min":null,"max":null,"default":"","placeholder":"","pattern":""},"id":"16091c27-0786-4294-a5a0-7ebea74cfe72","isHidden":false,"type":"form-field-text"},{"content":{"name":"email","label":"","required":"false","validators":"[\"email\"]","default":"","placeholder":"","pattern":""},"id":"9b54e677-78b6-4f9f-8021-7bbfce09b7a5","isHidden":false,"type":"form-field-email"},{"content":{"name":"date","label":"","required":"false","validators":"[\"date\"]","default":"","placeholder":""},"id":"7a7bb3a5-d228-4433-8517-73b9f494dae1","isHidden":false,"type":"form-field-date"}],"id":"b5dddc90-35ff-49b2-8e65-8833b65a81a7","width":"1\/1"}],"id":"04811157-6eb0-422a-b340-2322bdb51da1"}]
 
 ----
 
-Entries: [{"name":"Arno"},{"name":"Arno"}]
+Entries: [{"name":"Arnooo","email":"","date":""}]

@@ -1,9 +1,9 @@
-<?php $attributes = [
-  'name' => $block->name(),
-  'id' => $id,
-  'value' => $block->default()->isEmpty() ? null : $block->default(),
-  'required' => $block->required()->toBool()
-]; ?>
+<?php $attributes = arnoson\KirbyForms\formFieldAttributes(
+  $block,
+  $form,
+  $clientValidation,
+  $showOldValues,
+); ?>
 
 <label for="<?= $id ?>"><?= $label ?></label>
-<input type="date" <?= attr($attributes) ?> />
+<input id="<?= $id ?>" type="date" <?= $attributes ?> />

@@ -1,6 +1,11 @@
 <?php
 $formPage ??= $page;
 $formId = $form->slug();
+$clientValidation ??= true;
+$showOldValues ??= true;
+$submit ??= 'Submit';
+$success ??= null;
+$error ??= true;
 ?>
 
 <form action="<?= $formPage->url() ?>" method="POST">
@@ -19,6 +24,9 @@ $formId = $form->slug();
           'block' => $block,
           'id' => $id,
           'label' => $label,
+          'form' => $form,
+          'clientValidation' => $clientValidation,
+          'showOldValues' => $showOldValues,
         ]); ?>
       </div>
       <?php endforeach; ?>
@@ -28,5 +36,17 @@ $formId = $form->slug();
   <?php endforeach; ?>
   <?= csrf_field() ?>
   <?= honeypot_field() ?>
-  <button type="submit">Submit</button>
+  <button type="submit"><?= $submit ?></button>
 </form>
+
+<?php if ($success && $form->success()): ?>
+<div class="form-success"><?= $success ?></div>
+<?php elseif ($error): ?>
+<div class="form-error">
+  <?php if (is_string($error)) {
+    echo $error;
+  } else {
+    snippet('uniform/errors', ['form' => $form]);
+  } ?>
+</div>
+<?php endif; ?>
