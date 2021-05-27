@@ -1,6 +1,6 @@
 <?php
 $formPage ??= $page;
-$formId = $form->slug();
+$formId = $page->slug();
 $clientValidation ??= true;
 $showOldValues ??= true;
 $submit ??= 'Submit';

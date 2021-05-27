@@ -3,7 +3,10 @@
   'blocks/form-field-textarea' => __DIR__ . '/blocks/form-field-textarea.yml',
   'blocks/form-field-number' => __DIR__ . '/blocks/form-field-number.yml',
   'blocks/form-field-email' => __DIR__ . '/blocks/form-field-email.yml',
+  'blocks/form-field-tel' => __DIR__ . '/blocks/form-field-tel.yml',
   'blocks/form-field-date' => __DIR__ . '/blocks/form-field-date.yml',
+  'blocks/form-field-time' => __DIR__ . '/blocks/form-field-time.yml',
+  'blocks/form-field-url' => __DIR__ . '/blocks/form-field-url.yml',
   'blocks/form-field-checkboxes' =>
     __DIR__ . '/blocks/form-field-checkboxes.yml',
   'blocks/form-field-radio' => __DIR__ . '/blocks/form-field-radio.yml',

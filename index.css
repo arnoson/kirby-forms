@@ -8,5 +8,5 @@ required */
 .arnoson-forms-preview.required .k-field-label::after {
   content: '*';
   color: #999;
-  padding-left: .25rem;
+  padding-left: 0.25rem;
 }

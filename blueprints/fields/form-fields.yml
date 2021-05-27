@@ -6,11 +6,27 @@ layouts:
   - '1/3, 2/3'
   - '2/3, 1/3'
 fieldsets:
-  - form-field-text
-  - form-field-textarea
-  - form-field-number
-  - form-field-email
-  - form-field-date
-  - form-field-checkboxes
-  - form-field-radio
-  - form-field-select
+  baisc:
+    type: group
+    fieldsets:
+      - form-field-text
+      - form-field-textarea
+      - form-field-number
+      - form-field-select
+      - form-field-checkboxes
+      - form-field-radio
+  contact:
+    type: group
+    fieldsets:
+      - form-field-email
+      - form-field-tel
+  date_time:
+    label: Date & Time
+    type: group
+    fieldsets:
+      - form-field-date
+      - form-field-time
+  other:
+    type: group
+    fieldsets:
+      - form-field-url

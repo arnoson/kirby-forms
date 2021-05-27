@@ -1,4 +1,5 @@
 name: Number
+icon: 🔟
 fields:
   extends: fields/form-field-basic
   validators:

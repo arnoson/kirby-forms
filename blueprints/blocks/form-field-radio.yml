@@ -1,4 +1,5 @@
-name: Radio
+name: Radio Buttons
+icon: 🔘
 fields:
   extends: fields/form-field-basic
   default:

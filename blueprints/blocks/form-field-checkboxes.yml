@@ -1,4 +1,5 @@
 name: Checkboxes
+icon: ☑️
 fields:
   extends: fields/form-field-basic
   default:

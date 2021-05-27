@@ -1,13 +1,12 @@
-name: Date
-icon: 📆
+name: Time
+icon: ⌚
 fields:
   extends: fields/form-field-basic
   validators:
     type: hidden
-    default: '["date"]'
+    default: '["time"]'
   default:
-    type: date
-    time: false
+    type: time
     width: 1/2
   placeholder:
     extends: fields/form-field-placeholder

@@ -1,7 +1,10 @@
-name: Textarea
-icon: 📝
+name: URL
+icon: 🔗
 fields:
   extends: fields/form-field-basic
+  validators:
+    type: hidden
+    default: '["url"]'
   default:
     type: text
     width: 1/3
