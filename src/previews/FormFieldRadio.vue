@@ -1,30 +1,10 @@
-<template>
-  <k-radio-field
-    class="arnoson-forms-preview"
-    :class="{ required }"
-    :label="label"
-    :options="options"
-    :value="content.default"
-  />
-</template>
-
 <script>
+import FormField from './FormField.vue'
 export default {
+  extends: FormField,
+
   computed: {
-    required() {
-      return this.content.required
-    },
-
-    label() {
-      return this.content.label || this.content.name
-    },
-
-    options() {
-      return this.content.options.map(({ value, text }) => ({
-        value,
-        text: text || value
-      }))
-    }
+    component: () => 'k-radio-field'
   }
 }
 </script>

@@ -1,23 +1,10 @@
-<template>
-  <k-text-field
-    class="arnoson-forms-preview"
-    :class="{ required }"
-    :placeholder="content.placeholder"
-    :label="label"
-    :value="content.default"
-  />
-</template>
-
 <script>
+import FormField from './FormField.vue'
 export default {
-  computed: {
-    required() {
-      return this.content.required
-    },
+  extends: FormField,
 
-    label() {
-      return this.content.label || this.content.name
-    },
+  computed: {
+    component: () => 'k-text-field'
   }
 }
 </script>

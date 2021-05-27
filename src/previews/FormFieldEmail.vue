@@ -1,23 +1,10 @@
-<template>
-  <k-email-field
-    class="arnoson-forms-preview"
-    :class="{ required }"
-    :value="content.default"
-    :placeholder="content.placeholder"
-    :label="label"
-  />
-</template>
-
 <script>
+import FormField from './FormField.vue'
 export default {
-  computed: {
-    required() {
-      return this.content.required
-    },
+  extends: FormField,
 
-    label() {
-      return this.content.label || this.content.name
-    },
+  computed: {
+    component: () => 'k-email-field'
   }
 }
 </script>

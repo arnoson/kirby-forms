@@ -1,24 +1,10 @@
-<template>
-  <k-date-field
-    class="arnoson-forms-preview"
-    :class="{ required }"
-    :time="false"
-    :placeholder="content.placeholder"
-    :label="label"
-    :value="content.default"
-  />
-</template>
-
 <script>
+import FormField from './FormField.vue'
 export default {
-  computed: {
-    required() {
-      return this.content.required
-    },
+  extends: FormField,
 
-    label() {
-      return this.content.label || this.content.name
-    },
+  computed: {
+    component: () => 'k-date-field'
   }
 }
 </script>
