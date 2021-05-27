@@ -6,4 +6,4 @@
 ); ?>
 
 <label for="<?= $id ?>"><?= $label ?></label>
-<input id="<?= $id ?>" <?= attr($attributes) ?> />
+<input id="<?= $id ?>" type="number" <?= attr($attributes) ?> />

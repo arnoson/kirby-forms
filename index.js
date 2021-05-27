@@ -8896,6 +8896,166 @@ render._withStripped = true
         
       }
     })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldTextarea.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  computed: {
+    required: function required() {
+      return this.content.required;
+    },
+    label: function label() {
+      return this.content.label || this.content.name;
+    }
+  }
+};
+exports.default = _default;
+        var $b7a67e = exports.default || module.exports;
+      
+      if (typeof $b7a67e === 'function') {
+        $b7a67e = $b7a67e.options;
+      }
+    
+        /* template */
+        Object.assign($b7a67e, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("k-textarea-field", {
+    staticClass: "arnoson-forms-preview",
+    class: { required: _vm.required },
+    attrs: {
+      placeholder: _vm.content.placeholder,
+      label: _vm.label,
+      value: _vm.content.default,
+      buttons: false
+    }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$b7a67e', $b7a67e);
+          } else {
+            api.reload('$b7a67e', $b7a67e);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldNumber.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  computed: {
+    required: function required() {
+      return this.content.required;
+    },
+    label: function label() {
+      return this.content.label || this.content.name;
+    }
+  }
+};
+exports.default = _default;
+        var $1dd696 = exports.default || module.exports;
+      
+      if (typeof $1dd696 === 'function') {
+        $1dd696 = $1dd696.options;
+      }
+    
+        /* template */
+        Object.assign($1dd696, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("k-number-field", {
+    staticClass: "arnoson-forms-preview",
+    class: { required: _vm.required },
+    attrs: {
+      placeholder: _vm.content.placeholder,
+      label: _vm.label,
+      value: _vm.content.default
+    }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$1dd696', $1dd696);
+          } else {
+            api.reload('$1dd696', $1dd696);
+          }
+        }
+
+        
+      }
+    })();
 },{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldEmail.vue":[function(require,module,exports) {
 "use strict";
 
@@ -9335,6 +9495,10 @@ render._withStripped = true
 
 var _FormFieldText = _interopRequireDefault(require("./previews/FormFieldText.vue"));
 
+var _FormFieldTextarea = _interopRequireDefault(require("./previews/FormFieldTextarea.vue"));
+
+var _FormFieldNumber = _interopRequireDefault(require("./previews/FormFieldNumber.vue"));
+
 var _FormFieldEmail = _interopRequireDefault(require("./previews/FormFieldEmail.vue"));
 
 var _FormFieldDate = _interopRequireDefault(require("./previews/FormFieldDate.vue"));
@@ -9347,17 +9511,19 @@ var _FormFieldSelect = _interopRequireDefault(require("./previews/FormFieldSelec
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-panel.plugin("arnoson/kirby-forms", {
+panel.plugin('arnoson/kirby-forms', {
   blocks: {
     'form-field-text': _FormFieldText.default,
     'form-field-email': _FormFieldEmail.default,
+    'form-field-number': _FormFieldNumber.default,
     'form-field-date': _FormFieldDate.default,
     'form-field-checkboxes': _FormFieldCheckboxes.default,
     'form-field-radio': _FormFieldRadio.default,
-    'form-field-select': _FormFieldSelect.default
+    'form-field-select': _FormFieldSelect.default,
+    'form-field-textarea': _FormFieldTextarea.default
   }
 });
-},{"./previews/FormFieldText.vue":"previews/FormFieldText.vue","./previews/FormFieldEmail.vue":"previews/FormFieldEmail.vue","./previews/FormFieldDate.vue":"previews/FormFieldDate.vue","./previews/FormFieldCheckboxes.vue":"previews/FormFieldCheckboxes.vue","./previews/FormFieldRadio.vue":"previews/FormFieldRadio.vue","./previews/FormFieldSelect.vue":"previews/FormFieldSelect.vue"}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./previews/FormFieldText.vue":"previews/FormFieldText.vue","./previews/FormFieldTextarea.vue":"previews/FormFieldTextarea.vue","./previews/FormFieldNumber.vue":"previews/FormFieldNumber.vue","./previews/FormFieldEmail.vue":"previews/FormFieldEmail.vue","./previews/FormFieldDate.vue":"previews/FormFieldDate.vue","./previews/FormFieldCheckboxes.vue":"previews/FormFieldCheckboxes.vue","./previews/FormFieldRadio.vue":"previews/FormFieldRadio.vue","./previews/FormFieldSelect.vue":"previews/FormFieldSelect.vue"}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

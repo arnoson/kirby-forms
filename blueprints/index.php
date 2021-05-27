@@ -1,5 +1,7 @@
 <?php return [
   'blocks/form-field-text' => __DIR__ . '/blocks/form-field-text.yml',
+  'blocks/form-field-textarea' => __DIR__ . '/blocks/form-field-textarea.yml',
+  'blocks/form-field-number' => __DIR__ . '/blocks/form-field-number.yml',
   'blocks/form-field-email' => __DIR__ . '/blocks/form-field-email.yml',
   'blocks/form-field-date' => __DIR__ . '/blocks/form-field-date.yml',
   'blocks/form-field-checkboxes' =>

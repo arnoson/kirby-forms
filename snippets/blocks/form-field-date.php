@@ -6,4 +6,4 @@
 ); ?>
 
 <label for="<?= $id ?>"><?= $label ?></label>
-<input id="<?= $id ?>" type="date" <?= $attributes ?> />
+<input id="<?= $id ?>" type="date" <?= attr($attributes) ?> />

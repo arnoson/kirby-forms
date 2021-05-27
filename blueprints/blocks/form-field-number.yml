@@ -1,0 +1,26 @@
+name: Number
+fields:
+  extends: fields/form-field-basic
+  validators:
+    type: hidden
+    default: '["number"]'
+  min:
+    extends: fields/form-field-min
+    label: Min Value
+    width: 2/12
+  max:
+    extends: fields/form-field-max
+    label: Max Value
+    width: 2/12
+  step:
+    type: text
+    counter: false
+    spellcheck: false
+    placeholder: '0.01'
+    width: 2/12
+  default:
+    type: number
+    width: 3/12
+  placeholder:
+    extends: fields/form-field-placeholder
+    width: 3/12

@@ -1,0 +1,12 @@
+name: Textarea
+fields:
+  extends: fields/form-field-basic
+  default:
+    type: text
+    width: 1/3
+  placeholder:
+    extends: fields/form-field-placeholder
+    width: 1/3
+  pattern:
+    extends: fields/form-field-pattern
+    width: 1/3

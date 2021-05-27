@@ -6,7 +6,6 @@
 ); ?>
 
 <label for="<?= $id ?>"><?= $label ?></label>
-<input id="<?= $id ?>" <?= e(
-  $clientValidation,
-  'type="email"',
-) ?> <?= $attributes ?> />
+<input id="<?= $id ?>" <?= e($clientValidation, 'type="email"') ?> <?= attr(
+   $attributes,
+ ) ?> />

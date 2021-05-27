@@ -19,15 +19,17 @@ function formFieldAttributes(
   $form,
   bool $clientValidation,
   bool $showOldValues
-) {
+): array {
   $name = $field->name()->value();
+  $oldValue = $form->old($name);
+  $default = fieldNotEmpty($field->default());
+  $value = $showOldValues && $oldValue ? $oldValue : $default;
 
   $attributes = [
     'name' => $name,
-    'value' => $showOldValues
-      ? $form->old($name)
-      : fieldNotEmpty($field->default()),
+    'value' => $value,
     'placeholder' => fieldNotEmpty($field->placeholder()),
+    'step' => fieldNotEmpty($field->step()),
     'data-invalid' => !!$form->error($name),
   ];
 
@@ -43,5 +45,5 @@ function formFieldAttributes(
     ]);
   }
 
-  return attr($attributes);
+  return $attributes;
 }
