@@ -1,4 +1,5 @@
 import previews from './previews/*.vue'
+import FormEntries from './fields/FormEntries.vue'
 import { toDashCase } from './utils'
 
 const blocks = Object.fromEntries(
@@ -8,4 +9,9 @@ const blocks = Object.fromEntries(
   ])
 )
 
-panel.plugin('arnoson/kirby-forms', { blocks })
+console.log(FormEntries)
+
+panel.plugin('arnoson/kirby-forms', {
+  blocks,
+  fields: { 'form-entries': FormEntries }
+})
