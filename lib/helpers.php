@@ -30,7 +30,7 @@ function formFieldAttributes(
     'value' => $value,
     'placeholder' => fieldNotEmpty($field->placeholder()),
     'step' => fieldNotEmpty($field->step()),
-    'data-invalid' => !!$form->error($name),
+    'class' => $form->error($name) ? 'form-field-invalid' : null,
   ];
 
   if ($clientValidation) {

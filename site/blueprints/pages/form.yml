@@ -3,7 +3,8 @@ name: Form
 columns:
   - width: 7/12
     fields:
-      fields: fields/form-fields
+      form_fields: fields/form-fields
   - width: 5/12
     fields:
-      entries: fields/form-entries
+      form_success_page: fields/form-success-page
+      form_entries: fields/form-entries

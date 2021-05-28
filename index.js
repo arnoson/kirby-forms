@@ -9194,50 +9194,6 @@ exports.default = _default;
         
       }
     })();
-},{"./FormField.vue":"previews/FormField.vue","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldText.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _FormField = _interopRequireDefault(require("./FormField.vue"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _default = {
-  extends: _FormField.default,
-  computed: {
-    component: function component() {
-      return 'k-text-field';
-    }
-  }
-};
-exports.default = _default;
-        var $f30deb = exports.default || module.exports;
-      
-      if (typeof $f30deb === 'function') {
-        $f30deb = $f30deb.options;
-      }
-    
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$f30deb', $f30deb);
-          } else {
-            api.reload('$f30deb', $f30deb);
-          }
-        }
-
-        
-      }
-    })();
 },{"./FormField.vue":"previews/FormField.vue","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldTel.vue":[function(require,module,exports) {
 "use strict";
 
@@ -9276,6 +9232,50 @@ exports.default = _default;
             api.createRecord('$303128', $303128);
           } else {
             api.reload('$303128', $303128);
+          }
+        }
+
+        
+      }
+    })();
+},{"./FormField.vue":"previews/FormField.vue","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldText.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _FormField = _interopRequireDefault(require("./FormField.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = {
+  extends: _FormField.default,
+  computed: {
+    component: function component() {
+      return 'k-text-field';
+    }
+  }
+};
+exports.default = _default;
+        var $f30deb = exports.default || module.exports;
+      
+      if (typeof $f30deb === 'function') {
+        $f30deb = $f30deb.options;
+      }
+    
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f30deb', $f30deb);
+          } else {
+            api.reload('$f30deb', $f30deb);
           }
         }
 
@@ -9426,13 +9426,13 @@ module.exports = {
   "FormFieldNumber": require("./FormFieldNumber.vue"),
   "FormFieldRadio": require("./FormFieldRadio.vue"),
   "FormFieldSelect": require("./FormFieldSelect.vue"),
-  "FormFieldText": require("./FormFieldText.vue"),
   "FormFieldTel": require("./FormFieldTel.vue"),
+  "FormFieldText": require("./FormFieldText.vue"),
   "FormFieldTextarea": require("./FormFieldTextarea.vue"),
   "FormFieldTime": require("./FormFieldTime.vue"),
   "FormFieldUrl": require("./FormFieldUrl.vue")
 };
-},{"./FormField.vue":"previews/FormField.vue","./FormFieldCheckboxes.vue":"previews/FormFieldCheckboxes.vue","./FormFieldDate.vue":"previews/FormFieldDate.vue","./FormFieldEmail.vue":"previews/FormFieldEmail.vue","./FormFieldNumber.vue":"previews/FormFieldNumber.vue","./FormFieldRadio.vue":"previews/FormFieldRadio.vue","./FormFieldSelect.vue":"previews/FormFieldSelect.vue","./FormFieldText.vue":"previews/FormFieldText.vue","./FormFieldTel.vue":"previews/FormFieldTel.vue","./FormFieldTextarea.vue":"previews/FormFieldTextarea.vue","./FormFieldTime.vue":"previews/FormFieldTime.vue","./FormFieldUrl.vue":"previews/FormFieldUrl.vue"}],"utils.js":[function(require,module,exports) {
+},{"./FormField.vue":"previews/FormField.vue","./FormFieldCheckboxes.vue":"previews/FormFieldCheckboxes.vue","./FormFieldDate.vue":"previews/FormFieldDate.vue","./FormFieldEmail.vue":"previews/FormFieldEmail.vue","./FormFieldNumber.vue":"previews/FormFieldNumber.vue","./FormFieldRadio.vue":"previews/FormFieldRadio.vue","./FormFieldSelect.vue":"previews/FormFieldSelect.vue","./FormFieldTel.vue":"previews/FormFieldTel.vue","./FormFieldText.vue":"previews/FormFieldText.vue","./FormFieldTextarea.vue":"previews/FormFieldTextarea.vue","./FormFieldTime.vue":"previews/FormFieldTime.vue","./FormFieldUrl.vue":"previews/FormFieldUrl.vue"}],"utils.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9504,7 +9504,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37895" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42337" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,5 +1,8 @@
 <?php return [
   'form' => __DIR__ . '/form.php',
+  'form-fields' => __DIR__ . '/form-fields.php',
+  'form-success' => __DIR__ . '/form-success.php',
+  'form-error' => __DIR__ . '/form-error.php',
   'blocks/form-field-text' => __DIR__ . '/blocks/form-field-text.php',
   'blocks/form-field-number' => __DIR__ . '/blocks/form-field-number.php',
   'blocks/form-field-textarea' => __DIR__ . '/blocks/form-field-textarea.php',

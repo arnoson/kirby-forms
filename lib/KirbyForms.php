@@ -17,7 +17,7 @@ class KirbyForms {
    */
   function formRules($formPage): array {
     $formRules = [];
-    foreach ($formPage->fields()->toLayouts() as $layout) {
+    foreach ($formPage->form_fields()->toLayouts() as $layout) {
       foreach ($layout->columns() as $column) {
         foreach ($column->blocks() as $field) {
           $rules = [
