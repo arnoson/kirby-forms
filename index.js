@@ -9432,7 +9432,597 @@ module.exports = {
   "FormFieldTime": require("./FormFieldTime.vue"),
   "FormFieldUrl": require("./FormFieldUrl.vue")
 };
-},{"./FormField.vue":"previews/FormField.vue","./FormFieldCheckboxes.vue":"previews/FormFieldCheckboxes.vue","./FormFieldDate.vue":"previews/FormFieldDate.vue","./FormFieldEmail.vue":"previews/FormFieldEmail.vue","./FormFieldNumber.vue":"previews/FormFieldNumber.vue","./FormFieldRadio.vue":"previews/FormFieldRadio.vue","./FormFieldSelect.vue":"previews/FormFieldSelect.vue","./FormFieldTel.vue":"previews/FormFieldTel.vue","./FormFieldText.vue":"previews/FormFieldText.vue","./FormFieldTextarea.vue":"previews/FormFieldTextarea.vue","./FormFieldTime.vue":"previews/FormFieldTime.vue","./FormFieldUrl.vue":"previews/FormFieldUrl.vue"}],"utils.js":[function(require,module,exports) {
+},{"./FormField.vue":"previews/FormField.vue","./FormFieldCheckboxes.vue":"previews/FormFieldCheckboxes.vue","./FormFieldDate.vue":"previews/FormFieldDate.vue","./FormFieldEmail.vue":"previews/FormFieldEmail.vue","./FormFieldNumber.vue":"previews/FormFieldNumber.vue","./FormFieldRadio.vue":"previews/FormFieldRadio.vue","./FormFieldSelect.vue":"previews/FormFieldSelect.vue","./FormFieldTel.vue":"previews/FormFieldTel.vue","./FormFieldText.vue":"previews/FormFieldText.vue","./FormFieldTextarea.vue":"previews/FormFieldTextarea.vue","./FormFieldTime.vue":"previews/FormFieldTime.vue","./FormFieldUrl.vue":"previews/FormFieldUrl.vue"}],"components/FormEntriesTable.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default2 = {
+  props: {
+    entries: {
+      default: function _default() {
+        return {};
+      }
+    },
+    columns: {
+      default: function _default() {
+        return [];
+      }
+    }
+  },
+  data: function data() {
+    return {
+      pagination: {
+        start: 1,
+        end: 2
+      }
+    };
+  },
+  computed: {
+    displayColumns: function displayColumns() {
+      return this.columns;
+    },
+    paginatedEntries: function paginatedEntries() {
+      return this.entries.slice(this.pagination.start - 1, this.pagination.end);
+    }
+  },
+  methods: {
+    paginate: function paginate(pagination) {
+      this.pagination = pagination;
+    }
+  }
+};
+exports.default = _default2;
+        var $f8c7ec = exports.default || module.exports;
+      
+      if (typeof $f8c7ec === 'function') {
+        $f8c7ec = $f8c7ec.options;
+      }
+    
+        /* template */
+        Object.assign($f8c7ec, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("table", { staticClass: "k-structure-table" }, [
+        _c("thead", [
+          _c(
+            "tr",
+            [
+              _c("th", { staticClass: "k-structure-table-index" }, [
+                _vm._v("#")
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.displayColumns, function(column) {
+                return _c(
+                  "th",
+                  { key: column.name, staticClass: "k-structure-table-column" },
+                  [
+                    _vm._v(
+                      "\n          " +
+                        _vm._s(column.label || column.name) +
+                        "\n        "
+                    )
+                  ]
+                )
+              }),
+              _vm._v(" "),
+              _c("th")
+            ],
+            2
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          _vm._l(_vm.paginatedEntries, function(entry, index) {
+            return _c(
+              "tr",
+              {
+                key: "row_" + index,
+                on: {
+                  click: function($event) {
+                    return _vm.$emit("select", index)
+                  }
+                }
+              },
+              [
+                _c("td", { staticClass: "k-structure-table-index" }, [
+                  _c(
+                    "span",
+                    { staticClass: "k-structure-table-index-number" },
+                    [_vm._v(_vm._s(index + 1))]
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.displayColumns, function(column) {
+                  return _c(
+                    "td",
+                    {
+                      key: column.name,
+                      staticClass: "k-structure-table-column"
+                    },
+                    [
+                      _c("p", { staticClass: "k-structure-table-text" }, [
+                        _vm._v(_vm._s(entry[column.name]))
+                      ])
+                    ]
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  { staticClass: "k-structure-table-option" },
+                  [_c("k-button", { attrs: { icon: "remove" } })],
+                  1
+                )
+              ],
+              2
+            )
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("k-pagination", {
+        attrs: {
+          align: "center",
+          details: true,
+          total: _vm.entries.length,
+          limit: 2
+        },
+        on: { paginate: _vm.paginate }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f8c7ec', $f8c7ec);
+          } else {
+            api.reload('$f8c7ec', $f8c7ec);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"components/FormEntryTable.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: ['entry']
+};
+exports.default = _default;
+        var $0a479f = exports.default || module.exports;
+      
+      if (typeof $0a479f === 'function') {
+        $0a479f = $0a479f.options;
+      }
+    
+        /* template */
+        Object.assign($0a479f, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "table",
+    { staticClass: "k-structure-table" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._l(_vm.entry, function(value, field) {
+        return _c("tr", { key: field }, [
+          _c("td", { staticClass: "k-structure-table-column" }, [
+            _c("p", { staticClass: "k-structure-table-text" }, [
+              _vm._v(_vm._s(field))
+            ])
+          ]),
+          _vm._v(" "),
+          _c("td", { staticClass: "k-structure-table-column" }, [
+            _c("p", { staticClass: "k-structure-table-text" }, [
+              _vm._v(_vm._s(value))
+            ])
+          ])
+        ])
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { staticClass: "k-structure-table-column" }, [
+          _vm._v("Field")
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "k-structure-table-column" }, [_vm._v("Value")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-0a479f",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$0a479f', $0a479f);
+          } else {
+            api.reload('$0a479f', $0a479f);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"fields/FormEntries.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _FormEntriesTable = _interopRequireDefault(require("../components/FormEntriesTable.vue"));
+
+var _FormEntryTable = _interopRequireDefault(require("../components/FormEntryTable.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: ['value', 'columns'],
+  components: {
+    FormEntriesTable: _FormEntriesTable.default,
+    FormEntryTable: _FormEntryTable.default
+  },
+  mounted: function mounted() {
+    console.log(this);
+  },
+  data: function data() {
+    return {
+      currentEntryIndex: null
+    };
+  },
+  computed: {
+    entries: function entries() {
+      return this.value;
+    },
+    currentEntry: function currentEntry() {
+      return this.entries[this.currentEntryIndex];
+    }
+  },
+  methods: {
+    selectEntry: function selectEntry(index) {
+      this.currentEntryIndex = index;
+    },
+    deselectEntry: function deselectEntry() {
+      this.currentEntryIndex = null;
+    }
+  }
+};
+exports.default = _default;
+        var $0b0681 = exports.default || module.exports;
+      
+      if (typeof $0b0681 === 'function') {
+        $0b0681 = $0b0681.options;
+      }
+    
+        /* template */
+        Object.assign($0b0681, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "k-field",
+    {
+      staticClass: "arnoson-form-entries",
+      class: { "form-entry-selected": _vm.currentEntry }
+    },
+    [
+      _c(
+        "header",
+        {
+          staticClass: "k-field-header",
+          attrs: { slot: "header" },
+          slot: "header"
+        },
+        [
+          _c(
+            "label",
+            { staticClass: "k-field-label", on: { click: _vm.deselectEntry } },
+            [
+              _c("button", { staticClass: "arnoson-label" }, [
+                _vm._v("Entries")
+              ]),
+              _vm._v(" "),
+              _vm.currentEntry
+                ? [
+                    _c("span", { staticClass: "arnoson-separator" }, [
+                      _vm._v("/")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [
+                      _vm._v("#" + _vm._s(_vm.currentEntryIndex + 1))
+                    ])
+                  ]
+                : _vm._e()
+            ],
+            2
+          )
+        ]
+      ),
+      _vm._v(" "),
+      !_vm.entries.length
+        ? _c("k-empty", { attrs: { icon: "list-bullet" } }, [
+            _vm._v(_vm._s(_vm.$t("arnoson.forms.no-entries")))
+          ])
+        : _c(
+            "keep-alive",
+            [
+              !_vm.currentEntry
+                ? _c("form-entries-table", {
+                    attrs: { entries: _vm.value, columns: _vm.columns },
+                    on: { select: _vm.selectEntry }
+                  })
+                : _c("form-entry-table", { attrs: { entry: _vm.currentEntry } })
+            ],
+            1
+          )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$0b0681', $0b0681);
+          } else {
+            api.reload('$0b0681', $0b0681);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"../components/FormEntriesTable.vue":"components/FormEntriesTable.vue","../components/FormEntryTable.vue":"components/FormEntryTable.vue","_css_loader":"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"utils.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9449,6 +10039,8 @@ exports.toDashCase = toDashCase;
 "use strict";
 
 var _ = _interopRequireDefault(require("./previews/*.vue"));
+
+var _FormEntries = _interopRequireDefault(require("./fields/FormEntries.vue"));
 
 var _utils = require("./utils");
 
@@ -9473,10 +10065,14 @@ var blocks = Object.fromEntries(Object.entries(_.default).map(function (_ref) {
 
   return [(0, _utils.toDashCase)(key), value.default];
 }));
+console.log(_FormEntries.default);
 panel.plugin('arnoson/kirby-forms', {
-  blocks: blocks
+  blocks: blocks,
+  fields: {
+    'form-entries': _FormEntries.default
+  }
 });
-},{"./previews/*.vue":"previews/*.vue","./utils":"utils.js"}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./previews/*.vue":"previews/*.vue","./fields/FormEntries.vue":"fields/FormEntries.vue","./utils":"utils.js"}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9504,7 +10100,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42337" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36935" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

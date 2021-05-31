@@ -1,10 +1,10 @@
 <?php
 
-use Kirby\Data\Json;
+use Kirby\Data\Yaml;
 
 require_once __DIR__ . '/lib/KirbyForms.php';
 require_once __DIR__ . '/lib/helpers.php';
-require_once __DIR__ . '/lib/SaveJsonAction.php';
+require_once __DIR__ . '/lib/SaveYamlAction.php';
 
 function kirbyForms() {
   return arnoson\KirbyForms\KirbyForms::getInstance();
@@ -20,7 +20,7 @@ function kirbyForms() {
         'value' => function ($value = null) {
           if (is_string($value)) {
             try {
-              $value = Json::decode($value);
+              $value = Yaml::decode($value);
             } catch (\Exception $e) {
               $value = null;
             }
@@ -50,7 +50,7 @@ function kirbyForms() {
         },
       ],
       'save' => function ($value = null) {
-        return Json::encode($value);
+        return Yaml::encode($value);
       },
     ],
   ],

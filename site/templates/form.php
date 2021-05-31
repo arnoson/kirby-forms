@@ -35,8 +35,4 @@
 }
 </style>
 
-<?php snippet('form', [
-  'clientValidation' => false,
-  'submit' => 'Okay',
-  'success' => 'Yey!!!',
-]); ?>
+<?php snippet('form'); ?>

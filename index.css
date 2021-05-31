@@ -1,12 +1,25 @@
-/* The fields are only a preview of the form and not meant for interaction */
-.arnoson-forms-preview > * {
-  pointer-events: none;
+.k-structure-table th[data-v-0a479f]:last-child {
+  width: 100%;
+}
+.k-structure-table-column[data-v-0a479f] {
+  height: 38px;
+}.arnoson-form-entries .k-structure-table th {
+  color: #5c5c5c;
+  background: #ddd;
+  border-color: #d6d6d6;
+  border-bottom: none;
+}
+.arnoson-form-entries .k-structure-table-option {
+  text-align: center;
 }
 
-/* Fake kirby's required asterisk without making the preview fields actually
-required */
-.arnoson-forms-preview.required .k-field-label::after {
-  content: '*';
-  color: #999;
-  padding-left: 0.25rem;
+.arnoson-separator {
+  margin: 0 8px;
+  font-weight: lighter;
+}
+.arnoson-label {
+  font-weight: inherit;
+}
+.form-entry-selected .arnoson-label {
+  font-weight: lighter;
 }

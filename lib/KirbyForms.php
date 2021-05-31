@@ -89,7 +89,7 @@ class KirbyForms {
         ->request()
         ->is('POST')
     ) {
-      $form->SaveJsonAction();
+      $form->SaveYamlAction();
       $this->sendNotificationEmail($form);
       $this->sendConfirmationEmail($form);
 

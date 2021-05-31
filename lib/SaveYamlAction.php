@@ -3,16 +3,22 @@
 namespace Uniform\Actions;
 use Kirby\Toolkit\I18n;
 
-class SaveJsonAction extends Action {
+class SaveYamlAction extends Action {
   public function perform() {
     try {
       $page = page();
-      $entries = $page->form_entries()->toData('json');
-      array_push($entries, $this->form->data());
+      $entries = $page->form_entries()->toData('yaml');
+
+      // `form_name` is only used as a template variable for the email subject
+      // so we can omit it before saving the data.
+      $data = $this->form->data();
+      unset($data['form_name']);
+      array_push($entries, $data);
+
       kirby()->impersonate(
         'kirby',
         fn() => $page->update([
-          'form_entries' => \Kirby\Data\Json::encode($entries),
+          'form_entries' => \Kirby\Data\Yaml::encode($entries),
         ]),
       );
     } catch (\Exception $e) {

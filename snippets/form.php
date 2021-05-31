@@ -5,7 +5,7 @@ $submitWasSuccessful = (params()['submit'] ?? null) == 'success';
 $clientValidation ??= true;
 $showOldValues ??= true;
 $submit ??= 'Submit';
-$success ??= null;
+$success ??= $formPage->form_success_message();
 $error ??= true;
 $gridColumns ??= 6;
 ?>
@@ -22,6 +22,7 @@ $gridColumns ??= 6;
     'clientValidation' => $clientValidation,
     'showOldValues' => $showOldValues,
   ]); ?>
+  <input type="hidden" name="form_name" value="<?= $formPage->title() ?>" />
   <?= csrf_field() ?>
   <?= honeypot_field() ?>
   <button type="submit"><?= $submit ?></button>
