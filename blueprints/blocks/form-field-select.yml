@@ -1,4 +1,6 @@
-name: Select
+name:
+  en: Select
+  de: Auswahl
 icon: ✔️
 fields:
   extends: fields/form-field-basic

@@ -1,2 +1,4 @@
 type: text
-label: Placeholder
+label:
+  en: Placeholder
+  de: Platzhalter

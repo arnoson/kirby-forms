@@ -1,4 +1,6 @@
-name: Textarea
+name:
+  en: Textarea
+  de: Textblock
 icon: 📝
 fields:
   extends: fields/form-field-basic

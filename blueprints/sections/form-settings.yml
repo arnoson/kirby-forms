@@ -2,26 +2,42 @@ type: fields
 fields:
   form_success_type:
     type: toggle
-    label: Success
+    translations:
+      blue:
+        de: blau
+        en: blue
+    label:
+      en: Success
+      de: Bestätigung
     width: 5/12
     text:
-      - 'Message'
-      - 'Page'
+      en:
+        - 'Message'
+        - 'Page'
+      de:
+        - 'Nachricht'
+        - 'Seite'
   form_success_message:
     type: writer
-    label: Message
+    label:
+      en: Message
+      de: Nachricht
     default: Thank you for the registration!
     width: 7/12
     when:
       form_success_type: false
   form_success_page:
-    label: Page
+    label:
+      en: Page
+      de: Seite
     type: pages
     multiple: false
-    width: 2/3
+    width: 7/12
     when:
       form_success_type: true
   form_fields_error_message:
     type: writer
-    label: Fields Error
+    label:
+      en: Error
+      de: Fehlermeldung
     default: Please fill in all fields correctly.

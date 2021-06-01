@@ -1,4 +1,6 @@
-name: Telephone
+name:
+  en: Telephone
+  de: Telefon
 icon: ☎️
 fields:
   extends: fields/form-field-basic

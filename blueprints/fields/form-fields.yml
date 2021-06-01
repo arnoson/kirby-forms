@@ -1,4 +1,6 @@
-label: Fields
+label:
+  en: Fields
+  de: Felder
 type: layout
 layouts:
   - '1/1'
@@ -6,7 +8,7 @@ layouts:
   - '1/3, 2/3'
   - '2/3, 1/3'
 fieldsets:
-  baisc:
+  basic:
     type: group
     fieldsets:
       - form-field-text
@@ -17,16 +19,24 @@ fieldsets:
       - form-field-radio
   contact:
     type: group
+    label:
+      en: Contact
+      de: Kontakt
     fieldsets:
       - form-field-email
       - form-field-tel
   date_time:
-    label: Date & Time
+    label:
+      en: Date & Time
+      de: Datum & Uhrzeit
     type: group
     fieldsets:
       - form-field-date
       - form-field-time
   other:
     type: group
+    label:
+      en: Other
+      de: Sonstige
     fieldsets:
       - form-field-url

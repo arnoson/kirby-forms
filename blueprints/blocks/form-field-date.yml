@@ -1,4 +1,6 @@
-name: Date
+name:
+  en: Date
+  de: Datum
 icon: 📆
 fields:
   extends: fields/form-field-basic

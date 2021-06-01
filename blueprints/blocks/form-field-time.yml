@@ -1,4 +1,6 @@
-name: Time
+name:
+  en: Time
+  de: Zeit
 icon: ⌚
 fields:
   extends: fields/form-field-basic

@@ -1,2 +1,4 @@
 type: number
-label: Min length
+label:
+  en: Min length
+  de: Min. Länge

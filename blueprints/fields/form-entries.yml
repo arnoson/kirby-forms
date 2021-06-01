@@ -1,2 +1,4 @@
-label: Entries
+label:
+  en: Entries
+  de: Einträge
 type: form-entries

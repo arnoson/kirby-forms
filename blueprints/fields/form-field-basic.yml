@@ -2,15 +2,24 @@ type: group
 fields:
   name:
     type: text
-    label: Name
-    placeholder: field_name
+    placeholder:
+      en: field_name
+      de: feld_name
     required: true
     width: 5/12
   label:
     type: text
-    placeholder: Field Name
+    label:
+      en: Label
+      de: Beschriftung
+    placeholder:
+      en: Field Name
+      de: Feld Name
     width: 5/12
   required:
     type: toggle
+    label:
+      en: Required
+      de: Pflichtfeld
     default: false
     width: 2/12

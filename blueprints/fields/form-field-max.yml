@@ -1,2 +1,4 @@
 type: number
-label: Max length
+label:
+  en: Max length
+  de: Max. Länge

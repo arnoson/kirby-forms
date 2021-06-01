@@ -20,7 +20,6 @@
   'fields/form-field-pattern' => __DIR__ . '/fields/form-field-pattern.yml',
   'fields/form-field-min' => __DIR__ . '/fields/form-field-min.yml',
   'fields/form-field-max' => __DIR__ . '/fields/form-field-max.yml',
-  'fields/form-success-page' => __DIR__ . '/fields/form-success-page.yml',
 
   'sections/form-fields' => __DIR__ . '/sections/form-fields.yml',
   'sections/form-settings' => __DIR__ . '/sections/form-settings.yml',

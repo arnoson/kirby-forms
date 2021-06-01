@@ -1,4 +1,6 @@
-name: Number
+name:
+  en: Number
+  de: Zahl
 icon: 🔟
 fields:
   extends: fields/form-field-basic
