@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04ef1a56d01f5c8e42fd9907b136ef89",
+    "content-hash": "98ebff297a420773c5958e7a0e192527",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -279,44 +279,6 @@
                 "source": "https://github.com/jongacnik/kirby-fields-block/tree/v1.0.1"
             },
             "time": "2021-05-18T18:44:15+00:00"
-        },
-        {
-            "name": "kirbyzone/formbuilder",
-            "version": "1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://gitlab.com/kirbyzone/formbuilder.git",
-                "reference": "0170ecf2807bec8297ec4a0fcb767e6388e514ca"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/kirbyzone%2Fformbuilder/repository/archive.zip?sha=0170ecf2807bec8297ec4a0fcb767e6388e514ca",
-                "reference": "0170ecf2807bec8297ec4a0fcb767e6388e514ca",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.1"
-            },
-            "type": "kirby-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cre8iv Click",
-                    "email": "hello@cre8iv.click",
-                    "homepage": "https://cre8iv.click"
-                }
-            ],
-            "description": "Cre8iv Click's Form Builder Plugin for Kirby",
-            "homepage": "https://gitlab.com/cre8ivclick/formbuilder",
-            "support": {
-                "issues": "https://gitlab.com/cre8ivclick/formbuilder/issues",
-                "source": "https://gitlab.com/cre8ivclick/formbuilder",
-                "wiki": "https://gitlab.com/cre8ivclick/formbuilder/wikis/home"
-            },
-            "time": "2019-12-11T15:20:19+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -785,44 +747,6 @@
             "time": "2021-05-26T08:48:53+00:00"
         },
         {
-            "name": "oblik/kirby-json",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/OblikStudio/kirby-json.git",
-                "reference": "306e32d22bd45bf2635813293d5ba5a798a3f3ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/OblikStudio/kirby-json/zipball/306e32d22bd45bf2635813293d5ba5a798a3f3ef",
-                "reference": "306e32d22bd45bf2635813293d5ba5a798a3f3ef",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.1"
-            },
-            "type": "kirby-plugin",
-            "extra": {
-                "installer-name": "json"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hristiyan Dodov",
-                    "email": "h.dodov@gmail.com"
-                }
-            ],
-            "description": "JSON editor and field for Kirby.",
-            "support": {
-                "issues": "https://github.com/OblikStudio/kirby-json/issues",
-                "source": "https://github.com/OblikStudio/kirby-json/tree/1.0.1"
-            },
-            "time": "2019-09-25T05:10:48+00:00"
-        },
-        {
             "name": "phpmailer/phpmailer",
             "version": "v6.4.1",
             "source": {
@@ -1027,56 +951,6 @@
                 }
             ],
             "time": "2021-01-22T09:19:47+00:00"
-        },
-        {
-            "name": "timoetting/kirby-builder",
-            "version": "2.0.16",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TimOetting/kirby-builder.git",
-                "reference": "6e8f6f4239dfe9836a394d32c2aeb9ceb5800780"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TimOetting/kirby-builder/zipball/6e8f6f4239dfe9836a394d32c2aeb9ceb5800780",
-                "reference": "6e8f6f4239dfe9836a394d32c2aeb9ceb5800780",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.1",
-                "php": ">=7.1.0"
-            },
-            "type": "kirby-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Ötting",
-                    "email": "email@tim-oetting.de"
-                }
-            ],
-            "description": "This versatile plugin for Kirby CMS (v3) lets you predefine content blocks with different field sets that can then be added, edited and arranged inside Kirby's panel.",
-            "keywords": [
-                "builder",
-                "kirby-builder",
-                "kirby3",
-                "kirby3-cms",
-                "kirby3-plugin",
-                "page-builder"
-            ],
-            "support": {
-                "issues": "https://github.com/TimOetting/kirby-builder/issues",
-                "source": "https://github.com/TimOetting/kirby-builder/tree/v2.0.16"
-            },
-            "funding": [
-                {
-                    "url": "https://paypal.me/TimOetting/10",
-                    "type": "custom"
-                }
-            ],
-            "time": "2020-11-18T23:15:15+00:00"
         },
         {
             "name": "true/punycode",

@@ -42,3 +42,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.arnoson-forms-preview {
+  pointer-events: none;
+}
+</style>

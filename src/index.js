@@ -9,8 +9,6 @@ const blocks = Object.fromEntries(
   ])
 )
 
-console.log(FormEntries)
-
 panel.plugin('arnoson/kirby-forms', {
   blocks,
   fields: { 'form-entries': FormEntries }

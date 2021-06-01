@@ -1,21 +1,17 @@
 {
-    "name": "vendor/kirby-plugin",
-    "description": "Kirby Example Plugin",
-    "type": "kirby-plugin",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Your Name",
-            "email": "you@example.com"
-        }
-    ],
-    "require": {
-        "getkirby/composer-installer": "^1.1",
-        "getkirby/cms": "^3",
-        "kirbyzone/formbuilder": "^1.1",
-        "timoetting/kirby-builder": "^2.0",
-        "jg/kirby-fields-block": "^1.0",
-        "mzur/kirby-uniform": "^4.0",
-        "oblik/kirby-json": "^1.0"
+  "name": "arnoson/kirby-forms",
+  "description": "Kirby Example Plugin",
+  "type": "kirby-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "arnoson"
     }
+  ],
+  "require": {
+    "getkirby/composer-installer": "^1.1",
+    "getkirby/cms": "^3",
+    "jg/kirby-fields-block": "^1.0",
+    "mzur/kirby-uniform": "^4.0"
+  }
 }

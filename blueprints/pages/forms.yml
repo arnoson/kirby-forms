@@ -1,0 +1,6 @@
+name: Forms
+
+sections:
+  pages:
+    type: pages
+    template: form

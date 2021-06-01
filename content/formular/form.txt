@@ -2,7 +2,7 @@ Title: Formular
 
 ----
 
-Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"name":"name","label":"Name","required":"true","min":null,"max":null,"default":"","placeholder":"","pattern":""},"id":"18cd8aa1-215f-4b55-8566-1fa2786c54bb","isHidden":false,"type":"form-field-text"}],"id":"4cff2857-7867-4b70-95cf-350ff857e613","width":"1\/1"}],"id":"ec1fc26e-3c81-43ff-bf37-6425f7759d3f"}]
+Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"name":"first_name","label":"First Name","required":"true","min":null,"max":null,"default":"","placeholder":"","pattern":""},"id":"18cd8aa1-215f-4b55-8566-1fa2786c54bb","isHidden":false,"type":"form-field-text"}],"id":"6a481191-af5f-4001-828f-3e58db0df60b","width":"1\/2"},{"blocks":[{"content":{"name":"last_name","label":"Last Name","required":"false","min":null,"max":null,"default":"","placeholder":"","pattern":""},"id":"9c65de38-4443-4977-b884-401614b7f4d1","isHidden":false,"type":"form-field-text"}],"id":"a19ae4d9-48d0-4b32-866b-08517ea0947c","width":"1\/2"}],"id":"d0354e1b-fcf5-4c38-bdbb-9ffd5eae3ba5"},{"attrs":[],"columns":[{"blocks":[{"content":{"name":"Checkboxes","label":"","required":"false","default":"","options":[{"value":"one","text":""},{"value":"two","text":""}]},"id":"38a0b653-dbb2-4a53-a5a9-0f5bf6cdf2e0","isHidden":false,"type":"form-field-radio"}],"id":"4cff2857-7867-4b70-95cf-350ff857e613","width":"1\/1"}],"id":"ec1fc26e-3c81-43ff-bf37-6425f7759d3f"}]
 
 ----
 
@@ -25,8 +25,10 @@ Form-fields-error-message: Please fill in all fields correctly.
 Form-entries:
 
 - 
-  name: Arno
+  first_name: Arno
+  last_name: Son
+  Checkboxes: two
 - 
-  name: Test
-- 
-  name: Test
+  first_name: Arno
+  last_name: Son
+  Checkboxes: two

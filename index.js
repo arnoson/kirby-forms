@@ -117,7 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+})({"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -8921,9 +8988,13 @@ render._withStripped = true
         }
 
         
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldCheckboxes.vue":[function(require,module,exports) {
+},{"_css_loader":"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"previews/FormFieldCheckboxes.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9487,6 +9558,11 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
 var _default2 = {
   props: {
     entries: {
@@ -9519,6 +9595,9 @@ var _default2 = {
   methods: {
     paginate: function paginate(pagination) {
       this.pagination = pagination;
+    },
+    realIndex: function realIndex(paginatedIndex) {
+      return this.pagination.start + paginatedIndex - 1;
     }
   }
 };
@@ -9576,7 +9655,7 @@ exports.default = _default2;
                 key: "row_" + index,
                 on: {
                   click: function($event) {
-                    return _vm.$emit("select", index)
+                    _vm.$emit("select", _vm.realIndex(index))
                   }
                 }
               },
@@ -9585,7 +9664,7 @@ exports.default = _default2;
                   _c(
                     "span",
                     { staticClass: "k-structure-table-index-number" },
-                    [_vm._v(_vm._s(index + 1))]
+                    [_vm._v(_vm._s(_vm.realIndex(index) + 1))]
                   )
                 ]),
                 _vm._v(" "),
@@ -9607,7 +9686,17 @@ exports.default = _default2;
                 _c(
                   "td",
                   { staticClass: "k-structure-table-option" },
-                  [_c("k-button", { attrs: { icon: "remove" } })],
+                  [
+                    _c("k-button", {
+                      attrs: { icon: "remove" },
+                      on: {
+                        click: function($event) {
+                          $event.stopPropagation()
+                          _vm.$emit("remove", _vm.realIndex(index))
+                        }
+                      }
+                    })
+                  ],
                   1
                 )
               ],
@@ -9660,74 +9749,7 @@ render._withStripped = true
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../.nvm/versions/node/v14.15.1/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"components/FormEntryTable.vue":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/FormEntryTable.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9885,14 +9907,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 var _default = {
   props: ['value', 'columns'],
   components: {
     FormEntriesTable: _FormEntriesTable.default,
     FormEntryTable: _FormEntryTable.default
-  },
-  mounted: function mounted() {
-    console.log(this);
   },
   data: function data() {
     return {
@@ -9913,6 +9933,11 @@ var _default = {
     },
     deselectEntry: function deselectEntry() {
       this.currentEntryIndex = null;
+    },
+    removeEntry: function removeEntry(index) {
+      this.$emit('input', this.value.filter(function (_, elIndex) {
+        return elIndex !== index;
+      }));
     }
   }
 };
@@ -9979,7 +10004,7 @@ exports.default = _default;
               !_vm.currentEntry
                 ? _c("form-entries-table", {
                     attrs: { entries: _vm.value, columns: _vm.columns },
-                    on: { select: _vm.selectEntry }
+                    on: { select: _vm.selectEntry, remove: _vm.removeEntry }
                   })
                 : _c("form-entry-table", { attrs: { entry: _vm.currentEntry } })
             ],
@@ -10065,7 +10090,6 @@ var blocks = Object.fromEntries(Object.entries(_.default).map(function (_ref) {
 
   return [(0, _utils.toDashCase)(key), value.default];
 }));
-console.log(_FormEntries.default);
 panel.plugin('arnoson/kirby-forms', {
   blocks: blocks,
   fields: {
@@ -10100,7 +10124,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36935" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45289" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

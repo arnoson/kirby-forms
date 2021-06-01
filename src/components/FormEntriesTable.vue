@@ -18,10 +18,12 @@
         <tr
           v-for="(entry, index) of paginatedEntries"
           :key="`row_${index}`"
-          @click="$emit('select', index)"
+          @click="$emit('select', realIndex(index))"
         >
           <td class="k-structure-table-index">
-            <span class="k-structure-table-index-number">{{ index + 1 }}</span>
+            <span class="k-structure-table-index-number">{{
+              realIndex(index) + 1
+            }}</span>
           </td>
           <td
             class="k-structure-table-column"
@@ -31,7 +33,10 @@
             <p class="k-structure-table-text">{{ entry[column.name] }}</p>
           </td>
           <td class="k-structure-table-option">
-            <k-button icon="remove" />
+            <k-button
+              icon="remove"
+              @click.stop="$emit('remove', realIndex(index))"
+            />
           </td>
         </tr>
       </tbody>
@@ -72,6 +77,10 @@ export default {
   methods: {
     paginate(pagination) {
       this.pagination = pagination
+    },
+
+    realIndex(paginatedIndex) {
+      return this.pagination.start + paginatedIndex - 1
     }
   }
 }

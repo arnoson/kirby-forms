@@ -21,6 +21,7 @@
         :entries="value"
         :columns="columns"
         @select="selectEntry"
+        @remove="removeEntry"
       />
       <form-entry-table v-else :entry="currentEntry" />
     </keep-alive>
@@ -34,10 +35,6 @@ export default {
   props: ['value', 'columns'],
 
   components: { FormEntriesTable, FormEntryTable },
-
-  mounted() {
-    console.log(this)
-  },
 
   data() {
     return {
@@ -62,6 +59,13 @@ export default {
 
     deselectEntry() {
       this.currentEntryIndex = null
+    },
+
+    removeEntry(index) {
+      this.$emit(
+        'input',
+        this.value.filter((_, elIndex) => elIndex !== index)
+      )
     }
   }
 }

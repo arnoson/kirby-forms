@@ -1,4 +1,6 @@
-.k-structure-table th[data-v-0a479f]:last-child {
+.arnoson-forms-preview {
+  pointer-events: none;
+}.k-structure-table th[data-v-0a479f]:last-child {
   width: 100%;
 }
 .k-structure-table-column[data-v-0a479f] {

@@ -1,0 +1,12 @@
+name: Form
+
+columns:
+  - width: 7/12
+    sections:
+      form_fields: sections/form-fields
+  - width: 5/12
+    sections:
+      form_settings: sections/form-settings
+  - width: 1/1
+    sections:
+      form_entries: sections/form-entries

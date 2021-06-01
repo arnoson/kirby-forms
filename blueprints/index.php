@@ -11,6 +11,7 @@
     __DIR__ . '/blocks/form-field-checkboxes.yml',
   'blocks/form-field-radio' => __DIR__ . '/blocks/form-field-radio.yml',
   'blocks/form-field-select' => __DIR__ . '/blocks/form-field-select.yml',
+
   'fields/form-fields' => __DIR__ . '/fields/form-fields.yml',
   'fields/form-entries' => __DIR__ . '/fields/form-entries.yml',
   'fields/form-field-basic' => __DIR__ . '/fields/form-field-basic.yml',
@@ -20,4 +21,11 @@
   'fields/form-field-min' => __DIR__ . '/fields/form-field-min.yml',
   'fields/form-field-max' => __DIR__ . '/fields/form-field-max.yml',
   'fields/form-success-page' => __DIR__ . '/fields/form-success-page.yml',
+
+  'sections/form-fields' => __DIR__ . '/sections/form-fields.yml',
+  'sections/form-settings' => __DIR__ . '/sections/form-settings.yml',
+  'sections/form-entries' => __DIR__ . '/sections/form-entries.yml',
+
+  'pages/form' => __DIR__ . '/pages/form.yml',
+  'pages/forms' => __DIR__ . '/pages/forms.yml',
 ];
