@@ -8,6 +8,7 @@ fields:
     type: hidden
     default: '["time"]'
   default:
+    extends: fields/form-field-default
     type: time
     width: 1/2
   placeholder:

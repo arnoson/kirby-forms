@@ -22,6 +22,7 @@ fields:
     placeholder: '0.01'
     width: 2/12
   default:
+    extends: fields/form-field-default
     type: number
     width: 3/12
   placeholder:

@@ -8,6 +8,7 @@ fields:
     type: hidden
     default: '["date"]'
   default:
+    extends: fields/form-field-default
     type: date
     time: false
     width: 1/2

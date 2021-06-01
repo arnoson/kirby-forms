@@ -9,6 +9,7 @@ fields:
     placeholder: ' — '
     width: 5/12
   default:
+    extends: fields/form-field-default
     type: text
     width: 5/12
   empty:
