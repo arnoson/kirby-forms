@@ -9712,7 +9712,7 @@ exports.default = _default2;
           align: "center",
           details: true,
           total: _vm.entries.length,
-          limit: 2
+          limit: 20
         },
         on: { paginate: _vm.paginate }
       })
@@ -9909,7 +9909,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 var _default = {
-  props: ['value', 'columns'],
+  props: ['value', 'columns', 'label'],
   components: {
     FormEntriesTable: _FormEntriesTable.default,
     FormEntryTable: _FormEntryTable.default
@@ -9974,7 +9974,7 @@ exports.default = _default;
             { staticClass: "k-field-label", on: { click: _vm.deselectEntry } },
             [
               _c("button", { staticClass: "arnoson-label" }, [
-                _vm._v("Entries")
+                _vm._v(_vm._s(_vm.label))
               ]),
               _vm._v(" "),
               _vm.currentEntry
@@ -10124,7 +10124,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45289" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

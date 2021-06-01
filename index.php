@@ -80,6 +80,7 @@ function kirbyForms() {
     'de' => [
       'forms-json-save-error' =>
         'Beim Speichern der Formulardaten ist ein Fehler aufgetreten',
+      'arnoson.forms.no-entries' => 'Keine Einträge',
     ],
   ],
 ]);

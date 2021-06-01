@@ -45,7 +45,7 @@
       align="center"
       :details="true"
       :total="entries.length"
-      :limit="2"
+      :limit="20"
       @paginate="paginate"
     />
   </div>

@@ -1,3 +1,8 @@
 type: fields
 fields:
-  form_entries: fields/form-entries
+  form_entries:
+    type: form-entries
+    label: Test
+    label:
+      en: Entries
+      de: Einträge

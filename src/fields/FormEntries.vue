@@ -5,7 +5,7 @@
   >
     <header slot="header" class="k-field-header">
       <label class="k-field-label" @click="deselectEntry"
-        ><button class="arnoson-label">Entries</button>
+        ><button class="arnoson-label">{{ label }}</button>
         <template v-if="currentEntry">
           <span class="arnoson-separator">/</span>
           <span>#{{ currentEntryIndex + 1 }}</span>
@@ -32,7 +32,7 @@
 import FormEntriesTable from '../components/FormEntriesTable.vue'
 import FormEntryTable from '../components/FormEntryTable.vue'
 export default {
-  props: ['value', 'columns'],
+  props: ['value', 'columns', 'label'],
 
   components: { FormEntriesTable, FormEntryTable },
 

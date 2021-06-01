@@ -13,7 +13,6 @@
   'blocks/form-field-select' => __DIR__ . '/blocks/form-field-select.yml',
 
   'fields/form-fields' => __DIR__ . '/fields/form-fields.yml',
-  'fields/form-entries' => __DIR__ . '/fields/form-entries.yml',
   'fields/form-field-basic' => __DIR__ . '/fields/form-field-basic.yml',
   'fields/form-field-placeholder' =>
     __DIR__ . '/fields/form-field-placeholder.yml',
