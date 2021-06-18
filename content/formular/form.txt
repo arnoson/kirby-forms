@@ -2,7 +2,7 @@ Title: Formular
 
 ----
 
-Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"name":"number","label":"","required":"false","validators":"[\"num\"]","min":10,"max":20,"step":"","default":null,"placeholder":""},"id":"4d46a793-1ffc-417e-817c-8c4bb4a06a16","isHidden":false,"type":"form-field-number"}],"id":"3cf95b1a-5e4e-4724-9e33-3c97da808704","width":"1\/1"}],"id":"d208d57b-676c-46eb-8ae8-e0e81dd6793c"},{"attrs":[],"columns":[{"blocks":[{"content":{"name":"Checkboxes","label":"","required":"false","default":"","options":[{"value":"one","text":""},{"value":"two","text":""}]},"id":"38a0b653-dbb2-4a53-a5a9-0f5bf6cdf2e0","isHidden":false,"type":"form-field-radio"}],"id":"4cff2857-7867-4b70-95cf-350ff857e613","width":"1\/1"}],"id":"ec1fc26e-3c81-43ff-bf37-6425f7759d3f"}]
+Form-fields: []
 
 ----
 
