@@ -60,7 +60,7 @@ export default {
 
   data() {
     return {
-      pagination: { start: 1, end: 2 }
+      pagination: { start: 1, end: 20 }
     }
   },
 
