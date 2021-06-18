@@ -83,6 +83,10 @@ class KirbyForms {
     }
   }
 
+  /**
+   * @param \Kirby\Cms\Page $formPage
+   * @param \Uniform\Form $form
+   */
   function processRequest($formPage, $form) {
     if (
       kirby()
