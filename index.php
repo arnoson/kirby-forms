@@ -1,7 +1,5 @@
 <?php
 
-use Kirby\Data\Yaml;
-
 require_once __DIR__ . '/lib/KirbyForms.php';
 require_once __DIR__ . '/lib/helpers.php';
 require_once __DIR__ . '/lib/SaveYamlAction.php';
@@ -11,51 +9,24 @@ function kirbyForms() {
 }
 
 \Kirby\Cms\App::plugin('arnoson/kirby-forms', [
-  'blueprints' => require __DIR__ . '/blueprints/index.php',
-  'snippets' => require __DIR__ . '/snippets/index.php',
-  'controllers' => require __DIR__ . '/controllers/index.php',
-  'fields' => [
-    'form-entries' => [
-      'props' => [
-        'value' => function ($value = null) {
-          if (is_string($value)) {
-            try {
-              $value = Yaml::decode($value);
-            } catch (\Exception $e) {
-              $value = null;
-            }
-          }
-          return $value ?? [];
-        },
-        'columns' => function () {
-          $columns = [];
-
-          foreach (
-            $this->model()
-              ->form_fields()
-              ->toLayouts()
-            as $layout
-          ) {
-            foreach ($layout->columns() as $column) {
-              foreach ($column->blocks() as $field) {
-                array_push($columns, [
-                  'name' => $field->name()->value(),
-                  'label' => $field->label()->value(),
-                ]);
-              }
-            }
-          }
-
-          return $columns;
-        },
-      ],
-      'save' => function ($value = null) {
-        return Yaml::encode($value);
-      },
-    ],
-  ],
+  'blueprints' => require __DIR__ . '/plugin/blueprints/index.php',
+  'snippets' => require __DIR__ . '/plugin/snippets/index.php',
+  'controllers' => require __DIR__ . '/plugin/controllers/index.php',
+  'fields' => require __DIR__ . '/plugin/fields/index.php',
+  'translations' => require __DIR__ . '/plugin/translations/index.php',
 
   'options' => [
+    // Wether or not to use client validation (in addition to server-side
+    // validation done by Kirby Uniform).
+    'clientValidation' => true,
+
+    // How many columns to use for the grid that determines the layout of the
+    // form. see: https://getkirby.com/docs/reference/panel/fields/layout#calculate-the-column-span-value
+    'gridColumns' => 12,
+
+    // Wether or not to use the `autocomplete` attribute for the form element.
+    'autoComplete' => false,
+
     // The email sent to you when the form has received a new registration.
     'notificationEmail' => [
       'active' => false,
@@ -63,24 +34,13 @@ function kirbyForms() {
       'from' => null,
       'subject' => 'New registration in {{form_name}}',
     ],
+
     // The confirmation email that will be sent to the submitter.
     'confirmationEmail' => [
       'active' => false,
       'from' => null,
       'replyTo' => null, // Uses `from` if empty.
       'subject' => 'Thank you for your registration!',
-    ],
-  ],
-
-  'translations' => [
-    'en' => [
-      'forms-json-save-error' => 'An error occurred while saving the form data',
-      'arnoson.forms.no-entries' => 'No entries yet',
-    ],
-    'de' => [
-      'forms-json-save-error' =>
-        'Beim Speichern der Formulardaten ist ein Fehler aufgetreten',
-      'arnoson.forms.no-entries' => 'Keine Einträge',
     ],
   ],
 ]);

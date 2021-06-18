@@ -2,13 +2,13 @@
 $formPage ??= $page;
 $submitWasSuccessful = (params()['submit'] ?? null) == 'success';
 
-$clientValidation ??= true;
+$clientValidation ??= option('arnoson.kirby-forms.clientValidation');
 $showOldValues ??= true;
 $submit ??= $formPage->form_submit_label();
 $success ??= $formPage->form_success_message();
 $error ??= true;
-$gridColumns ??= 6;
-$autoComplete ??= false;
+$gridColumns ??= option('arnoson.kirby-forms.gridColumns');
+$autoComplete ??= option('arnoson.kirby-forms.autoComplete');
 ?>
 
 <?php if ($submitWasSuccessful): ?>

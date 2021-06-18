@@ -31,7 +31,7 @@ class SaveYamlAction extends Action {
    */
   protected function handleException($e) {
     $error = $e->getMessage();
-    $message = I18n::translate('forms-json-save-error');
+    $message = I18n::translate('arnoson.kirby-forms.save-error');
     $message = option('debug') ? "$message: $error" : "$message.";
     $this->fail($message);
   }

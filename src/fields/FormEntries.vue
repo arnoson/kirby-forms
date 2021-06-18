@@ -13,7 +13,7 @@
       </label>
     </header>
     <k-empty v-if="!entries.length" icon="list-bullet">{{
-      $t('arnoson.forms.no-entries')
+      $t('arnoson.kirby-forms.no-entries')
     }}</k-empty>
     <keep-alive v-else>
       <form-entries-table

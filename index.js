@@ -9996,7 +9996,7 @@ exports.default = _default;
       _vm._v(" "),
       !_vm.entries.length
         ? _c("k-empty", { attrs: { icon: "list-bullet" } }, [
-            _vm._v(_vm._s(_vm.$t("arnoson.forms.no-entries")))
+            _vm._v(_vm._s(_vm.$t("arnoson.kirby-forms.no-entries")))
           ])
         : _c(
             "keep-alive",

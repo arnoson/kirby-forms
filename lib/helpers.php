@@ -36,8 +36,10 @@ function formFieldAttributes(
   if ($clientValidation) {
     $attributes = array_merge($attributes, [
       'required' => $field->required()->toBool(),
-      'minlength' => fieldNotEmpty($field->min()),
-      'maxlength' => fieldNotEmpty($field->max()),
+      'min' => fieldNotEmpty($field->min()),
+      'max' => fieldNotEmpty($field->max()),
+      'minlength' => fieldNotEmpty($field->minLength()),
+      'maxlength' => fieldNotEmpty($field->maxLength()),
       'pattern' => $field->pattern()->isEmpty()
         ? null
         : // Strip slashes for use in html input.

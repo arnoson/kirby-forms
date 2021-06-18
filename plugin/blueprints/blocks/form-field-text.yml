@@ -2,11 +2,11 @@ name: Text
 icon: ✏️
 fields:
   extends: fields/form-field-basic
-  min:
-    extends: fields/form-field-min
+  min_length:
+    extends: fields/form-field-min-length
     width: 1/6
-  max:
-    extends: fields/form-field-max
+  max_length:
+    extends: fields/form-field-max-length
     width: 1/6
   default:
     extends: fields/form-field-default
