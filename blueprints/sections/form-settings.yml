@@ -35,6 +35,12 @@ fields:
     width: 7/12
     when:
       form_success_type: true
+  form_submit_label:
+    type: text
+    default: Submit
+    label:
+      en: Submit Button
+      de: Absendebutton
   form_fields_error_message:
     type: writer
     label:

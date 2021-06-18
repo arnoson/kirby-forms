@@ -1,4 +1,6 @@
-name: Form
+title:
+  en: Form
+  de: Formular
 
 columns:
   - width: 7/12

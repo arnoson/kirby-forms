@@ -18,6 +18,10 @@ Form-success-page:
 
 ----
 
+Form-submit-label: Submit
+
+----
+
 Form-fields-error-message: Please fill in all fields correctly.
 
 ----
@@ -25,10 +29,6 @@ Form-fields-error-message: Please fill in all fields correctly.
 Form-entries:
 
 - 
-  first_name: Arno
-  last_name: Son
-  Checkboxes: two
-- 
-  first_name: Arno
-  last_name: Son
-  Checkboxes: two
+  first_name: My
+  last_name: Name
+  Checkboxes: one

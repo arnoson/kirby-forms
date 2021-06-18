@@ -4,10 +4,11 @@ $submitWasSuccessful = (params()['submit'] ?? null) == 'success';
 
 $clientValidation ??= true;
 $showOldValues ??= true;
-$submit ??= 'Submit';
+$submit ??= $formPage->form_submit_label();
 $success ??= $formPage->form_success_message();
 $error ??= true;
 $gridColumns ??= 6;
+$autoComplete ??= false;
 ?>
 
 <?php if ($submitWasSuccessful): ?>
@@ -15,7 +16,11 @@ $gridColumns ??= 6;
 <?php snippet('form-success', ['success' => $success]); ?>
 <?php endif; ?>
 <?php else: ?>
-<form action="<?= $formPage->url() ?>" method="POST">
+<form <?= attr([
+  'action' => $formPage->url(),
+  'method' => 'POST',
+  'autocomplete' => $autoComplete ? 'on' : 'off',
+]) ?>>
   <?php snippet('form-fields', [
     'formPage' => $page,
     'gridColumns' => $gridColumns,

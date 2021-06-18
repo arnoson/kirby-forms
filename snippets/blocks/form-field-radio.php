@@ -1,4 +1,3 @@
-<?php dump($block->default()->value()); ?>
 <fieldset>
   <legend><?= $label ?></legend>
   <?php foreach ($block->options()->toStructure() as $option): ?>
