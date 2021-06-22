@@ -11,6 +11,11 @@ A flexible form builder and handler based on Kirby's layout und block fields and
 - 📬 Send confirmation and notification emails
 - 🔗 Use Post/Redirect/Get pattern to avoid multiple submission
 
+## Demo
+
+https://user-images.githubusercontent.com/15122993/122928073-cd0adc80-d369-11eb-8a02-4d5275cc5da9.mp4
+
+
 ## Installation
 
 Make sure you have [Kirby Uniform](https://github.com/mzur/kirby-uniform/) installed, then install the plugin using Composer:
