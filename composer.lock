@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98ebff297a420773c5958e7a0e192527",
+    "content-hash": "fdcc3c13a4c335eadbb07c101d7e3640",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -244,41 +244,6 @@
                 }
             ],
             "time": "2020-12-28T12:54:39+00:00"
-        },
-        {
-            "name": "jg/kirby-fields-block",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jongacnik/kirby-fields-block.git",
-                "reference": "ec5e8d98dfe3ca507d9c48b599526a7fdfbad8aa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jongacnik/kirby-fields-block/zipball/ec5e8d98dfe3ca507d9c48b599526a7fdfbad8aa",
-                "reference": "ec5e8d98dfe3ca507d9c48b599526a7fdfbad8aa",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.1"
-            },
-            "type": "kirby-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jon Gacnik",
-                    "email": "jon@folderstudio.com"
-                }
-            ],
-            "description": "Kirby Fields Block",
-            "support": {
-                "issues": "https://github.com/jongacnik/kirby-fields-block/issues",
-                "source": "https://github.com/jongacnik/kirby-fields-block/tree/v1.0.1"
-            },
-            "time": "2021-05-18T18:44:15+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
