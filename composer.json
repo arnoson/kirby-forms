@@ -1,6 +1,6 @@
 {
   "name": "arnoson/kirby-forms",
-  "description": "Kirby Example Plugin",
+  "description": "Form builder and handler for Kirby 3",
   "type": "kirby-plugin",
   "license": "MIT",
   "authors": [
