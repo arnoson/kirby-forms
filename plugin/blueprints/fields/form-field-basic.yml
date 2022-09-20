@@ -1,12 +1,15 @@
 type: group
 fields:
   name:
-    type: text
+    type: slug
     placeholder:
       en: field_name
       de: feld_name
     required: true
     width: 5/12
+    wizard:
+      field: label
+      text: Create from label
   label:
     type: text
     label:
