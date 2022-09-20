@@ -9,10 +9,15 @@
     }
   ],
   "require": {
-    "getkirby/composer-installer": "^1.1"
+    "getkirby/composer-installer": "^1.2"
   },
   "require-dev": {
-    "getkirby/cms": "^3",
-    "mzur/kirby-uniform": "^4.0"
+    "getkirby/cms": "^3.7",
+    "mzur/kirby-uniform": "^5.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
   }
 }
