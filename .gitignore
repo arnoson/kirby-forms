@@ -11,6 +11,7 @@ node_modules/
 .lock
 kirby
 vendor
+index.dev.mjs
 
 /public/media/*
 !/public/media/index.html

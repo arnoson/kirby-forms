@@ -1,15 +1,17 @@
-import previews from './previews/*.vue'
-import FormEntries from './fields/FormEntries.vue'
-import { toDashCase } from './utils'
+import { kirbyup } from 'kirbyup/plugin'
+import FormEntries from './fields/form-entries.vue'
 
-const blocks = Object.fromEntries(
-  Object.entries(previews).map(([key, value]) => [
-    toDashCase(key),
-    value.default
-  ])
-)
+// import previews from './previews/*.vue'
+// import { toDashCase } from './utils'
 
-panel.plugin('arnoson/kirby-forms', {
-  blocks,
+// const blocks = Object.fromEntries(
+//   Object.entries(previews).map(([key, value]) => [
+//     toDashCase(key),
+//     value.default
+//   ])
+// )
+
+window.panel.plugin('arnoson/kirby-forms', {
+  blocks: kirbyup.import('./previews/*.vue'),
   fields: { 'form-entries': FormEntries }
 })

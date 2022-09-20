@@ -1,4 +1,5 @@
 <template>
+
   <component
     :is="component"
     class="arnoson-forms-preview"
@@ -10,11 +11,16 @@
     :options="options"
     :empty="empty"
   />
+
 </template>
 
 <script>
 export default {
   props: ['content'],
+
+  mounted() {
+    console.log(this.content)
+  },
 
   computed: {
     required() {
@@ -48,3 +54,4 @@ export default {
   pointer-events: none;
 }
 </style>
+

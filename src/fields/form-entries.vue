@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import FormEntriesTable from '../components/FormEntriesTable.vue'
-import FormEntryTable from '../components/FormEntryTable.vue'
+import FormEntriesTable from '../components/form-entries-table.vue'
+import FormEntryTable from '../components/form-entry-table.vue'
 export default {
   props: ['value', 'columns', 'label'],
 

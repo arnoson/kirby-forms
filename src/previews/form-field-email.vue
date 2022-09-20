@@ -1,10 +1,11 @@
 <script>
-import FormField from './FormField.vue'
+import FormField from './form-field.vue'
 export default {
   extends: FormField,
 
   computed: {
-    component: () => 'k-radio-field'
+    component: () => 'k-email-field'
   }
 }
 </script>
+
