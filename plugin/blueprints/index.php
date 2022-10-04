@@ -1,34 +1,68 @@
-<?php return [
-  'blocks/form-field-text' => __DIR__ . '/blocks/form-field-text.yml',
-  'blocks/form-field-textarea' => __DIR__ . '/blocks/form-field-textarea.yml',
-  'blocks/form-field-number' => __DIR__ . '/blocks/form-field-number.yml',
-  'blocks/form-field-email' => __DIR__ . '/blocks/form-field-email.yml',
-  'blocks/form-field-tel' => __DIR__ . '/blocks/form-field-tel.yml',
-  'blocks/form-field-date' => __DIR__ . '/blocks/form-field-date.yml',
-  'blocks/form-field-time' => __DIR__ . '/blocks/form-field-time.yml',
-  'blocks/form-field-url' => __DIR__ . '/blocks/form-field-url.yml',
-  'blocks/form-field-checkboxes' =>
-    __DIR__ . '/blocks/form-field-checkboxes.yml',
-  'blocks/form-field-radio' => __DIR__ . '/blocks/form-field-radio.yml',
-  'blocks/form-field-select' => __DIR__ . '/blocks/form-field-select.yml',
+<?php
 
-  'fields/form-fields' => __DIR__ . '/fields/form-fields.yml',
-  'fields/form-field-basic' => __DIR__ . '/fields/form-field-basic.yml',
-  'fields/form-field-placeholder' =>
-    __DIR__ . '/fields/form-field-placeholder.yml',
-  'fields/form-field-pattern' => __DIR__ . '/fields/form-field-pattern.yml',
-  'fields/form-field-min' => __DIR__ . '/fields/form-field-min.yml',
-  'fields/form-field-max' => __DIR__ . '/fields/form-field-max.yml',
-  'fields/form-field-min-length' =>
-    __DIR__ . '/fields/form-field-min-length.yml',
-  'fields/form-field-max-length' =>
-    __DIR__ . '/fields/form-field-max-length.yml',
-  'fields/form-field-default' => __DIR__ . '/fields/form-field-default.yml',
+$blueprints = [];
+foreach (glob(__DIR__ . '/**/*.yml') as $file) {
+  $category = basename(dirname($file));
+  $name = basename($file, '.yml');
+  $blueprints["$category/$name"] = $file;
+}
 
-  'sections/form-fields' => __DIR__ . '/sections/form-fields.yml',
-  'sections/form-settings' => __DIR__ . '/sections/form-settings.yml',
-  'sections/form-entries' => __DIR__ . '/sections/form-entries.yml',
+return array_merge($blueprints, [
+  'sections/form-entries' => function ($kirby) {
+    $url = $kirby->urls()->current();
+    preg_match('/\/pages\/([a-zA-Z0-9+-]+)\/?/', $url, $result);
+    $slug = str_replace('+', '/', $result[1]);
+    $formPage =
+      page($slug) ??
+      site()
+        ->index()
+        ->drafts()
+        ->find($slug);
 
-  'pages/form' => __DIR__ . '/pages/form.yml',
-  'pages/forms' => __DIR__ . '/pages/forms.yml',
-];
+    $blueprint = [
+      'type' => 'fields',
+      'fields' => ['form_entries' => []],
+    ];
+
+    if (!$formPage) {
+      $blueprint['fields']['form_entries'] = [
+        'type' => 'info',
+        'theme' => 'negative',
+        'text' => "Couldn't find page $slug",
+      ];
+      return $blueprint;
+    }
+
+    $fields = [];
+    foreach ($formPage->form_fields()->toLayouts() as $layout) {
+      foreach ($layout->columns() as $column) {
+        foreach ($column->blocks() as $block) {
+          $content = $block->content();
+          $fields[$content->name()->value()] = array_merge(
+            $block->content()->toArray(),
+            [
+              'type' => explode('-', $block->type())[2],
+              'required' => $content->required()->toBool(),
+            ],
+          );
+        }
+      }
+    }
+
+    if (empty($fields)) {
+      $blueprint['fields']['form_entries'] = [
+        'label' => 'Entries',
+        'type' => 'info',
+        'text' => 'No fields yet',
+      ];
+      return $blueprint;
+    }
+
+    $blueprint['fields']['form_entries'] = [
+      'label' => 'Entries',
+      'type' => 'structure',
+      'fields' => $fields,
+    ];
+    return $blueprint;
+  },
+]);
