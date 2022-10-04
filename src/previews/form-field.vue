@@ -18,10 +18,6 @@
 export default {
   props: ['content'],
 
-  mounted() {
-    console.log(this.content)
-  },
-
   computed: {
     required() {
       return this.content.required
@@ -49,9 +45,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .arnoson-forms-preview {
   pointer-events: none;
+
+  &.required .k-field-label::after {
+    content: '*';
+    padding-left: .25rem;
+    color: var(--color-gray-500);
+  }
 }
 </style>
 
