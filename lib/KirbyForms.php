@@ -17,8 +17,9 @@ class KirbyForms {
    */
   function formRules($formPage): array {
     $formRules = [
-      // `form_name` is a hidden field we send with every form.
+      // `form_name` and `form_slug` are hidden fields we send with every form.
       'form_name' => [],
+      'form_slug' => [],
     ];
     foreach ($formPage->form_fields()->toLayouts() as $layout) {
       foreach ($layout->columns() as $column) {
@@ -94,6 +95,9 @@ class KirbyForms {
         ->is('POST')
     ) {
       $form->SaveYamlAction();
+      $form->logAction([
+        'file' => kirby()->root() . '/messages.log',
+      ]);
       $this->sendNotificationEmail($form);
       $this->sendConfirmationEmail($form);
 

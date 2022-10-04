@@ -28,6 +28,7 @@ $autoComplete ??= option('arnoson.kirby-forms.autoComplete');
     'showOldValues' => $showOldValues,
   ]); ?>
   <input type="hidden" name="form_name" value="<?= $formPage->title() ?>" />
+  <input type="hidden" name="form_slug" value="<?= $formPage->slug() ?>" />
   <?= csrf_field() ?>
   <?= honeypot_field() ?>
   <button type="submit"><?= $submit ?></button>

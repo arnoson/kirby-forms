@@ -6,18 +6,20 @@ use Kirby\Toolkit\I18n;
 class SaveYamlAction extends Action {
   public function perform() {
     try {
-      $page = page();
-      $entries = $page->form_entries()->toData('yaml');
-
-      // `form_name` is only used as a template variable for the email subject
-      // so we can omit it before saving the data.
       $data = $this->form->data();
+      $formPage = page($data['form_slug']);
+
+      // We don't need `form_slug` and `form_name` (used for email subject)
+      // anymore.
       unset($data['form_name']);
-      array_push($entries, $data);
+      unset($data['form_slug']);
+
+      $entries = $formPage->form_entries()->toData('yaml');
+      $entries[] = $data;
 
       kirby()->impersonate(
         'kirby',
-        fn() => $page->update([
+        fn() => $formPage->update([
           'form_entries' => \Kirby\Data\Yaml::encode($entries),
         ]),
       );
