@@ -1,5 +1,7 @@
 <?php
 
+use Kirby\Data\Yaml;
+
 require_once __DIR__ . '/lib/KirbyForms.php';
 require_once __DIR__ . '/lib/helpers.php';
 require_once __DIR__ . '/lib/SaveYamlAction.php';
@@ -12,9 +14,7 @@ function kirbyForms() {
   'blueprints' => require __DIR__ . '/plugin/blueprints/index.php',
   'snippets' => require __DIR__ . '/plugin/snippets/index.php',
   'controllers' => require __DIR__ . '/plugin/controllers/index.php',
-  'fields' => require __DIR__ . '/plugin/fields/index.php',
   'translations' => require __DIR__ . '/plugin/translations/index.php',
-
   'options' => [
     // Wether or not to use client validation (in addition to server-side
     // validation done by Kirby Uniform).
