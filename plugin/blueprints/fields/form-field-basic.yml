@@ -1,15 +1,5 @@
 type: group
 fields:
-  name:
-    type: slug
-    placeholder:
-      en: field_name
-      de: feld_name
-    required: true
-    width: 5/12
-    wizard:
-      field: label
-      text: Create from label
   label:
     type: text
     label:
@@ -19,6 +9,18 @@ fields:
       en: Field Name
       de: Feld Name
     width: 5/12
+  name:
+    type: slug
+    label: Identifier
+    sync: label
+    placeholder:
+      en: field_name
+      de: feld_name
+    required: true
+    width: 5/12
+    wizard:
+      field: label
+      text: Create from label
   required:
     type: toggle
     label:

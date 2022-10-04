@@ -1,10 +1,10 @@
 {
   "scripts": {
     "dev": "concurrently \"npm:server\" \"npm:watch\" \"npm:mail-hog\"",
-    "mail-hog": "~/go/bin/MailHog",
-    "server": "php -S localhost:8888 -t public server.php",
+    "mail-hog": "wsl ~/go/bin/MailHog",
+    "server": "php -q -S localhost:8888 -t public server.php",
     "watch": "kirbyup serve src/index.js",
-    "build": "parcel build src/index.js --no-source-maps --experimental-scope-hoisting -d ./"
+    "build": "kirbyup src/index.js"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.19.1",

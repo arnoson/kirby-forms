@@ -11,12 +11,12 @@ fields:
       de: Bestätigung
     width: 5/12
     text:
-      en:
-        - 'Message'
-        - 'Page'
-      de:
-        - 'Nachricht'
-        - 'Seite'
+      -
+        en: Message
+        de: Nachricht
+      -
+        en: Page
+        de: Seite
   form_success_message:
     type: writer
     label:

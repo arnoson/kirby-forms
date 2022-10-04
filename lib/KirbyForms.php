@@ -95,9 +95,6 @@ class KirbyForms {
         ->is('POST')
     ) {
       $form->SaveYamlAction();
-      $form->logAction([
-        'file' => kirby()->root() . '/messages.log',
-      ]);
       $this->sendNotificationEmail($form);
       $this->sendConfirmationEmail($form);
 

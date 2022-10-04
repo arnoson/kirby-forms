@@ -1,0 +1,29 @@
+Title: Form
+
+----
+
+Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"First Name","name":"first-name","required":"false","min_length":null,"max_length":null,"default":"","placeholder":"","pattern":""},"id":"fa8a6e4a-603a-4f3f-a241-ab8f7b99b161","isHidden":false,"type":"form-field-text"}],"id":"d056ce5c-f5cd-41f2-9abe-92e55201cdfc","width":"1\/2"},{"blocks":[{"content":{"label":"Last Name","name":"last-name","required":"false","min_length":null,"max_length":null,"default":"","placeholder":"","pattern":""},"id":"7b89b19a-6e4e-41bf-8a72-c6f0273d996a","isHidden":false,"type":"form-field-text"}],"id":"992f9abf-68dd-447c-aa0b-19b949fbbea7","width":"1\/2"}],"id":"ea3ee3c2-a690-443c-8f95-1a8e2572dd06"}]
+
+----
+
+Form-success-type: false
+
+----
+
+Form-success-message: Thank you for the registration!
+
+----
+
+Form-success-page: 
+
+----
+
+Form-submit-label: Submit
+
+----
+
+Form-fields-error-message: Please fill in all fields correctly.
+
+----
+
+Form-entries:
