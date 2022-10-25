@@ -566,16 +566,16 @@
         },
         {
             "name": "mzur/kirby-uniform",
-            "version": "v5.0.2",
+            "version": "v5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mzur/kirby-uniform.git",
-                "reference": "d65087e686585a10b387bca9d1c064f4f8102298"
+                "reference": "6c24c255084bf0659037b61727f3b0c4ebc2292f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/d65087e686585a10b387bca9d1c064f4f8102298",
-                "reference": "d65087e686585a10b387bca9d1c064f4f8102298",
+                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/6c24c255084bf0659037b61727f3b0c4ebc2292f",
+                "reference": "6c24c255084bf0659037b61727f3b0c4ebc2292f",
                 "shasum": ""
             },
             "require": {
@@ -584,7 +584,7 @@
             "require-dev": {
                 "getkirby/cms": "^3.5",
                 "mzur/kirby-defuse-session": "^1.0",
-                "phpunit/phpunit": "^6.0"
+                "phpunit/phpunit": "^9.0"
             },
             "type": "library",
             "extra": {
@@ -625,7 +625,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-01-22T19:13:14+00:00"
+            "time": "2022-09-26T18:26:12+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
