@@ -26,6 +26,12 @@ function kirbyForms() {
     // Wether or not to use the `autocomplete` attribute for the form element.
     'autoComplete' => false,
 
+    // Wether or not to use uniform's session store action. If enabled,
+    // submitted forms are available as `kirby()->session()->get(formId)` where
+    // `formId` can be obtained with `KirbyForms::getFormId($yourFormPage)`
+    // https://kirby-uniform.readthedocs.io/en/latest/actions/session-store/
+    'sessionStore' => false,
+
     // The email sent to you when the form has received a new registration.
     'notificationEmail' => [
       'active' => false,

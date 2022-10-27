@@ -9,6 +9,10 @@ class KirbyForms {
     return self::$instance ??= new self();
   }
 
+  public static function getFormId($page) {
+    return str_replace('/', '+', $page->id());
+  }
+
   /**
    * Generate the form rules for the specified form page for use with
    * Kirby Uniform.
@@ -89,24 +93,27 @@ class KirbyForms {
    * @param \Uniform\Form $form
    */
   function processRequest($formPage, $form) {
-    if (
-      kirby()
-        ->request()
-        ->is('POST')
-    ) {
-      $form->SaveYamlAction(['page' => $formPage]);
-      $this->sendNotificationEmail($form);
-      $this->sendConfirmationEmail($form);
+    $form->SaveYamlAction(['page' => $formPage]);
+    $this->sendNotificationEmail($form);
+    $this->sendConfirmationEmail($form);
 
-      if ($form->success()) {
-        // Even if no success page is set, we have to do a redirect to prevent
-        // another form submission on reload (Post/Redirect/Get pattern).
-        $successUrl =
-          fieldNotEmpty($formPage->form_success_page()->url()) ??
-          url($formPage->url(), ['params' => ['submit' => 'success']]);
+    if (option('arnoson.kirby-forms.sessionStore')) {
+      $form->sessionStoreAction(['name' => KirbyForms::getFormId($formPage)]);
+    }
 
-        go($successUrl);
-      }
+    if ($form->success()) {
+      // If we use multiple forms on a single page, we have to be able to
+      // distinguish which from was successful.
+      flash('kirby-forms.success_form_id', get('form_id'));
+
+      $successUrl = $formPage
+        ->form_success_page()
+        ->toPage()
+        ?->url();
+
+      // Even if no success page is set, we have to do a redirect to prevent
+      // another form submission on reload (Post/Redirect/Get pattern).
+      go($successUrl ?? page()->url(), 303);
     }
   }
 }

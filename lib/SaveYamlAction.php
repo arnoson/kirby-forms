@@ -11,8 +11,10 @@ class SaveYamlAction extends Action {
       $data = $this->form->data();
       $page = $this->option('page');
 
-      // We don't need `form_name` (used for email subject) anymore.
+      // We don't need `form_name` (used for email subject) and `form_id` (used
+      // to differentiate multiple forms on a single page) anymore.
       unset($data['form_name']);
+      unset($data['form_id']);
 
       $entries = $page->form_entries()->toData('yaml');
       $entries[] = $data;
