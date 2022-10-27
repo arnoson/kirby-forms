@@ -17,9 +17,9 @@ class KirbyForms {
    */
   function formRules($formPage): array {
     $formRules = [
-      // `form_name` and `form_slug` are hidden fields we send with every form.
+      // `form_name` and `form_id` are hidden fields we send with every form.
       'form_name' => [],
-      'form_slug' => [],
+      'form_id' => [],
     ];
     foreach ($formPage->form_fields()->toLayouts() as $layout) {
       foreach ($layout->columns() as $column) {

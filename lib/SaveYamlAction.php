@@ -7,12 +7,12 @@ class SaveYamlAction extends Action {
   public function perform() {
     try {
       $data = $this->form->data();
-      $formPage = page($data['form_slug']);
+      $formPage = page($data['form_id']);
 
-      // We don't need `form_slug` and `form_name` (used for email subject)
+      // We don't need `form_id` and `form_name` (used for email subject)
       // anymore.
       unset($data['form_name']);
-      unset($data['form_slug']);
+      unset($data['form_id']);
 
       $entries = $formPage->form_entries()->toData('yaml');
       $entries[] = $data;
