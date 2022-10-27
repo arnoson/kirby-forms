@@ -2,13 +2,16 @@
 $formPage ??= $page;
 $submitWasSuccessful = (params()['submit'] ?? null) == 'success';
 
-$clientValidation ??= option('arnoson.kirby-forms.clientValidation');
+$clientValidation = option('arnoson.kirby-forms.clientValidation');
 $showOldValues ??= true;
 $submit ??= $formPage->form_submit_label();
 $success ??= $formPage->form_success_message();
 $error ??= true;
 $gridColumns ??= option('arnoson.kirby-forms.gridColumns');
 $autoComplete ??= option('arnoson.kirby-forms.autoComplete');
+
+$form = new Uniform\Form(kirbyForms()->formRules($formPage));
+kirbyForms()->processRequest($formPage, $form);
 ?>
 
 <?php if ($submitWasSuccessful): ?>
@@ -22,15 +25,13 @@ $autoComplete ??= option('arnoson.kirby-forms.autoComplete');
   'autocomplete' => $autoComplete ? 'on' : 'off',
 ]) ?>>
   <?php snippet('form-fields', [
-    'formPage' => $page,
+    'form' => $form,
+    'formPage' => $formPage,
     'gridColumns' => $gridColumns,
     'clientValidation' => $clientValidation,
     'showOldValues' => $showOldValues,
   ]); ?>
   <input type="hidden" name="form_name" value="<?= $formPage->title() ?>" />
-  <input type="hidden" name="form_id" value="<?= $formPage
-    ->uuid()
-    ->or($formPage->id()) ?>" />
   <?= csrf_field() ?>
   <?= honeypot_field() ?>
   <button type="submit"><?= $submit ?></button>

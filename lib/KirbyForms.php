@@ -94,7 +94,7 @@ class KirbyForms {
         ->request()
         ->is('POST')
     ) {
-      $form->SaveYamlAction();
+      $form->SaveYamlAction(['page' => $formPage]);
       $this->sendNotificationEmail($form);
       $this->sendConfirmationEmail($form);
 

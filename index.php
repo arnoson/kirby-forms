@@ -13,7 +13,6 @@ function kirbyForms() {
 \Kirby\Cms\App::plugin('arnoson/kirby-forms', [
   'blueprints' => require __DIR__ . '/plugin/blueprints/index.php',
   'snippets' => require __DIR__ . '/plugin/snippets/index.php',
-  'controllers' => require __DIR__ . '/plugin/controllers/index.php',
   'translations' => require __DIR__ . '/plugin/translations/index.php',
   'options' => [
     // Wether or not to use client validation (in addition to server-side

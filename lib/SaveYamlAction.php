@@ -1,25 +1,25 @@
 <?php
 
 namespace Uniform\Actions;
+
+use Error;
 use Kirby\Toolkit\I18n;
 
 class SaveYamlAction extends Action {
   public function perform() {
     try {
       $data = $this->form->data();
-      $formPage = page($data['form_id']);
+      $page = $this->option('page');
 
-      // We don't need `form_id` and `form_name` (used for email subject)
-      // anymore.
+      // We don't need `form_name` (used for email subject) anymore.
       unset($data['form_name']);
-      unset($data['form_id']);
 
-      $entries = $formPage->form_entries()->toData('yaml');
+      $entries = $page->form_entries()->toData('yaml');
       $entries[] = $data;
 
       kirby()->impersonate(
         'kirby',
-        fn() => $formPage->update([
+        fn() => $page->update([
           'form_entries' => \Kirby\Data\Yaml::encode($entries),
         ]),
       );
