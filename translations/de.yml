@@ -1,2 +1,7 @@
 arnoson.kirby-forms.save-error: Beim Speichern der Formulardaten ist ein Fehler aufgetreten
 arnoson.kirby-forms.no-entries: Keine Einträge
+arnoson.kirby-forms.success-type: Bei Erfolg anzeigen
+arnoson.kirby-forms.message: Nachricht
+arnoson.kirby-forms.page: Seite
+arnoson.kirby-forms.submit-button: Absendebutton
+arnoson.kirby-forms.error-message: Fehlermeldung

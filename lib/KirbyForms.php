@@ -103,17 +103,20 @@ class KirbyForms {
 
     if ($form->success()) {
       // If we use multiple forms on a single page, we have to be able to
-      // distinguish which from was successful.
+      // distinguish which form was successful.
       flash('kirby-forms.success_form_id', get('form_id'));
 
+      $useSuccessPage = $formPage->form_success_type()->value() === 'page';
       $successUrl = $formPage
         ->form_success_page()
         ->toPage()
         ?->url();
 
-      // Even if no success page is set, we have to do a redirect to prevent
-      // another form submission on reload (Post/Redirect/Get pattern).
-      go($successUrl ?? page()->url(), 303);
+      if ($useSuccessPage && $successUrl) {
+        go($successUrl, 303);
+      } else {
+        $form->done();
+      }
     }
   }
 }

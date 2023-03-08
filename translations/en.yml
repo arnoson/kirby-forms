@@ -1,2 +1,7 @@
 arnoson.kirby-forms.save-error: An error occurred while saving the form data
 arnoson.kirby-forms.no-entries: No entries yet
+arnoson.kirby-forms.success-type: Show on Success
+arnoson.kirby-forms.message: Message
+arnoson.kirby-forms.page: Page
+arnoson.kirby-forms.submit-button: Submit Button
+arnoson.kirby-forms.error-message: Error Message

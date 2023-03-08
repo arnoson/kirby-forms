@@ -1,49 +1,43 @@
 type: fields
 fields:
   form_success_type:
-    type: toggle
-    translations:
-      blue:
-        de: blau
-        en: blue
+    type: toggles
     label:
-      en: Success
-      de: Bestätigung
+      *: arnoson.kirby-forms.success-type
     width: 5/12
-    text:
-      -
-        en: Message
-        de: Nachricht
-      -
-        en: Page
-        de: Seite
+    default: message
+    options:
+      - value: message
+        text:
+          *: arnoson.kirby-forms.message
+        icon: text
+      - value: page
+        text:
+          *: arnoson.kirby-forms.page
+        icon: page
   form_success_message:
     type: writer
     label:
-      en: Message
-      de: Nachricht
+      *: arnoson.kirby-forms.message
     default: Thank you for the registration!
     width: 7/12
     when:
-      form_success_type: false
+      form_success_type: message
   form_success_page:
     label:
-      en: Page
-      de: Seite
+      *: arnoson.kirby-forms.page
     type: pages
     multiple: false
     width: 7/12
     when:
-      form_success_type: true
+      form_success_type: page
   form_submit_label:
     type: text
     default: Submit
     label:
-      en: Submit Button
-      de: Absendebutton
+      *: arnoson.kirby-forms.submit-button
   form_fields_error_message:
     type: writer
     label:
-      en: Error
-      de: Fehlermeldung
+      *: arnoson.kirby-forms.error-message
     default: Please fill in all fields correctly.

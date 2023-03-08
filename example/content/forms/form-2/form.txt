@@ -6,7 +6,7 @@ Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Email","nam
 
 ----
 
-Form-success-type: false
+Form-success-type: message
 
 ----
 
