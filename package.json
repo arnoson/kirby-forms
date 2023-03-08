@@ -1,8 +1,8 @@
 {
   "scripts": {
     "dev": "concurrently \"npm:server\" \"npm:watch\" \"npm:mail-hog\"",
-    "mail-hog": "wsl ~/go/bin/MailHog",
-    "server": "php -q -S localhost:8888 -t public server.php",
+    "mail-hog": "~/go/bin/MailHog",
+    "server": "php -q -S localhost:8888  -t ./example/ ./example/router.php",
     "watch": "kirbyup serve src/index.js",
     "build": "kirbyup src/index.js"
   },

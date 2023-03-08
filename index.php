@@ -11,9 +11,9 @@ function kirbyForms() {
 }
 
 \Kirby\Cms\App::plugin('arnoson/kirby-forms', [
-  'blueprints' => require __DIR__ . '/plugin/blueprints/index.php',
-  'snippets' => require __DIR__ . '/plugin/snippets/index.php',
-  'translations' => require __DIR__ . '/plugin/translations/index.php',
+  'blueprints' => require __DIR__ . '/blueprints/index.php',
+  'snippets' => require __DIR__ . '/snippets/index.php',
+  'translations' => require __DIR__ . '/translations/index.php',
   'options' => [
     // Wether or not to use client validation (in addition to server-side
     // validation done by Kirby Uniform).
