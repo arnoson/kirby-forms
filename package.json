@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.19.1",
-    "concurrently": "^6.2.0",
+    "concurrently": "^7.6.0",
     "kirbyup": "^2.0.1",
     "prettier": "^2.7.1"
   }
