@@ -2,13 +2,31 @@ title:
   en: Form
   de: Formular
 
-columns:
-  - width: 7/12
+tabs:
+  fields:
+    icon: edit
+    label:
+      *: arnoson.kirby-forms.fields 
     sections:
       form_fields: sections/form-fields
-  - width: 5/12
+  entries:
+    icon: table
     sections:
-      form_settings: sections/form-settings
-  - width: 1/1
-    sections:
-      form_entries: sections/form-entries
+      form_entries: sections/form-entries           
+  settings:
+    icon: settings
+    columns:
+      - width: 1/2
+        sections:
+          form_submit: sections/form-submit
+          form_success: sections/form-success
+          form_error: sections/form-error     
+      - width: 1/2
+        sections:
+          form_confirmation_email: sections/form-confirmation-email
+          line_1:
+            type: fields
+            fields:
+              line_1:
+                type: line
+          form_notification_email: sections/form-notification-email

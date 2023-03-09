@@ -1,5 +1,11 @@
 type: fields
 fields:
+  form_success_headline:
+    type: headline
+    label:
+      *: arnoson.kirby-forms.success
+    numbered: false
+
   form_success_type:
     type: toggles
     label:
@@ -15,6 +21,7 @@ fields:
         text:
           *: arnoson.kirby-forms.page
         icon: page
+  
   form_success_message:
     type: writer
     label:
@@ -23,6 +30,7 @@ fields:
     width: 7/12
     when:
       form_success_type: message
+  
   form_success_page:
     label:
       *: arnoson.kirby-forms.page
@@ -31,13 +39,3 @@ fields:
     width: 7/12
     when:
       form_success_type: page
-  form_submit_label:
-    type: text
-    default: Submit
-    label:
-      *: arnoson.kirby-forms.submit-button
-  form_fields_error_message:
-    type: writer
-    label:
-      *: arnoson.kirby-forms.error-message
-    default: Please fill in all fields correctly.

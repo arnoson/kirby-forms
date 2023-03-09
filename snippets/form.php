@@ -9,8 +9,8 @@ $submitSuccessful = $formId === flash('kirby-forms.success_form_id');
 $clientValidation ??= option('arnoson.kirby-forms.clientValidation');
 $showOldValues ??= true;
 $submit ??= $formPage->form_submit_label();
-$success ??= $formPage->form_success_message();
-$error ??= true;
+$successMessage ??= $formPage->form_success_message();
+$errorMessage ??= true;
 $gridColumns ??= option('arnoson.kirby-forms.gridColumns');
 $autoComplete ??= option('arnoson.kirby-forms.autoComplete');
 
@@ -23,8 +23,8 @@ if ($kirby->request()->is('POST') && get('form_id') === $formId) {
 ?>
 
 <?php if ($submitSuccessful): ?>
-<?php if ($success): ?>
-<?php snippet('form-success', ['success' => $success]); ?>
+<?php if ($successMessage): ?>
+<?php snippet('form-success', ['success' => $successMessage]); ?>
 <?php endif; ?>
 <?php else: ?>
 <form <?= attr([
@@ -46,7 +46,7 @@ if ($kirby->request()->is('POST') && get('form_id') === $formId) {
     $formPage,
   ) ?>"><?= $submit ?></button>
 </form>
-<?php if ($error): ?>
-<?php snippet('form-error', ['form' => $form, 'error' => $error]); ?>
+<?php if ($errorMessage): ?>
+<?php snippet('form-error', ['form' => $form, 'error' => $errorMessage]); ?>
 <?php endif; ?>
 <?php endif; ?>

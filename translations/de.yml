@@ -1,7 +1,19 @@
-arnoson.kirby-forms.save-error: Beim Speichern der Formulardaten ist ein Fehler aufgetreten
-arnoson.kirby-forms.no-entries: Keine Einträge
-arnoson.kirby-forms.success-type: Bei Erfolg anzeigen
+arnoson.kirby-forms.submit: Absenden
+arnoson.kirby-forms.success: Erflog
+arnoson.kirby-forms.error: Fehler
+arnoson.kirby-forms.fields: Felder
 arnoson.kirby-forms.message: Nachricht
 arnoson.kirby-forms.page: Seite
-arnoson.kirby-forms.submit-button: Absendebutton
-arnoson.kirby-forms.error-message: Fehlermeldung
+arnoson.kirby-forms.enabled: Aktiviert
+
+arnoson.kirby-forms.success-type: Zeige
+arnoson.kirby-forms.submit-button-label: Button Beschriftung
+
+arnoson.kirby-forms.confirmation-email: Bestätigungs-Email
+arnoson.kirby-forms.notification-email: Benachrichtigungs-Email
+arnoson.kirby-forms.email-from: Absender
+arnoson.kirby-forms.email-subject: Betreff
+arnoson.kirby-forms.email-content: Inhalt
+
+arnoson.kirby-forms.no-entries: Keine Einträge vorhanden
+arnoson.kirby-forms.save-error: Beim Speichern der Formulardaten ist ein Fehler aufgetreten

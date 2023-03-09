@@ -48,4 +48,15 @@ function kirbyForms() {
       'subject' => 'Thank you for your registration!',
     ],
   ],
+  'routes' => [
+    [
+      'pattern' => 'kirby-forms/email-templates',
+      'action' => function () {
+        if (!kirby()->user()) {
+          return;
+        }
+        return ['eins', 'zwei'];
+      },
+    ],
+  ],
 ]);

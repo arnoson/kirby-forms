@@ -1,0 +1,13 @@
+type: fields
+fields:
+  form_submit_headline:
+    type: headline
+    label: 
+      *: arnoson.kirby-forms.submit
+    numbered: false
+    
+  form_submit_label:
+    type: text
+    default: Submit
+    label:
+      *: arnoson.kirby-forms.submit-button-label

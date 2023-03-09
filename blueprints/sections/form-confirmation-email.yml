@@ -1,0 +1,64 @@
+type: fields
+fields:
+  confirmation_email_headline:
+    type: headline
+    label:
+      *: arnoson.kirby-forms.confirmation-email
+    numbered: false
+
+  confirmation_email_active:
+    type: toggle
+    label:
+      *: arnoson.kirby-forms.enabled
+    width: 2/12
+
+  confirmation_email_from:
+    type: email
+    label:
+      *: arnoson.kirby-forms.email-from
+    placeholder: info@your-site.com
+    width: 5/12
+    when:
+      confirmation_email_active: true
+
+  confirmation_email_subject:
+    type: text
+    label:
+      *: arnoson.kirby-forms.email-subject
+    placeholder: 'Thank you for your registration!'
+    default: 'Thank you for your registration!'
+    width: 5/12
+    when:
+      confirmation_email_active: true
+
+  confirmation_email_content_type:
+    type: toggles
+    label:
+      *: arnoson.kirby-forms.email-content
+    default: text
+    width: 1/3
+    options:
+      - value: text
+        text: Text
+        icon: text
+      - value: template
+        text: template
+        icon: template
+    when:
+      confirmation_email_active: true
+
+  confirmation_email_content_text:
+    label: Text
+    type: writer
+    width: 2/3
+    when:
+      confirmation_email_content_type: text
+      confirmation_email_active: true
+
+  confirmation_email_content_template:
+    label: Template
+    type: select
+    width: 2/3
+    when:
+      confirmation_email_content_type: template
+      confirmation_email_active: true

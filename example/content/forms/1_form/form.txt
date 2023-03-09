@@ -1,0 +1,84 @@
+Title: Form
+
+----
+
+Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Email","name":"email","required":"false","validators":"[\"email\"]","default":"","placeholder":"","pattern":""},"id":"8e609009-46ee-4556-8e33-5ccfc64aed6e","isHidden":false,"type":"form-field-email"}],"id":"b13196a2-af33-4a1a-8948-1300490e165b","width":"1\/1"}],"id":"9e6d4e16-b7a6-48be-ad7b-06d168290ddf"}]
+
+----
+
+Form-submit-label: Submit
+
+----
+
+Form-success-type: message
+
+----
+
+Form-success-message: Thank you for the registration!
+
+----
+
+Form-success-page: 
+
+----
+
+Form-fields-error-message: Please fill in all fields correctly.
+
+----
+
+Confirmation-email-active: false
+
+----
+
+Confirmation-email-from: 
+
+----
+
+Confirmation-email-subject: 
+
+----
+
+Confirmation-email-content-type: 
+
+----
+
+Confirmation-email-content-text: 
+
+----
+
+Confirmation-email-content-template: 
+
+----
+
+Notification-email-active: false
+
+----
+
+Notification-email-from: 
+
+----
+
+Notification-email-subject: 
+
+----
+
+Notification-email-content-type: 
+
+----
+
+Notification-email-content-text: 
+
+----
+
+Notification-email-content-template: 
+
+----
+
+Form-entries:
+
+- 
+  email: a@b.de
+
+----
+
+Uuid: DzEtDDzd6RKSAF7I

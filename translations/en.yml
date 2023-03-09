@@ -1,7 +1,19 @@
-arnoson.kirby-forms.save-error: An error occurred while saving the form data
-arnoson.kirby-forms.no-entries: No entries yet
-arnoson.kirby-forms.success-type: Show on Success
+arnoson.kirby-forms.submit: Submit
+arnoson.kirby-forms.success: Success
+arnoson.kirby-forms.error: Error
+arnoson.kirby-forms.fields: Fields
 arnoson.kirby-forms.message: Message
 arnoson.kirby-forms.page: Page
-arnoson.kirby-forms.submit-button: Submit Button
-arnoson.kirby-forms.error-message: Error Message
+arnoson.kirby-forms.enabled: Enabled
+
+arnoson.kirby-forms.success-type: Show
+arnoson.kirby-forms.submit-button-label: Button label
+
+arnoson.kirby-forms.confirmation-email: Confirmation Email
+arnoson.kirby-forms.notification-email: Notification Email
+arnoson.kirby-forms.email-from: From
+arnoson.kirby-forms.email-subject: Subject
+arnoson.kirby-forms.email-content: Content
+
+arnoson.kirby-forms.no-entries: No entries yet
+arnoson.kirby-forms.save-error: An error occurred while saving the form data
