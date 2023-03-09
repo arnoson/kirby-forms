@@ -12,6 +12,7 @@ arnoson.kirby-forms.submit-button-label: Button label
 arnoson.kirby-forms.confirmation-email: Confirmation Email
 arnoson.kirby-forms.notification-email: Notification Email
 arnoson.kirby-forms.email-from: From
+arnoson.kirby-forms.email-to: To
 arnoson.kirby-forms.email-subject: Subject
 arnoson.kirby-forms.email-content: Content
 

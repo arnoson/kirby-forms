@@ -12,6 +12,7 @@ arnoson.kirby-forms.submit-button-label: Button Beschriftung
 arnoson.kirby-forms.confirmation-email: Bestätigungs-Email
 arnoson.kirby-forms.notification-email: Benachrichtigungs-Email
 arnoson.kirby-forms.email-from: Absender
+arnoson.kirby-forms.email-to: Empfänger
 arnoson.kirby-forms.email-subject: Betreff
 arnoson.kirby-forms.email-content: Inhalt
 

@@ -2,6 +2,8 @@
 
 namespace arnoson\KirbyForms;
 
+use Kirby\Cms\Page;
+
 /**
  * Return the value of a field, or null if the field is empty.
  */
@@ -48,4 +50,10 @@ function formFieldAttributes(
   }
 
   return $attributes;
+}
+
+function formOption(Page $formPage, string $name) {
+  $fieldName = str_replace('.', '_', $name);
+  $option = option("arnoson.kirby-forms.$name");
+  return $formPage->$fieldName()->or($option);
 }

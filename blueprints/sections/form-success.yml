@@ -1,12 +1,12 @@
 type: fields
 fields:
-  form_success_headline:
+  success_headline:
     type: headline
     label:
       *: arnoson.kirby-forms.success
     numbered: false
 
-  form_success_type:
+  success_type:
     type: toggles
     label:
       *: arnoson.kirby-forms.success-type
@@ -20,22 +20,22 @@ fields:
       - value: page
         text:
           *: arnoson.kirby-forms.page
-        icon: page
+        icon: share
   
-  form_success_message:
+  success_text:
     type: writer
     label:
       *: arnoson.kirby-forms.message
-    default: Thank you for the registration!
+    placeholder: Thank you for the registration!
     width: 7/12
     when:
-      form_success_type: message
+      success_type: message
   
-  form_success_page:
+  success_page:
     label:
       *: arnoson.kirby-forms.page
     type: pages
     multiple: false
     width: 7/12
     when:
-      form_success_type: page
+      success_type: page

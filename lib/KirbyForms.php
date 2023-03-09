@@ -2,6 +2,9 @@
 
 namespace arnoson\KirbyForms;
 
+use Kirby\Cms\Page;
+use Kirby\Toolkit\Str;
+
 class KirbyForms {
   protected static $instance = null;
 
@@ -10,16 +13,14 @@ class KirbyForms {
   }
 
   public static function getFormId($page) {
-    return str_replace('/', '+', $page->id());
+    return Str::slug($page->uuid());
   }
 
   /**
    * Generate the form rules for the specified form page for use with
    * Kirby Uniform.
-   *
-   * @param Kirby\Cms\Page $formPage
    */
-  function formRules($formPage): array {
+  function formRules(Page $formPage): array {
     $formRules = [
       // `form_name` and `form_id` are hidden fields we send with every form.
       'form_name' => [],
@@ -50,54 +51,26 @@ class KirbyForms {
     return $formRules;
   }
 
-  /**
-   * Send a notification email containing the registration data.
-   * @param Uniform\Form $form
-   */
-  function sendNotificationEmail($form) {
-    if (option('arnoson.kirby-forms.notificationEmail.active')) {
-      $form->emailAction([
-        'to' => option('arnoson.kirby-forms.notificationEmail.to'),
-        'from' => option('arnoson.kirby-forms.notificationEmail.from'),
-        'subject' => option('arnoson.kirby-forms.notificationEmail.subject'),
-      ]);
-    }
-  }
-
-  /**
-   * Send a confirmation mail to the user. An email field has be present in the
-   * form data!
-   * @param Uniform\Form $form
-   */
-  function sendConfirmationEmail($form) {
-    if (
-      option('arnoson.kirby-forms.confirmationEmail.active') &&
-      $form->data('email')
-    ) {
-      $from = option('arnoson.kirby-forms.confirmationEmail.from');
-      $form->emailAction([
-        'to' => $form->data('email'),
-        'from' => $from,
-        'replyTo' => option(
-          'arnoson.kirby-forms.confirmationEmail.replyTo',
-          $from,
-        ),
-        'subject' => option('arnoson.kirby-forms.confirmationEmail.subject'),
-        'template' => 'form-registration-success',
-      ]);
-    }
-  }
-
-  /**
-   * @param \Kirby\Cms\Page $formPage
-   * @param \Uniform\Form $form
-   */
   function processRequest($formPage, $form) {
     $form->SaveYamlAction(['page' => $formPage]);
-    $this->sendNotificationEmail($form);
-    $this->sendConfirmationEmail($form);
 
-    if (option('arnoson.kirby-forms.sessionStore')) {
+    if (formOption($formPage, 'confirmationEmail.enabled')->toBool()) {
+      $form->emailAction([
+        'to' => $form->data('email'),
+        'from' => formOption($formPage, 'confirmationEmail.from'),
+        'subject' => formOption($formPage, 'confirmationEmail.subject'),
+      ]);
+    }
+
+    if (formOption($formPage, 'notificationEmail.enabled')->toBool()) {
+      $form->emailAction([
+        'to' => formOption($formPage, 'notificationEmail.to'),
+        'from' => formOption($formPage, 'notificationEmail.from'),
+        'subject' => formOption($formPage, 'notificationEmail.subject'),
+      ]);
+    }
+
+    if (formOption($formPage, 'sessionStore')->toBool()) {
       $form->sessionStoreAction(['name' => KirbyForms::getFormId($formPage)]);
     }
 
@@ -106,13 +79,12 @@ class KirbyForms {
       // distinguish which form was successful.
       flash('kirby-forms.success_form_id', get('form_id'));
 
-      $useSuccessPage = $formPage->form_success_type()->value() === 'page';
-      $successUrl = $formPage
-        ->form_success_page()
+      $successType = formOption($formPage, 'success.type')->value();
+      $successUrl = formOption($formPage, 'success.page')
         ->toPage()
         ?->url();
 
-      if ($useSuccessPage && $successUrl) {
+      if ($successType === 'page' && $successUrl) {
         go($successUrl, 303);
       } else {
         $form->done();

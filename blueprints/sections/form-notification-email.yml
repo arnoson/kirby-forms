@@ -1,27 +1,27 @@
 type: fields
 fields:
-  notification_email_headline:
+  notificationEmail_headline:
     type: headline
     label:
       *: arnoson.kirby-forms.notification-email
     numbered: false
 
-  notification_email_active:
+  notificationEmail_enabled:
     type: toggle
     label:
       *: arnoson.kirby-forms.enabled
     width: 2/12
 
-  notification_email_from:
+  notificationEmail_to:
     type: email
     label:
-      *: arnoson.kirby-forms.email-from
+      *: arnoson.kirby-forms.email-to
     placeholder: info@your-site.com
     width: 5/12
     when:
-      notification_email_active: true
+      notificationEmail_enabled: true
 
-  notification_email_subject:
+  notificationEmail_subject:
     type: text
     label:
       *: arnoson.kirby-forms.email-subject
@@ -29,9 +29,9 @@ fields:
     default: 'Thank you for your registration!'
     width: 5/12
     when:
-      notification_email_active: true
+      notificationEmail_enabled: true
 
-  notification_email_content_type:
+  notificationEmail_content_type:
     type: toggles
     label:
       *: arnoson.kirby-forms.email-content
@@ -45,20 +45,20 @@ fields:
         text: template
         icon: template
     when:
-      notification_email_active: true
+      notificationEmail_enabled: true
 
-  notification_email_content_text:
+  notificationEmail_content_text:
     label: Text
     type: writer
     width: 2/3
     when:
-      notification_email_content_type: text
-      notification_email_active: true
+      notificationEmail_content_type: text
+      notificationEmail_enabled: true
 
-  notification_email_content_template:
+  notificationEmail_content_template:
     label: Template
     type: select
     width: 2/3
     when:
-      notification_email_content_type: template
-      notification_email_active: true
+      notificationEmail_content_type: template
+      notificationEmail_enabled: true
