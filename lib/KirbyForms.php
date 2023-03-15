@@ -59,6 +59,8 @@ class KirbyForms {
         'to' => $form->data('email'),
         'from' => formOption($formPage, 'confirmationEmail.from'),
         'subject' => formOption($formPage, 'confirmationEmail.subject'),
+        'template' => formOption($formPage, 'confirmationEmail.template'),
+        'body' => formOption($formPage, 'confirmationEmail.body'),
       ]);
     }
 
@@ -67,6 +69,8 @@ class KirbyForms {
         'to' => formOption($formPage, 'notificationEmail.to'),
         'from' => formOption($formPage, 'notificationEmail.from'),
         'subject' => formOption($formPage, 'notificationEmail.subject'),
+        'template' => formOption($formPage, 'notificationEmail.template'),
+        'body' => formOption($formPage, 'notificationEmail.body'),
       ]);
     }
 
