@@ -17,6 +17,7 @@ fields:
     label:
       *: arnoson.kirby-forms.email-from
     placeholder: info@your-site.com
+    required: true
     width: 5/12
     when:
       confirmationEmail_enabled: true
@@ -26,7 +27,7 @@ fields:
     label:
       *: arnoson.kirby-forms.email-subject
     placeholder: 'Thank you for your registration!'
-    default: 'Thank you for your registration!'
+    required: true
     width: 5/12
     when:
       confirmationEmail_enabled: true
@@ -50,6 +51,7 @@ fields:
   confirmationEmail_content_text:
     label: Text
     type: writer
+    required: true
     width: 2/3
     when:
       confirmationEmail_content_type: text
@@ -58,6 +60,7 @@ fields:
   confirmationEmail_content_template:
     label: Template
     type: select
+    required: true
     width: 2/3
     when:
       confirmationEmail_content_type: template

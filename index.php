@@ -47,7 +47,7 @@ function kirbyForms() {
       // submission.
       'type' => 'text',
       'page' => null,
-      'text' => 'Please fill in all fields correctly',
+      'text' => 'Thank you for your registration!',
     ],
 
     // The confirmation email that will be sent to the submitter.
