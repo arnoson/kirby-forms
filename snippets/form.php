@@ -5,22 +5,22 @@ use function arnoson\KirbyForms\formOption;
 
 $formPage ??= $page;
 $formId = KirbyForms::getFormId($formPage);
-$submitSuccessful = $formId === flash('kirby-forms.success_form_id');
-$submitLabel = formOption($formPage, 'label.submit')->value();
+$form = new Uniform\Form(kirbyForms()->formRules($formPage), $formId);
+$hasErrors = count($form->errors()) > 0;
 
-$form = new Uniform\Form(kirbyForms()->formRules($formPage), $formPage->id());
 // There might be multiple forms rendered on the page, so we only process the
-// form if the `form_id` is matching.
+// form if the form's id is matching.
 if ($kirby->request()->is('POST') && get('form_id') === $formId) {
   kirbyForms()->processRequest($formPage, $form);
 }
 ?>
 
-<?php if ($submitSuccessful): ?>
-<?php if ($success = formOption($formPage, 'success.text')): ?>
-<?php snippet('form-success', ['success' => $success]); ?>
-<?php endif; ?>
+<?php if ($form->success()): ?>
+<?php snippet('form-success', [
+  'success' => formOption($formPage, 'success.text'),
+]); ?>
 <?php else: ?>
+
 <form <?= attr([
   'action' => $page->url(),
   'method' => 'POST',
@@ -38,9 +38,16 @@ if ($kirby->request()->is('POST') && get('form_id') === $formId) {
   <input type="hidden" name="form_name" value="<?= $formPage->title() ?>" />
   <?= csrf_field() ?>
   <?= honeypot_field() ?>
-  <button type="submit" name="form_id" value="<?= $formId ?>"><?= $submitLabel ?></button>
+  <button type="submit" name="form_id" value="<?= $formId ?>">
+    <?= formOption($formPage, 'label.submit')->value() ?>
+  </button>
 </form>
-<?php if ($error = formOption($formPage, 'error.invalidFields')): ?>
-<?php snippet('form-error', ['form' => $form, 'error' => $error]); ?>
+
+<?php if ($hasErrors): ?>
+<?php snippet('form-error', [
+  'form' => $form,
+  'error' => formOption($formPage, 'error.invalidFields'),
+]); ?>
 <?php endif; ?>
+
 <?php endif; ?>
