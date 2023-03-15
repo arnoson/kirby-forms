@@ -169,16 +169,16 @@
         },
         {
             "name": "mzur/kirby-uniform",
-            "version": "v5.3.2",
+            "version": "v5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mzur/kirby-uniform.git",
-                "reference": "565f6b780882d92a6ded0988b150c396ddcdab6c"
+                "reference": "bc8a6917f1b8c67ed7d437fff2324a05c219e68c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/565f6b780882d92a6ded0988b150c396ddcdab6c",
-                "reference": "565f6b780882d92a6ded0988b150c396ddcdab6c",
+                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/bc8a6917f1b8c67ed7d437fff2324a05c219e68c",
+                "reference": "bc8a6917f1b8c67ed7d437fff2324a05c219e68c",
                 "shasum": ""
             },
             "require": {
@@ -225,7 +225,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-02-23T14:53:45+00:00"
+            "time": "2023-03-15T12:32:24+00:00"
         }
     ],
     "packages-dev": [
