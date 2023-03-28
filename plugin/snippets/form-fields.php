@@ -10,9 +10,9 @@
     $label = $block->label()->isNotEmpty() ? $block->label() : $name;
     $id = "$formSlug/field/$name";
     ?>
-    <div class="form-field <?= e(
+    <div class="form-field<?= e(
       $block->required()->toBool(),
-      'form-field-required',
+      ' form-field-required',
     ) ?>">
       <?php snippet('blocks/' . $block->type(), [
         'form' => $form,
