@@ -23,11 +23,6 @@ Make sure you have [Kirby Uniform](https://github.com/mzur/kirby-uniform/) insta
 composer require arnoson/kirby-forms
 ```
 
-<details>
-  <summary>Manual  installation</summary>
-  Download and copy this repository to site/plugins/kirby-forms
-</details>
-
 ## Getting started
 
 The quickest way to get started is creating a new page with the `form` blueprint provided by the plugin. Now you can build your form in the panel. To render the `form`, use the form snippet inside your template:
@@ -39,6 +34,8 @@ snippet('form');
 ## Options
 
 Most options can be configured per form in the Panel:
+
+![Screenshot 2023-03-28 at 17-02-32 Contact Form Plugin](https://user-images.githubusercontent.com/15122993/228284465-fbe9b5c8-8710-484c-84b2-06f94c3a7e5f.png)
 
 These global options can only be set in the plugin's config:
 
@@ -64,3 +61,5 @@ These global options can only be set in the plugin's config:
 ## Entries
 
 Form entries will be saved directly in the form page and can be viewed/deleted/edited in the panel:
+
+![Screenshot 2023-03-28 at 17-08-09 Contact Form Plugin](https://user-images.githubusercontent.com/15122993/228284748-7b3bfa28-2f87-486a-8e9a-005c42a5ff14.png)
