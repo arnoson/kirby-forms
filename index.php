@@ -17,6 +17,10 @@ function kirbyForms() {
   'snippets' => require __DIR__ . '/snippets/index.php',
   'translations' => require __DIR__ . '/translations/index.php',
   'options' => [
+    // A list of email addresses that can be selected in the panel as the sender
+    // of confirmation and notification emails.
+    'fromEmails' => [],
+
     // Wether or not to use client validation (in addition to server-side
     // validation done by Kirby Uniform).
     'clientValidation' => true,

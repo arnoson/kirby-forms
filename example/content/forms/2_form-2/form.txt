@@ -34,7 +34,7 @@ Confirmationemail-enabled: true
 
 ----
 
-Confirmationemail-from: register@a--s.info
+Confirmationemail-from: noreply@example.com
 
 ----
 

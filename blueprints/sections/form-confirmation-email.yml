@@ -8,12 +8,13 @@ fields:
 
   confirmationEmail_enabled:
     type: toggle
+    default: false
     label:
       *: arnoson.kirby-forms.enabled
     width: 2/12
 
   confirmationEmail_from:
-    type: email
+    extends: fields/form-email-sender
     label:
       *: arnoson.kirby-forms.email-from
     placeholder: info@your-site.com

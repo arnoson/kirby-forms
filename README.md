@@ -41,6 +41,10 @@ These global options can only be set in the plugin's config:
 
 ```php
 'arnoson.kirby-forms' => [
+  // A list of email addresses that can be selected in the panel as the sender
+  // of confirmation and notification emails.
+  'fromEmails' => [],
+
   // Wether or not to use client validation (in addition to server-side
   // validation done by Kirby Uniform).
   'clientValidation' => true,

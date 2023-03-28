@@ -8,12 +8,13 @@ fields:
 
   notificationEmail_enabled:
     type: toggle
+    default: false
     label:
       *: arnoson.kirby-forms.enabled
     width: 2/12
 
   notificationEmail_to:
-    type: email
+    extends: fields/form-email-sender
     label:
       *: arnoson.kirby-forms.email-to
     placeholder: info@your-site.com
