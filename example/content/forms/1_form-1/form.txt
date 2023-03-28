@@ -1,12 +1,25 @@
-Title: Form 1
+Title: Contact Form
 
 ----
 
-Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Name","name":"name","required":"false","min_length":null,"max_length":null,"default":"","placeholder":"","pattern":""},"id":"47822796-945c-4d51-b7fa-7f9a9a432f61","isHidden":false,"type":"form-field-text"}],"id":"69694c7d-acd9-4503-8359-71611be9c8dd","width":"1\/1"}],"id":"44d8166a-23ee-4dd0-88c5-495d653a8a72"}]
+Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"First Name","name":"first_name","required":"true","min_length":null,"max_length":null,"default":"","placeholder":"","pattern":""},"id":"47822796-945c-4d51-b7fa-7f9a9a432f61","isHidden":false,"type":"form-field-text"},{"content":{"label":"Last Name","name":"last_name","required":"true","min_length":null,"max_length":null,"default":"","placeholder":"","pattern":""},"id":"c9af4888-c637-4310-9948-587cf84b0227","isHidden":false,"type":"form-field-text"},{"content":{"label":"Email","name":"email","required":"true","validators":"[\"email\"]","default":"","placeholder":"","pattern":""},"id":"9ab42798-6d02-4236-a0da-9987dcdf1203","isHidden":false,"type":"form-field-email"}],"id":"69694c7d-acd9-4503-8359-71611be9c8dd","width":"1\/1"}],"id":"44d8166a-23ee-4dd0-88c5-495d653a8a72"}]
 
 ----
 
-Form-entries: 
+Form-entries:
+
+- 
+  first_name: Some
+  last_name: Person
+  email: mail@example.com
+- 
+  first_name: Another
+  last_name: Person
+  email: mail@example.com
+- 
+  first_name: Yet Another
+  last_name: Person
+  email: mail@example.com
 
 ----
 
@@ -14,7 +27,7 @@ Label-submit: Submit
 
 ----
 
-Success-type: message
+Success-type: page
 
 ----
 
@@ -22,7 +35,7 @@ Success-text: Thank you for your registration!
 
 ----
 
-Success-page: 
+Success-page: - page://s4S5fPpPK9PhDeLs
 
 ----
 
@@ -30,27 +43,30 @@ Error-invalidfields: Please fill in all fields correctly.
 
 ----
 
-Confirmationemail-enabled: false
+Confirmationemail-enabled: true
 
 ----
 
-Confirmationemail-from: 
+Confirmationemail-from: info@your-site.com
 
 ----
 
-Confirmationemail-subject: 
+Confirmationemail-subject: Contact
 
 ----
 
-Confirmationemail-content-type: text
+Confirmationemail-type: text
 
 ----
 
-Confirmationemail-content-text: 
+Confirmationemail-body:
+
+Hi {{first_name}},
+Thanks for contacting us!
 
 ----
 
-Confirmationemail-content-template: 
+Confirmationemail-template: 
 
 ----
 
@@ -63,6 +79,30 @@ Notificationemail-to:
 ----
 
 Notificationemail-subject: 
+
+----
+
+Notificationemail-type: text
+
+----
+
+Notificationemail-body: 
+
+----
+
+Notificationemail-template: 
+
+----
+
+Confirmationemail-content-type: text
+
+----
+
+Confirmationemail-content-text: 
+
+----
+
+Confirmationemail-content-template: 
 
 ----
 
