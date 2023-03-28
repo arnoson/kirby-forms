@@ -8,6 +8,8 @@ fields:
     
   label_submit:
     type: text
+    required: true
+    default: Submit
     placeholder: Submit
     label:
       *: arnoson.kirby-forms.submit-button-label

@@ -1,7 +1,6 @@
 <?php
 
 use arnoson\KirbyForms\KirbyForms;
-use function arnoson\KirbyForms\formOption;
 
 $formPage ??= $page;
 $formId = KirbyForms::getFormId($formPage);
@@ -17,36 +16,34 @@ if ($kirby->request()->is('POST') && get('form_id') === $formId) {
 
 <?php if ($form->success()): ?>
 <?php snippet('form-success', [
-  'success' => formOption($formPage, 'success.text'),
+  'success' => $formPage->success_text()->value(),
 ]); ?>
 <?php else: ?>
 
 <form <?= attr([
   'action' => $page->url(),
   'method' => 'POST',
-  'autocomplete' => formOption($formPage, 'autoComplete')->toBool()
-    ? 'on'
-    : 'off',
+  'autocomplete' => option('arnoson.kirby-forms.autoComplete') ? 'on' : 'off',
 ]) ?>>
   <?php snippet('form-fields', [
     'form' => $form,
     'formPage' => $formPage,
-    'gridColumns' => formOption($formPage, 'gridColumns')->value(),
-    'clientValidation' => formOption($formPage, 'clientValidation')->toBool(),
-    'showOldValues' => formOption($formPage, 'showOldValues')->toBool(),
+    'gridColumns' => option('arnoson.kirby-forms.gridColumns'),
+    'clientValidation' => option('arnoson.kirby-forms.clientValidation'),
+    'showOldValues' => option('arnoson.kirby-forms.showOldValues'),
   ]); ?>
   <input type="hidden" name="form_name" value="<?= $formPage->title() ?>" />
   <?= csrf_field() ?>
   <?= honeypot_field() ?>
   <button type="submit" name="form_id" value="<?= $formId ?>">
-    <?= formOption($formPage, 'label.submit')->value() ?>
+    <?= $formPage->label_submit()->value() ?>
   </button>
 </form>
 
 <?php if ($hasErrors): ?>
 <?php snippet('form-error', [
   'form' => $form,
-  'error' => formOption($formPage, 'error.invalidFields'),
+  'error' => $formPage->error_invalidFields()->value(),
 ]); ?>
 <?php endif; ?>
 

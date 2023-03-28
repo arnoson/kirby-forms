@@ -51,9 +51,3 @@ function formFieldAttributes(
 
   return $attributes;
 }
-
-function formOption(Page $formPage, string $name) {
-  $fieldName = str_replace('.', '_', $name);
-  $option = option("arnoson.kirby-forms.$name");
-  return $formPage->$fieldName()->or($option);
-}

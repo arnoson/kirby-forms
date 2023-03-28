@@ -11,3 +11,4 @@ fields:
     label:
       *: arnoson.kirby-forms.message
     placeholder: Please fill in all fields correctly.
+    default: Please fill in all fields correctly.

@@ -32,7 +32,7 @@ fields:
     when:
       notificationEmail_enabled: true
 
-  notificationEmail_content_type:
+  notificationEmail_type:
     type: toggles
     label:
       *: arnoson.kirby-forms.email-content
@@ -48,20 +48,21 @@ fields:
     when:
       notificationEmail_enabled: true
 
-  notificationEmail_content_text:
+  notificationEmail_body:
     label: Text
-    type: writer
+    type: textarea
+    buttons: false
     required: true
     width: 2/3
     when:
-      notificationEmail_content_type: text
+      notificationEmail_type: text
       notificationEmail_enabled: true
 
-  notificationEmail_content_template:
+  notificationEmail_template:
     label: Template
     type: text
     required: true
     width: 2/3
     when:
-      notificationEmail_content_type: template
+      notificationEmail_type: template
       notificationEmail_enabled: true

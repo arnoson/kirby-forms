@@ -27,6 +27,7 @@ fields:
     label:
       *: arnoson.kirby-forms.message
     placeholder: Thank you for your registration!
+    default: Thank you for your registration!
     width: 7/12
     when:
       success_type: message

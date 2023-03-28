@@ -9,6 +9,10 @@ function kirbyForms() {
 }
 
 \Kirby\Cms\App::plugin('arnoson/kirby-forms', [
+  'fields' => [
+    'form-identifier' => ['extends' => 'slug'],
+  ],
+
   'blueprints' => require __DIR__ . '/blueprints/index.php',
   'snippets' => require __DIR__ . '/snippets/index.php',
   'translations' => require __DIR__ . '/translations/index.php',
@@ -32,50 +36,5 @@ function kirbyForms() {
     // `formId` can be obtained with `KirbyForms::getFormId($yourFormPage)`
     // https://kirby-uniform.readthedocs.io/en/latest/actions/session-store/
     'sessionStore' => false,
-
-    'label' => [
-      // The submit button label.
-      'submit' => 'Submit',
-    ],
-
-    'error' => [
-      'invalidFields' => 'Please fill in all fields correctly',
-    ],
-
-    'success' => [
-      // Wether to show a 'text' or redirect to a 'page' after a successful form
-      // submission.
-      'type' => 'text',
-      'page' => null,
-      'text' => 'Thank you for your registration!',
-    ],
-
-    // The confirmation email that will be sent to the submitter.
-    'confirmationEmail' => [
-      'enabled' => false,
-      'from' => null,
-      'replyTo' => null, // Uses `from` if empty.
-      'subject' => 'Thank you for your registration!',
-      'content' => [
-        // Wether to use a text or an email template.
-        'type' => 'text',
-        'template' => null,
-        'text' => 'We will get back to you soon.',
-      ],
-    ],
-
-    // The email sent to you when the form has received a new registration.
-    'notificationEmail' => [
-      'enabled' => false,
-      'to' => null,
-      'from' => null,
-      'subject' => 'New registration in {{form_name}}',
-      'content' => [
-        // Wether to use a text or an email template.
-        'type' => 'text',
-        'template' => null,
-        'text' => 'We will get back to you soon.',
-      ],
-    ],
   ],
 ]);

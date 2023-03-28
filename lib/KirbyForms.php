@@ -54,27 +54,33 @@ class KirbyForms {
   function processRequest($formPage, $form) {
     $form->SaveYamlAction(['page' => $formPage]);
 
-    if (formOption($formPage, 'confirmationEmail.enabled')->toBool()) {
+    if ($formPage->confirmationEmail_enabled()->toBool()) {
       $form->emailAction([
         'to' => $form->data('email'),
-        'from' => formOption($formPage, 'confirmationEmail.from'),
-        'subject' => formOption($formPage, 'confirmationEmail.subject'),
-        'template' => formOption($formPage, 'confirmationEmail.template'),
-        'body' => formOption($formPage, 'confirmationEmail.body'),
+        'from' => $formPage->confirmationEmail_from()->value(),
+        'subject' => $formPage->confirmationEmail_subject()->value(),
+        'template' => $formPage
+          ->confirmationEmail_template()
+          ->or(null)
+          ->value(),
+        'body' => $formPage->confirmationEmail_body()->value(),
       ]);
     }
 
-    if (formOption($formPage, 'notificationEmail.enabled')->toBool()) {
+    if ($formPage->notificationEmail_enabled()->toBool()) {
       $form->emailAction([
-        'to' => formOption($formPage, 'notificationEmail.to'),
-        'from' => formOption($formPage, 'notificationEmail.from'),
-        'subject' => formOption($formPage, 'notificationEmail.subject'),
-        'template' => formOption($formPage, 'notificationEmail.template'),
-        'body' => formOption($formPage, 'notificationEmail.body'),
+        'to' => $formPage->notificationEmail_to()->value(),
+        'from' => $formPage->notificationEmail_from()->value(),
+        'subject' => $formPage->notificationEmail_subject()->value(),
+        'template' => $formPage
+          ->notificationEmail_template()
+          ->or(null)
+          ->value(),
+        'body' => $formPage->notificationEmail_body()->value(),
       ]);
     }
 
-    if (formOption($formPage, 'sessionStore')->toBool()) {
+    if ($formPage->sessionStore()->toBool()) {
       $form->sessionStoreAction(['name' => KirbyForms::getFormId($formPage)]);
     }
 
@@ -83,8 +89,9 @@ class KirbyForms {
       // distinguish which form was successful.
       flash('kirby-forms.success_form_id', get('form_id'));
 
-      $successType = formOption($formPage, 'success.type')->value();
-      $successUrl = formOption($formPage, 'success.page')
+      $successType = $formPage->success_type()->value();
+      $successUrl = $formPage
+        ->success_page()
         ->toPage()
         ?->url();
 

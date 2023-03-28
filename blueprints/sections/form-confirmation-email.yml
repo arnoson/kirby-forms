@@ -32,7 +32,7 @@ fields:
     when:
       confirmationEmail_enabled: true
 
-  confirmationEmail_content_type:
+  confirmationEmail_type:
     type: toggles
     label:
       *: arnoson.kirby-forms.email-content
@@ -48,20 +48,20 @@ fields:
     when:
       confirmationEmail_enabled: true
 
-  confirmationEmail_content_text:
+  confirmationEmail_body:
     label: Text
-    type: writer
+    type: textarea
+    buttons: false
     required: true
     width: 2/3
     when:
-      confirmationEmail_content_type: text
+      confirmationEmail_type: text
       confirmationEmail_enabled: true
 
-  confirmationEmail_content_template:
-    label: Template
-    type: select
+  confirmationEmail_template:
+    extends: fields/form-email-template
     required: true
     width: 2/3
     when:
-      confirmationEmail_content_type: template
+      confirmationEmail_type: template
       confirmationEmail_enabled: true
