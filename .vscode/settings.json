@@ -2,7 +2,5 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
-  "[php]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
