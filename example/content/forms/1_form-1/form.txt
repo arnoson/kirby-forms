@@ -1,0 +1,81 @@
+Title: Form 1
+
+----
+
+Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Name","name":"name","required":"false","min_length":null,"max_length":null,"default":"","placeholder":"","pattern":""},"id":"47822796-945c-4d51-b7fa-7f9a9a432f61","isHidden":false,"type":"form-field-text"}],"id":"69694c7d-acd9-4503-8359-71611be9c8dd","width":"1\/1"}],"id":"44d8166a-23ee-4dd0-88c5-495d653a8a72"}]
+
+----
+
+Form-entries: 
+
+----
+
+Label-submit: Submit
+
+----
+
+Success-type: message
+
+----
+
+Success-text: Thank you for your registration!
+
+----
+
+Success-page: 
+
+----
+
+Error-invalidfields: Please fill in all fields correctly.
+
+----
+
+Confirmationemail-enabled: false
+
+----
+
+Confirmationemail-from: 
+
+----
+
+Confirmationemail-subject: 
+
+----
+
+Confirmationemail-content-type: text
+
+----
+
+Confirmationemail-content-text: 
+
+----
+
+Confirmationemail-content-template: 
+
+----
+
+Notificationemail-enabled: false
+
+----
+
+Notificationemail-to: 
+
+----
+
+Notificationemail-subject: 
+
+----
+
+Notificationemail-content-type: text
+
+----
+
+Notificationemail-content-text: 
+
+----
+
+Notificationemail-content-template: 
+
+----
+
+Uuid: AOX0keP1d9qdIvZ9
