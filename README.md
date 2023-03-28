@@ -13,7 +13,7 @@ A flexible form builder and handler based on Kirby's layout und block fields and
 
 ## Demo
 
-https://user-images.githubusercontent.com/15122993/122928073-cd0adc80-d369-11eb-8a02-4d5275cc5da9.mp4
+https://user-images.githubusercontent.com/15122993/228290335-425006b7-7216-4f05-b670-73a78c5761ce.mp4
 
 ## Installation
 
