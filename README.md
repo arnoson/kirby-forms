@@ -15,7 +15,6 @@ A flexible form builder and handler based on Kirby's layout und block fields and
 
 https://user-images.githubusercontent.com/15122993/122928073-cd0adc80-d369-11eb-8a02-4d5275cc5da9.mp4
 
-
 ## Installation
 
 Make sure you have [Kirby Uniform](https://github.com/mzur/kirby-uniform/) installed, then install the plugin using Composer:
@@ -39,6 +38,10 @@ snippet('form');
 
 ## Options
 
+Most options can be configured per form in the Panel:
+
+These global options can only be set in the plugin's config:
+
 ```php
 'arnoson.kirby-forms' => [
   // Wether or not to use client validation (in addition to server-side
@@ -52,20 +55,12 @@ snippet('form');
   // Wether or not to use the `autocomplete` attribute for the form element.
   'autoComplete' => false,
 
-  // The email sent to you when the form has received a new registration.
-  'notificationEmail' => [
-    'active' => false,
-    'to' => null,
-    'from' => null,
-    'subject' => 'New registration in {{form_name}}',
-  ],
-
-  // The confirmation email that will be sent to the submitter.
-  'confirmationEmail' => [
-    'active' => false,
-    'from' => null,
-    'replyTo' => null, // Uses `from` if empty.
-    'subject' => 'Thank you for your registration!',
-  ],
+  // Wether ot not to render the previous values in the form (e.g.: in the case
+  // a form submit wasn't successful and the form is shown again to the user)
+  'showOldValues' => true,
 ]
 ```
+
+## Entries
+
+Form entries will be saved directly in the form page and can be viewed/deleted/edited in the panel:
