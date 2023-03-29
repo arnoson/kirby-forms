@@ -1,8 +1,8 @@
 <template>
-
   <component
     :is="component"
     class="arnoson-forms-preview"
+    :time="false"
     :class="{ required }"
     :placeholder="content.placeholder"
     :label="label"
@@ -11,7 +11,6 @@
     :options="options"
     :empty="empty"
   />
-
 </template>
 
 <script>
@@ -38,10 +37,10 @@ export default {
     options() {
       return this.content.options?.map(({ value, text }) => ({
         value,
-        text: text || value
+        text: text || value,
       }))
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -51,9 +50,8 @@ export default {
 
   &.required .k-field-label::after {
     content: '*';
-    padding-left: .25rem;
+    padding-left: 0.25rem;
     color: var(--color-gray-500);
   }
 }
 </style>
-
