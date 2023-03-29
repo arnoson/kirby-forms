@@ -1,6 +1,5 @@
 name:
-  en: Radio Buttons
-  de: Radiobuttons
+  *: arnoson.kirby-forms.radio
 icon: 🔘
 fields:
   extends: fields/form-field-basic
@@ -18,3 +17,7 @@ fields:
       text:
         type: text
         width: 1/2
+  error:
+    extends: fields/form-error-message
+    placeholder:
+      *: arnoson.kirby-forms.invalid-radio-error

@@ -1,4 +1,5 @@
-name: Email
+name:
+  *: arnoson.kirby-forms.email
 icon: 📧
 fields:
   extends: fields/form-field-basic
@@ -8,10 +9,11 @@ fields:
   default:
     extends: fields/form-field-default
     type: email
-    width: 1/3
+    width: 1/2
   placeholder:
     extends: fields/form-field-placeholder
-    width: 1/3
-  pattern:
-    extends: fields/form-field-pattern
-    width: 1/3
+    width: 1/2
+  error:
+    extends: fields/form-error-message
+    placeholder:
+      *: arnoson.kirby-forms.invalid-email-error

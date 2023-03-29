@@ -6,7 +6,7 @@
   <div class="form-column" style="--span:<?= $column->span($gridColumns) ?>">
     <?php foreach ($column->blocks() as $block): ?>
     <?php
-    $name = $block->name();
+    $name = $block->name()->value();
     $label = $block->label()->isNotEmpty() ? $block->label() : $name;
     $id = "$formSlug/field/$name";
     ?>
@@ -22,6 +22,9 @@
         'clientValidation' => $clientValidation,
         'showOldValues' => $showOldValues,
       ]); ?>
+      <?php if ($error = $form->error($name)): ?>
+      <div class="form-field-error" id="<?= $id ?>/error"><?= $error[0] ?></div>
+      <?php endif; ?>
     </div>
     <?php endforeach; ?>
   </div>

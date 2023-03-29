@@ -29,11 +29,16 @@ class KirbyForms {
     foreach ($formPage->form_fields()->toLayouts() as $layout) {
       foreach ($layout->columns() as $column) {
         foreach ($column->blocks() as $field) {
+          $pattern = $field->pattern()->value();
           $rules = [
             'required' => $field->required()->toBool(),
-            'min' => fieldNotEmpty($field->min()),
-            'max' => fieldNotEmpty($field->max()),
-            'match' => fieldNotEmpty($field->pattern()),
+            'min' => $field->min()->value(),
+            'max' => $field->max()->value(),
+            'minLength' => $field->min_length()->value(),
+            'maxLength' => $field->max_length()->value(),
+            // Html's `pattern` attribute doesn't want the regexp's enclosing `/`
+            // while uniform needs it.
+            'match' => $pattern ? "/$pattern/" : null,
           ];
 
           // In the hidden `validators` field additional validators can be
@@ -44,6 +49,7 @@ class KirbyForms {
 
           $formRules[$field->name()->value()] = [
             'rules' => array_filter($rules),
+            'message' => $field->error()->value(),
           ];
         }
       }

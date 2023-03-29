@@ -1,6 +1,7 @@
 arnoson.kirby-forms.submit: Submit
 arnoson.kirby-forms.success: Success
 arnoson.kirby-forms.error: Error
+arnoson.kirby-forms.error-message: Error Message
 arnoson.kirby-forms.fields: Fields
 arnoson.kirby-forms.message: Message
 arnoson.kirby-forms.page: Page
@@ -15,6 +16,29 @@ arnoson.kirby-forms.email-from: From
 arnoson.kirby-forms.email-to: To
 arnoson.kirby-forms.email-subject: Subject
 arnoson.kirby-forms.email-content: Content
+
+arnoson.kirby-forms.checkboxes: Checkboxes
+arnoson.kirby-forms.date: Date
+arnoson.kirby-forms.email: Email
+arnoson.kirby-forms.number: Number
+arnoson.kirby-forms.radio: Radio Buttons
+arnoson.kirby-forms.select: Select
+arnoson.kirby-forms.tel: Telephone
+arnoson.kirby-forms.text: Text
+arnoson.kirby-forms.textarea: Textarea
+arnoson.kirby-forms.time: Time
+arnoson.kirby-forms.url: URL
+
+arnoson.kirby-forms.invalid-checkboxes-error: Please select one or more options
+arnoson.kirby-forms.invalid-date-error: Please enter a valid date
+arnoson.kirby-forms.invalid-email-error: Please enter a valid email address
+arnoson.kirby-forms.invalid-number-error: Please enter a valid number
+arnoson.kirby-forms.invalid-radio-error: Please select an option
+arnoson.kirby-forms.invalid-select-error: Please select an option
+arnoson.kirby-forms.invalid-tel-error: Please enter a valid telephone number
+arnoson.kirby-forms.invalid-text-error: Please enter a text
+arnoson.kirby-forms.invalid-time-error: Please enter a valid time
+arnoson.kirby-forms.invalid-url-error: Please enter a valid URL
 
 arnoson.kirby-forms.no-entries: No entries yet
 arnoson.kirby-forms.save-error: An error occurred while saving the form data
