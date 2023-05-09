@@ -29,7 +29,7 @@ return function ($kirby) {
   foreach ($formPage->form_fields()->toLayouts() as $layout) {
     foreach ($layout->columns() as $column) {
       foreach ($column->blocks() as $block) {
-        if (!preg_match('/^form-field-([\w_-]+)/', $block->type(), $match)){
+        if (!preg_match('/^form-field-([\w_-]+)/', $block->type(), $match)) {
           continue;
         }
         $content = $block->content();
