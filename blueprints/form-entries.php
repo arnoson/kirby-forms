@@ -29,11 +29,14 @@ return function ($kirby) {
   foreach ($formPage->form_fields()->toLayouts() as $layout) {
     foreach ($layout->columns() as $column) {
       foreach ($column->blocks() as $block) {
+        if (!preg_match('/^form-field-([\w_-]+)/', $block->type(), $match)){
+          continue;
+        }
         $content = $block->content();
         $fields[$content->name()->value()] = array_merge(
           $block->content()->toArray(),
           [
-            'type' => explode('-', $block->type())[2],
+            'type' => $match[1],
             'required' => $content->required()->toBool(),
           ],
         );
