@@ -11,7 +11,7 @@
   "devDependencies": {
     "@prettier/plugin-php": "^0.19.1",
     "bumpp": "^9.1.0",
-    "concurrently": "^7.6.0",
+    "concurrently": "^8.0.0",
     "kirbyup": "^2.0.1",
     "prettier": "^2.7.1"
   }
