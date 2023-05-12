@@ -5,10 +5,12 @@
     "server": "php -q -S localhost:8888  -t ./example/ ./example/router.php",
     "watch": "kirbyup serve src/index.js",
     "build": "kirbyup src/index.js",
+    "release": "npm run build && bumpp composer.json",
     "check-prettier": "npx prettier --check \"**/*.{php,js,css}\""
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.19.1",
+    "bumpp": "^9.1.0",
     "concurrently": "^7.6.0",
     "kirbyup": "^2.0.1",
     "prettier": "^2.7.1"
