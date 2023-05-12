@@ -4,7 +4,8 @@
     "mail-hog": "~/go/bin/MailHog",
     "server": "php -q -S localhost:8888  -t ./example/ ./example/router.php",
     "watch": "kirbyup serve src/index.js",
-    "build": "kirbyup src/index.js"
+    "build": "kirbyup src/index.js",
+    "check-prettier": "npx prettier --check \"**/*.{php,js,css}\""
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.19.1",
