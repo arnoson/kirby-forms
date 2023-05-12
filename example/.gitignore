@@ -42,6 +42,7 @@ Icon
 # ---------------
 /site/plugins/*
 !/site/plugins/plugin
+!/site/plugins/custom-form-fields
 
 # Sessions
 # ---------------

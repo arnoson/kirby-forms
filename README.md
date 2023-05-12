@@ -67,3 +67,22 @@ These global options can only be set in the plugin's config:
 Form entries will be saved directly in the form page and can be viewed/deleted/edited in the panel:
 
 ![Screenshot 2023-03-28 at 17-08-09 Contact Form Plugin](https://user-images.githubusercontent.com/15122993/228284748-7b3bfa28-2f87-486a-8e9a-005c42a5ff14.png)
+
+## Using Different Layouts
+
+By creating your own `fields/form-fields` blueprint, you can overwrite the possible layouts in the form builder. Use this [file](https://github.com/arnoson/kirby-forms/blob/master/blueprints/fields/form-fields.yml) as a starting point.
+
+## Adding Custom Fields
+
+The easiest way to add your own custom fields is to start with the [example](https://github.com/arnoson/kirby-forms/tree/master/example/site/plugins/custom-form-fields).
+
+Custom fields consist of
+
+- A block blueprint (defining the field settings like `required`, `min`, `max`, ...)
+- A block snippet (to render the fields on the form)
+
+The block name must follow the naming convention of `form-field-<panel-field-name>`, where `<panel-field-name>` is a [panel field](https://getkirby.com/docs/reference/panel/fields), used to render the field's value in the [Entries](#entries) view.
+
+Ideally, a custom field should also have a [block preview](https://getkirby.com/docs/cookbook/panel/custom-block-type#simple-index-js).
+
+To show your custom field as an option in the Kirby Forms form builder, you have to override the `fields/form-fields` blueprint, see the [example](https://github.com/arnoson/kirby-forms/tree/master/example/site/blueprints/fields/form-fields.yml).

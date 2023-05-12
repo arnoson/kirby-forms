@@ -1,0 +1,38 @@
+name: Range
+icon: 🎚️
+fields:
+  # Extend the basic field to get common field settings (name, identifier, required)
+  extends: fields/form-field-basic
+
+  # Optionally add a hidden `validators` field, containing an array of validators
+  # See: https://getkirby.com/docs/reference#validators
+  # and https://kirby-uniform.readthedocs.io/en/latest/usage/#validation-rules
+  validators:
+    type: hidden
+    default: '["num"]'
+
+  # By extending these fields, we get the correct field type and the translated label.
+  default:
+    extends: fields/form-field-default
+    type: number
+    width: 2/12
+  min:
+    extends: fields/form-field-min
+    placeholder: 0
+    default: 0
+    width: 2/12
+  max:
+    extends: fields/form-field-max
+    placeholder: 100
+    default: 100
+    width: 2/12
+  step:
+    type: text
+    counter: false
+    spellcheck: false
+    placeholder: '1.0'
+    default: '1'
+    width: 2/12    
+  error:
+    extends: fields/form-error-message
+    placeholder: Please set a valid range value

@@ -1,0 +1,48 @@
+label:
+  en: Fields
+  de: Felder
+type: layout
+layouts:
+  - '1/1'
+  - '1/2, 1/2'
+  - '1/3, 1/3, 1/3'
+  - '1/4, 1/4, 1/4, 1/4'
+  - '1/3, 2/3'
+  - '2/3, 1/3'
+  - '1/4, 3/4'
+  - '3/4, 1/4'
+fieldsets:
+  basic:
+    type: group
+    fieldsets:
+      - form-field-text
+      - form-field-textarea
+      - form-field-number
+      - form-field-select
+      - form-field-checkboxes
+      - form-field-radio
+      # Add our custom field
+      - form-field-range
+  contact:
+    type: group
+    label:
+      en: Contact
+      de: Kontakt
+    fieldsets:
+      - form-field-email
+      - form-field-tel
+  date_time:
+    label:
+      en: Date & Time
+      de: Datum & Uhrzeit
+    type: group
+    fieldsets:
+      - form-field-date
+      - form-field-time
+  other:
+    type: group
+    label:
+      en: Other
+      de: Sonstige
+    fieldsets:
+      - form-field-url
