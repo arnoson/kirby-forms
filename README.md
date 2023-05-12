@@ -86,3 +86,12 @@ The block name must follow the naming convention of `form-field-<panel-field-nam
 Ideally, a custom field should also have a [block preview](https://getkirby.com/docs/cookbook/panel/custom-block-type#simple-index-js).
 
 To show your custom field as an option in the Kirby Forms form builder, you have to override the `fields/form-fields` blueprint, see the [example](https://github.com/arnoson/kirby-forms/tree/master/example/site/blueprints/fields/form-fields.yml).
+
+## Contribute
+
+Contributions to the plugin and it's documentation are welcome :~) Please make sure you:
+
+- use prettier to format your code (should happen automatically if you work on this project in VSCode)
+- use [conventional commits](https://www.conventionalcommits.or) (these are used to automatically generate release messages, including credits for your contributions)
+
+To get started have a look at the `package.json`.
