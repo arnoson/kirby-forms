@@ -12,7 +12,6 @@ fields:
   name:
     type: form-identifier
     label: Identifier
-    translate: false
     sync: label
     placeholder:
       en: field_name

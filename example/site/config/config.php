@@ -1,5 +1,7 @@
 <?php return [
   'debug' => true,
+  'languages' => true,
+  
   'email' => [
     'transport' => [
       'type' => 'smtp',

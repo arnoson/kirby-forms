@@ -2,7 +2,7 @@ Title: Contact Form
 
 ----
 
-Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"First Name","name":"first_name","required":"true","default":"","placeholder":"","min_length":null,"max_length":null,"pattern":"","error":""},"id":"47822796-945c-4d51-b7fa-7f9a9a432f61","isHidden":false,"type":"form-field-text"},{"content":{"label":"Last Name","name":"last_name","required":"true","default":"","placeholder":"","min_length":null,"max_length":null,"pattern":"","error":""},"id":"c9af4888-c637-4310-9948-587cf84b0227","isHidden":false,"type":"form-field-text"},{"content":{"label":"Email","name":"email","required":"true","validators":"[\"email\"]","default":"","placeholder":"","error":""},"id":"9ab42798-6d02-4236-a0da-9987dcdf1203","isHidden":false,"type":"form-field-email"},{"content":{"label":"Custom Range Field","name":"custom_range_field","required":"false","validators":"[\"num\"]","default":50,"min":0,"max":100,"step":"1","error":""},"id":"5ed693b9-9e69-4187-ad1c-1b730928ee0b","isHidden":false,"type":"form-field-range"}],"id":"69694c7d-acd9-4503-8359-71611be9c8dd","width":"1\/1"}],"id":"44d8166a-23ee-4dd0-88c5-495d653a8a72"}]
+Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Vorname","name":"first_name","required":"true","default":"","placeholder":"","min_length":null,"max_length":null,"pattern":"","error":""},"id":"47822796-945c-4d51-b7fa-7f9a9a432f61","isHidden":false,"type":"form-field-text"},{"content":{"label":"Nachname","name":"last_name","required":"true","default":"","placeholder":"","min_length":null,"max_length":null,"pattern":"","error":""},"id":"c9af4888-c637-4310-9948-587cf84b0227","isHidden":false,"type":"form-field-text"},{"content":{"label":"Email","name":"email","required":"true","validators":"[\"email\"]","default":"","placeholder":"","error":""},"id":"9ab42798-6d02-4236-a0da-9987dcdf1203","isHidden":false,"type":"form-field-email"},{"content":{"label":"Benutzerdefinierter slider","name":"custom_range_field","required":"false","validators":"[\"num\"]","default":50,"min":0,"max":100,"step":"1","error":""},"id":"5ed693b9-9e69-4187-ad1c-1b730928ee0b","isHidden":false,"type":"form-field-range"}],"id":"69694c7d-acd9-4503-8359-71611be9c8dd","width":"1\/1"}],"id":"44d8166a-23ee-4dd0-88c5-495d653a8a72"}]
 
 ----
 
@@ -13,16 +13,19 @@ Form-entries:
   last_name: Person
   email: mail@example.com
   custom_range_field: 20
+  fuuu: ""
 - 
   first_name: Another
   last_name: Person
   email: mail@example.com
   custom_range_field: 100
+  fuuu: ""
 - 
   first_name: Yet Another
   last_name: Person
   email: mail@example.com
   custom_range_field: 0
+  fuuu: ""
 
 ----
 
@@ -118,7 +121,3 @@ Notificationemail-content-text:
 ----
 
 Notificationemail-content-template: 
-
-----
-
-Uuid: AOX0keP1d9qdIvZ9
