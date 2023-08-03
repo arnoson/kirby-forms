@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "concurrently \"npm:server\" \"npm:watch\" \"npm:mail-hog\" -c yellow,green,blue",
-    "mail-hog": "~/go/bin/MailHog -api-bind-addr \"0.0.0.0:8125\" -ui-bind-addr \"0.0.0.0:8126\"",
+    "mail-hog": "~/go/bin/MailHog",
     "server": "php -q -S localhost:8888  -t ./example/ ./example/router.php",
     "watch": "kirbyup serve src/index.js",
     "build": "kirbyup src/index.js",
@@ -12,7 +12,7 @@
     "@prettier/plugin-php": "^0.19.1",
     "bumpp": "^9.1.0",
     "concurrently": "^8.0.0",
-    "kirbyup": "^2.0.1",
+    "kirbyup": "^3.0.0",
     "prettier": "^2.7.1"
   }
 }
