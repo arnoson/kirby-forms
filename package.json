@@ -5,7 +5,8 @@
     "server": "php -q -S localhost:8888  -t ./example/ ./example/router.php",
     "watch": "kirbyup serve src/index.js",
     "build": "kirbyup src/index.js",
-    "release": "npm run build && bumpp composer.json",
+    "commit-build": "git add index.js index.css && git commit -m 'chore: build'",
+    "release": "npm run build && npm run commit-build && bumpp composer.json",
     "check-prettier": "npx prettier --check \"**/*.{php,js,css}\""
   },
   "devDependencies": {
