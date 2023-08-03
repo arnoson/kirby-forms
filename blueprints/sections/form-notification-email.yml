@@ -23,13 +23,23 @@ fields:
     when:
       notificationEmail_enabled: true
 
+  notificationEmail_from:
+    extends: fields/form-email-sender
+    label:
+      *: arnoson.kirby-forms.email-from
+    placeholder: info@your-site.com
+    required: true
+    width: 5/12
+    when:
+      notificationEmail_enabled: true      
+
   notificationEmail_subject:
     type: text
     label:
       *: arnoson.kirby-forms.email-subject
     placeholder: Thank you for your registration!
     required: true
-    width: 5/12
+    width: 12/12
     when:
       notificationEmail_enabled: true
 

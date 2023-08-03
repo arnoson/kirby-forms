@@ -19,7 +19,7 @@ fields:
       *: arnoson.kirby-forms.email-from
     placeholder: info@your-site.com
     required: true
-    width: 5/12
+    width: 10/12
     when:
       confirmationEmail_enabled: true
 
@@ -29,7 +29,7 @@ fields:
       *: arnoson.kirby-forms.email-subject
     placeholder: 'Thank you for your registration!'
     required: true
-    width: 5/12
+    width: 12/12
     when:
       confirmationEmail_enabled: true
 
