@@ -32,6 +32,10 @@ fields:
     when:
       confirmationEmail_enabled: true
 
+  confirmationEmail_info: 
+    extends: fields/form-email-info
+    theme: negative
+
   confirmationEmail_subject:
     type: text
     label:

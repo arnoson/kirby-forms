@@ -14,6 +14,7 @@ fields:
     width: 2/12
 
   notificationEmail_to:
+    type: email
     extends: fields/form-email-sender
     label:
       *: arnoson.kirby-forms.email-to
