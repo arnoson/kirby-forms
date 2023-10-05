@@ -1,3 +1,6 @@
 type: fields
 fields:
+  confirmationEmail_form_info: 
+    extends: fields/form-email-info
+    theme: negative
   form_fields: fields/form-fields
