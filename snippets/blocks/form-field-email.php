@@ -3,10 +3,10 @@
   $block,
   $form,
   $clientValidation,
-  $showOldValues,
+  $showOldValues
 ); ?>
 
 <label for="<?= $id ?>"><?= $label ?></label>
 <input id="<?= $id ?>" <?= e($clientValidation, 'type="email"') ?> <?= attr(
-   $attributes,
+   $attributes
  ) ?> />

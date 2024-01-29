@@ -23,7 +23,7 @@ class SaveYamlAction extends Action {
         'kirby',
         fn() => $page->update([
           'form_entries' => \Kirby\Data\Yaml::encode($entries),
-        ]),
+        ])
       );
     } catch (\Exception $e) {
       $this->handleException($e);

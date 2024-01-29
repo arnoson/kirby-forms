@@ -12,7 +12,7 @@
     ?>
     <div class="form-field<?= e(
       $block->required()->toBool(),
-      ' form-field-required',
+      ' form-field-required'
     ) ?>">
       <?php snippet('blocks/' . $block->type(), [
         'form' => $form,

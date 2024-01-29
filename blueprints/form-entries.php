@@ -38,7 +38,7 @@ return function ($kirby) {
           [
             'type' => $match[1],
             'required' => $content->required()->toBool(),
-          ],
+          ]
         );
       }
     }

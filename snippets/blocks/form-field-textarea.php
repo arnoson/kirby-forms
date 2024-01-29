@@ -4,7 +4,7 @@ $attributes = arnoson\KirbyForms\formFieldAttributes(
   $block,
   $form,
   $clientValidation,
-  $showOldValues,
+  $showOldValues
 );
 
 $value = $attributes['value'];

@@ -3,7 +3,7 @@
   $block,
   $form,
   $clientValidation,
-  $showOldValues,
+  $showOldValues
 ); ?>
 
 <label for="<?= $id ?>"><?= $label ?></label>
