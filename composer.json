@@ -14,7 +14,7 @@
     "mzur/kirby-uniform": "^5.3"
   },
   "require-dev": {
-    "getkirby/cms": "^3.9"
+    "getkirby/cms": "^4.0"
   },
   "config": {
     "allow-plugins": {

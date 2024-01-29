@@ -1,6 +1,6 @@
 {
+  "plugins": ["@prettier/plugin-php"],
   "semi": false,
   "braceStyle": "1tbs",
-  "singleQuote": true,
-  "phpVersion": "7.4"
+  "singleQuote": true
 }
