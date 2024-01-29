@@ -7,7 +7,8 @@
     "build": "kirbyup src/index.js",
     "commit-build": "git add index.js index.css && git commit -m 'chore: build'",
     "release": "npm run build && npm run commit-build && bumpp composer.json",
-    "check-prettier": "npx prettier --check \"**/*.{php,js,css}\""
+    "check-prettier": "npx prettier --check \"**/*.{php,js,css}\"",
+    "format": "npx prettier --write \"**/*.{php,js,css}\""
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.22.1",
