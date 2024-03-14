@@ -1,0 +1,10 @@
+label:
+  de: Info
+  en: Info
+type: info
+
+text:
+  de: Es ist notwendig, ein Feld mit der Bezeichnung "email" zu haben. Das heißt, der **Identifier** eines E-Mail-Feldes in Ihrem Formular muss "email" lauten.
+  en: It is necessary to have a field called „email“. Meaning the **Identifier** of an email field in your form needs say „email“.
+when:
+  confirmationEmail_enabled: true
