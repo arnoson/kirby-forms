@@ -13,7 +13,13 @@ return function ($kirby) {
 
   $blueprint = [
     'type' => 'fields',
-    'fields' => ['form_entries' => []],
+    'fields' => [
+      'export_form_entries' => [
+        'type' => 'export-form-entries',
+        'formId' => $formPage->uuid()->id(),
+      ],
+      'form_entries' => [],
+    ],
   ];
 
   if (!$formPage) {

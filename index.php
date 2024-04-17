@@ -1,5 +1,8 @@
 <?php
 
+use Kirby\Http\Header;
+use Kirby\Http\Response;
+
 require_once __DIR__ . '/lib/KirbyForms.php';
 require_once __DIR__ . '/lib/helpers.php';
 require_once __DIR__ . '/lib/SaveYamlAction.php';
@@ -11,6 +14,11 @@ function kirbyForms() {
 \Kirby\Cms\App::plugin('arnoson/kirby-forms', [
   'fields' => [
     'form-identifier' => ['extends' => 'slug'],
+    'export-form-entries' => [
+      'props' => [
+        'formId' => fn($formId) => $formId,
+      ],
+    ],
   ],
 
   'blueprints' => require __DIR__ . '/blueprints/index.php',
@@ -40,5 +48,44 @@ function kirbyForms() {
     // `formId` can be obtained with `KirbyForms::getFormId($yourFormPage)`
     // https://kirby-uniform.readthedocs.io/en/latest/actions/session-store/
     'sessionStore' => false,
+  ],
+
+  'routes' => [
+    [
+      'pattern' => 'kirby-forms/export/(:any)',
+      'action' => function ($formId) {
+        if (
+          !kirby()
+            ->user()
+            ?->isLoggedIn()
+        ) {
+          throw new Error('You need to be logged in to export form entries.');
+        }
+
+        $formPage = page("page://$formId");
+        if (!$formPage) {
+          throw new Error("Form page with id '$formId' not found");
+        }
+
+        Header::download([
+          'mime' => 'application/csv',
+          'name' => $formPage->slug() . '.csv',
+          'Pragma' => 'no-cache',
+          'Content-Disposition' => 'attachment',
+        ]);
+
+        $entries = $formPage->form_entries()->yaml();
+        $columns = array_keys($entries['0']);
+
+        $handle = fopen('php://output', 'w');
+        fputcsv($handle, $columns);
+        foreach ($entries as $entry) {
+          fputcsv($handle, $entry);
+        }
+        fclose($handle);
+
+        exit();
+      },
+    ],
   ],
 ]);
