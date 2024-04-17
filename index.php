@@ -66,8 +66,6 @@ function kirbyForms() {
         Header::download([
           'mime' => 'application/csv',
           'name' => $formPage->slug() . '.csv',
-          'Pragma' => 'no-cache',
-          'Content-Disposition' => 'attachment',
         ]);
 
         $entries = $formPage->form_entries()->yaml();
