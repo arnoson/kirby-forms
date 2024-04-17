@@ -96,10 +96,7 @@ class KirbyForms {
       flash('kirby-forms.success_form_id', get('form_id'));
 
       $successType = $formPage->success_type()->value();
-      $successUrl = $formPage
-        ->success_page()
-        ->toPage()
-        ?->url();
+      $successUrl = $formPage->success_page()->toPage()?->url();
 
       if ($successType === 'page' && $successUrl) {
         go($successUrl, 303);

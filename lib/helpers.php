@@ -23,14 +23,8 @@ function formFieldAttributes(
   $attributes = [
     'name' => $name,
     'value' => $value ? $value : null,
-    'placeholder' => $field
-      ->placeholder()
-      ->or(null)
-      ->value(),
-    'step' => $field
-      ->step()
-      ->or(null)
-      ->value(),
+    'placeholder' => $field->placeholder()->or(null)->value(),
+    'step' => $field->step()->or(null)->value(),
     'aria-invalid' => $hasError ? 'true' : null,
     'aria-describedby' => $hasError ? "$id/error" : null,
   ];
@@ -38,26 +32,11 @@ function formFieldAttributes(
   if ($clientValidation) {
     $attributes = array_merge($attributes, [
       'required' => $field->required()->toBool(),
-      'min' => $field
-        ->min()
-        ->or(null)
-        ->value(),
-      'max' => $field
-        ->max()
-        ->or(null)
-        ->value(),
-      'minlength' => $field
-        ->min_length()
-        ->or(null)
-        ->value(),
-      'maxlength' => $field
-        ->max_length()
-        ->or(null)
-        ->value(),
-      'pattern' => $field
-        ->pattern()
-        ->or(null)
-        ->value(),
+      'min' => $field->min()->or(null)->value(),
+      'max' => $field->max()->or(null)->value(),
+      'minlength' => $field->min_length()->or(null)->value(),
+      'maxlength' => $field->max_length()->or(null)->value(),
+      'pattern' => $field->pattern()->or(null)->value(),
     ]);
   }
 

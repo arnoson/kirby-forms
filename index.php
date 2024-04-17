@@ -54,11 +54,7 @@ function kirbyForms() {
     [
       'pattern' => 'kirby-forms/export/(:any)',
       'action' => function ($formId) {
-        if (
-          !kirby()
-            ->user()
-            ?->isLoggedIn()
-        ) {
+        if (!kirby()->user()?->isLoggedIn()) {
           throw new Error('You need to be logged in to export form entries.');
         }
 
