@@ -13,13 +13,22 @@ fields:
       *: arnoson.kirby-forms.enabled
     width: 2/12
 
+  confirmationEmail_to:
+    type: form-email-select
+    label:
+      *: arnoson.kirby-forms.email-to
+    required: true
+    width: 5/12
+    when:
+      confirmationEmail_enabled: true      
+
   confirmationEmail_from:
     extends: fields/form-email-sender
     label:
       *: arnoson.kirby-forms.email-from
     placeholder: info@your-site.com
     required: true
-    width: 10/12
+    width: 5/12
     when:
       confirmationEmail_enabled: true
 

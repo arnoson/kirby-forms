@@ -15,18 +15,29 @@ tabs:
       form_entries: sections/form-entries           
   settings:
     icon: settings
-    columns:
-      - width: 1/2
-        sections:
-          form_submit: sections/form-submit
-          form_success: sections/form-success
-          form_error: sections/form-error     
-      - width: 1/2
-        sections:
-          form_confirmation_email: sections/form-confirmation-email
+    sections:
+      form_submit: sections/form-submit
+      line_1:
+        type: fields
+        fields:
           line_1:
-            type: fields
-            fields:
-              line_1:
-                type: line
-          form_notification_email: sections/form-notification-email
+            type: line
+      form_success: sections/form-success
+      line_2:
+        type: fields
+        fields:
+          line_2:
+            type: line      
+      form_error: sections/form-error     
+      line_3:
+        type: fields
+        fields:
+          line_3:
+            type: line      
+      form_confirmation_email: sections/form-confirmation-email
+      line_4:
+        type: fields
+        fields:
+          line_4:
+            type: line
+      form_notification_email: sections/form-notification-email

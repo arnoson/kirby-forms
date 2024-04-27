@@ -14,6 +14,7 @@ function kirbyForms() {
 \Kirby\Cms\App::plugin('arnoson/kirby-forms', [
   'fields' => [
     'form-identifier' => ['extends' => 'slug'],
+    'form-email-select' => [],
     'export-form-entries' => [
       'props' => [
         'formId' => fn($formId) => $formId,

@@ -61,16 +61,20 @@ class KirbyForms {
     $form->SaveYamlAction(['page' => $formPage]);
 
     if ($formPage->confirmationEmail_enabled()->toBool()) {
-      $form->emailAction([
-        'to' => $form->data('email'),
-        'from' => $formPage->confirmationEmail_from()->value(),
-        'subject' => $formPage->confirmationEmail_subject()->value(),
-        'template' => $formPage
-          ->confirmationEmail_template()
-          ->or(null)
-          ->value(),
-        'body' => $formPage->confirmationEmail_body()->value(),
-      ]);
+      $toEmailName = $formPage->confirmationEmail_to()->value();
+      $toEmail = $form->data($toEmailName);
+      if ($toEmail) {
+        $form->emailAction([
+          'to' => $toEmail,
+          'from' => $formPage->confirmationEmail_from()->value(),
+          'subject' => $formPage->confirmationEmail_subject()->value(),
+          'template' => $formPage
+            ->confirmationEmail_template()
+            ->or(null)
+            ->value(),
+          'body' => $formPage->confirmationEmail_body()->value(),
+        ]);
+      }
     }
 
     if ($formPage->notificationEmail_enabled()->toBool()) {
