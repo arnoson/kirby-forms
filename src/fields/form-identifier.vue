@@ -1,5 +1,10 @@
 <template>
-  <k-field v-bind="$props" :input="_uid" :help="preview" class="k-slug-field">
+  <k-field
+    v-bind="$props"
+    :input="_uid"
+    :help="preview"
+    class="k-slug-field kf-field-identifier"
+  >
     <template v-if="wizard && wizard.text" #options>
       <k-button :text="wizard.text" icon="wand" @click="onWizard" />
     </template>
@@ -21,3 +26,13 @@ export default {
   extends: 'k-slug-field',
 }
 </script>
+
+<style>
+.kf-field-identifier {
+  button {
+    /* The wizard buttons takes to much space and breaks the field layout. Not
+    sure why this is happening. */
+    height: auto;
+  }
+}
+</style>

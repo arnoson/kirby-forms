@@ -4,7 +4,7 @@ panel.plugin('my/custom-form-fields', {
       props: ['content'],
       template: `
         <k-range-field
-          class="arnoson-forms-preview"
+          class="kf-field-preview"
           :style="\`--kf-field-name: '\${content.name}'\`"
           v-bind="fieldProps"
         />

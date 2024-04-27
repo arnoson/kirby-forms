@@ -1,7 +1,7 @@
 <template>
   <component
     :is="component"
-    class="arnoson-forms-preview"
+    class="kf-field-preview"
     :style="`--kf-field-name: '${content.name}'`"
     :time="false"
     :class="{ required }"
@@ -45,8 +45,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.arnoson-forms-preview {
+<style>
+.kf-field-preview {
   pointer-events: none;
 
   &.required .k-field-label::after {
