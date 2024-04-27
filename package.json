@@ -1,9 +1,7 @@
 {
   "scripts": {
-    "dev": "concurrently \"npm:server\" \"npm:watch\" \"npm:mail-hog\" -c yellow,green,blue",
-    "mail-hog": "~/go/bin/MailHog",
-    "server": "php -q -S localhost:8888  -t ./example/ ./example/router.php",
-    "watch": "kirbyup serve src/index.js",
+    "start": "ddev start && npm run dev",
+    "dev": "kirbyup serve src/index.js",
     "build": "kirbyup src/index.js",
     "commit-build": "git add index.js index.css && git commit -m 'chore: build'",
     "release": "npm run build && npm run commit-build && bumpp composer.json",
@@ -13,7 +11,6 @@
   "devDependencies": {
     "@prettier/plugin-php": "^0.22.1",
     "bumpp": "^9.3.0",
-    "concurrently": "^8.2.2",
     "kirbyup": "^3.1.0",
     "prettier": "^3.2.4"
   }
