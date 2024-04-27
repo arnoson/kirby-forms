@@ -2,6 +2,7 @@
   <component
     :is="component"
     class="arnoson-forms-preview"
+    :style="`--kf-field-name: '${content.name}'`"
     :time="false"
     :class="{ required }"
     :placeholder="content.placeholder"
@@ -49,9 +50,18 @@ export default {
   pointer-events: none;
 
   &.required .k-field-label::after {
-    content: '*';
-    padding-left: 0.25rem;
+    content: '✶';
+    font-size: var(--text-xs);
     color: var(--color-gray-500);
+    margin-inline-start: var(--spacing-1);
+  }
+
+  .k-field-label::before {
+    position: absolute;
+    right: 0;
+    content: var(--kf-field-name);
+    color: var(--color-gray-500);
+    font-weight: normal;
   }
 }
 </style>

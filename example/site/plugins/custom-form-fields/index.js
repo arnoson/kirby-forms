@@ -3,7 +3,11 @@ panel.plugin('my/custom-form-fields', {
     'form-field-range': {
       props: ['content'],
       template: `
-        <k-range-field class="arnoson-forms-preview" v-bind="fieldProps"/>
+        <k-range-field
+          class="arnoson-forms-preview"
+          :style="\`--kf-field-name: '\${content.name}'\`"
+          v-bind="fieldProps"
+        />
       `,
       computed: {
         fieldProps() {
