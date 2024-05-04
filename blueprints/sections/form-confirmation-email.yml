@@ -75,3 +75,6 @@ fields:
     when:
       confirmationEmail_type: template
       confirmationEmail_enabled: true
+
+  confirmationEmail_gap:
+    type: gap

@@ -40,3 +40,6 @@ fields:
     width: 7/12
     when:
       success_type: page
+
+  success_gap:
+    type: gap

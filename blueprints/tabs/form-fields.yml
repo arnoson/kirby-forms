@@ -1,0 +1,5 @@
+icon: edit
+label:
+  *: arnoson.kirby-forms.fields 
+sections:
+  form_fields: sections/form-fields

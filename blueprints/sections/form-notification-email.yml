@@ -77,3 +77,6 @@ fields:
     when:
       notificationEmail_type: template
       notificationEmail_enabled: true
+
+  notificationEmail_gap:
+    type: gap

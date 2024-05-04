@@ -1,0 +1,7 @@
+icon: settings
+sections:
+  form_submit: sections/form-submit
+  form_success: sections/form-success
+  form_error: sections/form-error
+  form_confirmation_email: sections/form-confirmation-email
+  form_notification_email: sections/form-notification-email
