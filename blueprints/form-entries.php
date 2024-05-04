@@ -11,7 +11,7 @@ return function ($kirby) {
     'fields' => [
       'export_form_entries' => [
         'type' => 'export-form-entries',
-        'formId' => $formPage->uuid()->id(),
+        'formId' => $formPage?->uuid()->id(),
       ],
       'form_entries' => [],
     ],
