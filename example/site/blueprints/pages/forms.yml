@@ -1,0 +1,10 @@
+title:
+  en: Forms
+  de: Formulare
+
+sections:
+  pages:
+    type: pages
+    templates:
+      - form
+      - form-workshop

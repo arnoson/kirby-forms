@@ -1,0 +1,85 @@
+Title: Contact
+
+----
+
+Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Email","name":"email","required":"true","validators":"[\"email\"]","default":"","placeholder":"","error":""},"id":"80fff1a1-7ea8-4335-8053-34e0a23df59b","isHidden":false,"type":"form-field-email"},{"content":{"label":"Text","name":"text","required":"true","default":"","placeholder":"","pattern":"","error":""},"id":"f721ddc1-0757-44ed-8082-8b704d7fb46b","isHidden":false,"type":"form-field-textarea"}],"id":"bf226f61-3900-435e-9af5-128525acdd29","width":"1/1"}],"id":"7c68f64c-b5de-4559-9036-26c05490a283"}]
+
+----
+
+Form-entries: 
+
+----
+
+Label-submit: Submit
+
+----
+
+Success-type: message
+
+----
+
+Success-text: Thank you for your registration!
+
+----
+
+Success-page: 
+
+----
+
+Error-invalidfields: Please fill in all fields correctly.
+
+----
+
+Confirmationemail-enabled: false
+
+----
+
+Confirmationemail-from: 
+
+----
+
+Confirmationemail-subject: 
+
+----
+
+Confirmationemail-type: text
+
+----
+
+Confirmationemail-body: 
+
+----
+
+Confirmationemail-template: 
+
+----
+
+Notificationemail-enabled: false
+
+----
+
+Notificationemail-to: 
+
+----
+
+Notificationemail-from: 
+
+----
+
+Notificationemail-subject: 
+
+----
+
+Notificationemail-type: text
+
+----
+
+Notificationemail-body: 
+
+----
+
+Notificationemail-template: 
+
+----
+
+Uuid: jzfEbTTqmyTsyhsD

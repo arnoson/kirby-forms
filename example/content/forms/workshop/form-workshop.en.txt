@@ -1,0 +1,109 @@
+Title: Workshop
+
+----
+
+Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"First Name","name":"first_name","required":"false","default":"","placeholder":"","min_length":"","max_length":"","pattern":"","error":""},"id":"b6606ab0-2b82-465a-a082-04978734dfaf","isHidden":false,"type":"form-field-text"}],"id":"a60c21f2-9601-4442-9d1b-018ce6371ab7","width":"1/2"},{"blocks":[{"content":{"label":"Last Name","name":"last_name","required":"false","default":"","placeholder":"","min_length":"","max_length":"","pattern":"","error":""},"id":"489b28ac-d69a-41d8-9ef9-e339530bb691","isHidden":false,"type":"form-field-text"}],"id":"ce7e378b-8a61-4f2d-a8c9-db50f1f29a3b","width":"1/2"}],"id":"6a31b6ef-6276-4d03-8827-4db70229782b"},{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Email","name":"email","required":"false","validators":"[\"email\"]","default":"","placeholder":"","error":""},"id":"080066cb-19f5-49ec-8048-7b6db6a888a2","isHidden":false,"type":"form-field-email"}],"id":"e6694342-acad-45fc-b487-00554f2ef03d","width":"1/1"}],"id":"a6ea2022-35cb-4602-b1e6-5b6ce289e672"}]
+
+----
+
+Form-entries: 
+
+----
+
+Max-participants: 3
+
+----
+
+Label-submit: Register
+
+----
+
+Success-type: message
+
+----
+
+Success-text: <p>Thank you for your registration!</p>
+
+----
+
+Success-page: 
+
+----
+
+Error-invalidfields: 
+
+----
+
+Confirmationemailworkshop-enabled: true
+
+----
+
+Confirmationemailworkshop-to: email
+
+----
+
+Confirmationemailworkshop-from: noreply@example.com
+
+----
+
+Confirmationemailworkshop-subject: Workshop Registration
+
+----
+
+Confirmationemailworkshop-body: Thank you for your registration!
+
+----
+
+Confirmationemailworkshop-body-waitlist: The workshop is already full, but your are on the wait list!
+
+----
+
+Notificationemail-enabled: false
+
+----
+
+Notificationemail-to: 
+
+----
+
+Notificationemail-from: 
+
+----
+
+Notificationemail-subject: 
+
+----
+
+Notificationemail-type: 
+
+----
+
+Notificationemail-body: 
+
+----
+
+Notificationemail-template: 
+
+----
+
+Confirmationemail-to: email
+
+----
+
+Confirmationemail-from: noreply@example.com
+
+----
+
+Confirmationemail-subject: Workshop Registration
+
+----
+
+Confirmationemail-body: Thank you for your registration!
+
+----
+
+Confirmationemail-body-waitlist: The workshop is already full, but you have been put on the waiting list!
+
+----
+
+Uuid: 1ig4usHI8UULxbmV
