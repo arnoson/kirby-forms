@@ -4,6 +4,7 @@ namespace arnoson\KirbyForms;
 
 use Kirby\Cms\Page;
 use Kirby\Toolkit\Str;
+use Uniform\Form;
 
 class KirbyForms {
   protected static $instance = null;
@@ -57,7 +58,14 @@ class KirbyForms {
     return $formRules;
   }
 
-  function processRequest($formPage, $form) {
+  function processRequest(Page $formPage, Form $form) {
+    $customActions = $formPage->actions();
+    if (is_array($customActions)) {
+      foreach ($customActions as $action) {
+        $form->action($action, ['page' => $formPage]);
+      }
+    }
+
     $form->SaveYamlAction(['page' => $formPage]);
 
     if ($formPage->confirmationEmail_enabled()->toBool()) {
