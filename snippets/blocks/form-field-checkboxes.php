@@ -5,7 +5,8 @@
 <fieldset>
   <?php snippet('form-legend', [
     'label' => $label,
-    'required' => $block->required()->toBool(),
+    // Html doesn't allow required on a group of checkboxes.
+    'required' => false,
   ]); ?>
   <?php foreach ($block->options()->toStructure() as $option): ?>
   <?php
