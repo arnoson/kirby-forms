@@ -6,7 +6,11 @@ Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Email","nam
 
 ----
 
-Form-entries: 
+Form-entries:
+
+- 
+  email: test@example.com
+  text: Hey there :)
 
 ----
 
@@ -18,7 +22,7 @@ Success-type: message
 
 ----
 
-Success-text: Thank you for your registration!
+Success-text: <p>Thanks for getting in touch!</p>
 
 ----
 
