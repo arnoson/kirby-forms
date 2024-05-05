@@ -1,5 +1,8 @@
 <fieldset>
-  <legend><?= $label ?></legend>
+  <?php snippet('form-legend', [
+    'label' => $label,
+    'required' => $block->required()->toBool(),
+  ]); ?>
   <?php foreach ($block->options()->toStructure() as $option): ?>
   <?php
   $value = $option->value();
@@ -9,6 +12,7 @@
     'name' => $block->name(),
     'id' => $optionId,
     'value' => $value,
+    'required' => $block->required()->toBool() ? true : null,
     'checked' => $value == $block->default()->value() ? true : null,
   ];
   ?>

@@ -10,5 +10,9 @@ $value = $attributes['value'];
 unset($attributes['value']);
 ?>
 
-<label for="<?= $id ?>"><?= $label ?></label>
+<?php snippet('form-label', [
+  'id' => $id,
+  'label' => $label,
+  'required' => $block->required()->toBool(),
+]); ?>
 <textarea id="<?= $id ?>" <?= attr($attributes) ?>><?= $value ?></textarea>

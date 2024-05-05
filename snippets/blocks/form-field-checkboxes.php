@@ -2,8 +2,11 @@
   ? []
   : array_map('trim', explode(',', $block->default()->value())); ?>
 
-<fieldset <?= e($block->required()->toBool(), 'required') ?>>
-  <legend><?= $label ?></legend>
+<fieldset>
+  <?php snippet('form-legend', [
+    'label' => $label,
+    'required' => $block->required()->toBool(),
+  ]); ?>
   <?php foreach ($block->options()->toStructure() as $option): ?>
   <?php
   $value = $option->value();

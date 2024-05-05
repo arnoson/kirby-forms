@@ -5,5 +5,9 @@
   $showOldValues
 ); ?>
 
-<label for="<?= $id ?>"><?= $label ?></label>
+<?php snippet('form-label', [
+  'id' => $id,
+  'label' => $label,
+  'required' => $block->required()->toBool(),
+]); ?>
 <input id="<?= $id ?>" type="text" <?= attr($attributes) ?> />

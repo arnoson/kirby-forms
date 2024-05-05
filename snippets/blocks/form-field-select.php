@@ -1,10 +1,15 @@
-<?php
-$attributes = [
-  'name' => $block->name(),
-  'id' => $id,
-]; ?>
+<?php $attributes = arnoson\KirbyForms\formFieldAttributes(
+  $id,
+  $block,
+  $form,
+  $showOldValues
+); ?>
 
-<label for="<?= $id ?>"><?= $label ?></label>
+<?php snippet('form-label', [
+  'id' => $id,
+  'label' => $label,
+  'required' => $block->required()->toBool(),
+]); ?>
 <select <?= attr($attributes) ?>>
   <?php if ($block->empty()->toBool() || $block->default()->isEmpty()): ?>
   <option value=""><?= $block->placeholder()->isEmpty()
