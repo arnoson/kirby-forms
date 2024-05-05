@@ -66,8 +66,6 @@ class KirbyForms {
       }
     }
 
-    $form->SaveYamlAction(['page' => $formPage]);
-
     if ($formPage->confirmationEmail_enabled()->toBool()) {
       $toEmailName = $formPage->confirmationEmail_to()->value();
       $toEmail = $form->data($toEmailName);
@@ -97,6 +95,8 @@ class KirbyForms {
         'body' => $formPage->notificationEmail_body()->value(),
       ]);
     }
+
+    $form->SaveYamlAction(['page' => $formPage]);
 
     if ($formPage->sessionStore()->toBool()) {
       $form->sessionStoreAction(['name' => KirbyForms::getFormId($formPage)]);
