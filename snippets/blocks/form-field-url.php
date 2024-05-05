@@ -10,4 +10,4 @@
   'label' => $label,
   'required' => $block->required()->toBool(),
 ]); ?>
-<input id="<?= $id ?>" <?= attr($attributes) ?> />
+<input id="<?= $id ?>" type="url" <?= attr($attributes) ?> />
