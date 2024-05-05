@@ -7,3 +7,5 @@
 /example/site/config
 /index.js
 /index.css
+*.min.css
+/.ddev
