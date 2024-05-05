@@ -7,13 +7,7 @@ namespace arnoson\KirbyForms;
  * @param Kirby\Cms\Block $field
  * @param Uniform\Form $form
  */
-function formFieldAttributes(
-  $id,
-  $field,
-  $form,
-  bool $clientValidation,
-  bool $showOldValues
-): array {
+function formFieldAttributes($id, $field, $form, bool $showOldValues): array {
   $name = $field->name()->value();
   $hasError = !!$form->error($name);
   $oldValue = $form->old($name);
@@ -27,18 +21,13 @@ function formFieldAttributes(
     'step' => $field->step()->or(null)->value(),
     'aria-invalid' => $hasError ? 'true' : null,
     'aria-describedby' => $hasError ? "$id/error" : null,
+    'required' => $field->required()->toBool(),
+    'min' => $field->min()->or(null)->value(),
+    'max' => $field->max()->or(null)->value(),
+    'minlength' => $field->min_length()->or(null)->value(),
+    'maxlength' => $field->max_length()->or(null)->value(),
+    'pattern' => $field->pattern()->or(null)->value(),
   ];
-
-  if ($clientValidation) {
-    $attributes = array_merge($attributes, [
-      'required' => $field->required()->toBool(),
-      'min' => $field->min()->or(null)->value(),
-      'max' => $field->max()->or(null)->value(),
-      'minlength' => $field->min_length()->or(null)->value(),
-      'maxlength' => $field->max_length()->or(null)->value(),
-      'pattern' => $field->pattern()->or(null)->value(),
-    ]);
-  }
 
   return $attributes;
 }

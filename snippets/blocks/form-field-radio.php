@@ -6,7 +6,6 @@
   $optionId = "$id/$value";
   $label = $option->text()->isEmpty() ? $value : $option->text();
   $attributes = [
-    'required' => $clientValidation ? $block->required()->toBool() : null,
     'name' => $block->name(),
     'id' => $optionId,
     'value' => $value,

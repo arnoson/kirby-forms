@@ -2,7 +2,6 @@
   $id,
   $block,
   $form,
-  $clientValidation,
   $showOldValues
 ); ?>
 

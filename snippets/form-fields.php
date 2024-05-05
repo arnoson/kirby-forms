@@ -1,7 +1,7 @@
 <?php $formSlug = $formPage->slug(); ?>
 
 <?php foreach ($formPage->form_fields()->toLayouts() as $layout): ?>
-<section class="form-row">
+<div class="form-row">
   <?php foreach ($layout->columns() as $column): ?>
   <div class="form-column" style="--span:<?= $column->span($gridColumns) ?>">
     <?php foreach ($column->blocks() as $block): ?>
@@ -10,24 +10,20 @@
     $label = $block->label()->isNotEmpty() ? $block->label() : $name;
     $id = "$formSlug/field/$name";
     ?>
-    <div class="form-field<?= e(
-      $block->required()->toBool(),
-      ' form-field-required'
-    ) ?>">
+    <div class="form-field">
       <?php snippet('blocks/' . $block->type(), [
         'form' => $form,
         'block' => $block,
         'id' => $id,
         'label' => $label,
-        'clientValidation' => $clientValidation,
         'showOldValues' => $showOldValues,
       ]); ?>
       <?php if ($error = $form->error($name)): ?>
-      <div class="form-field-error" id="<?= $id ?>/error"><?= $error[0] ?></div>
+      <small class="form-field-error" id="<?= $id ?>/error"><?= $error[0] ?></small>
       <?php endif; ?>
     </div>
     <?php endforeach; ?>
   </div>
   <?php endforeach; ?>
-</section>
+</div>
 <?php endforeach; ?>

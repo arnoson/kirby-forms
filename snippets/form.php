@@ -24,12 +24,12 @@ if ($kirby->request()->is('POST') && get('form_id') === $formId) {
   'action' => $page->url(),
   'method' => 'POST',
   'autocomplete' => option('arnoson.kirby-forms.autoComplete') ? 'on' : 'off',
+  'novalidate' => option('arnoson.kirby-forms.clientValidation') ? null : true,
 ]) ?>>
   <?php snippet('form-fields', [
     'form' => $form,
     'formPage' => $formPage,
     'gridColumns' => option('arnoson.kirby-forms.gridColumns'),
-    'clientValidation' => option('arnoson.kirby-forms.clientValidation'),
     'showOldValues' => option('arnoson.kirby-forms.showOldValues'),
   ]); ?>
   <input type="hidden" name="form_name" value="<?= $formPage->title() ?>" />

@@ -2,7 +2,6 @@
 $attributes = [
   'name' => $block->name(),
   'id' => $id,
-  'required' => $clientValidation ? $block->required()->toBool() : null,
 ]; ?>
 
 <label for="<?= $id ?>"><?= $label ?></label>
