@@ -1,11 +1,12 @@
 <?php
 
+use Kirby\Cms\Collection;
 use Kirby\Http\Header;
 use Kirby\Http\Response;
 
 require_once __DIR__ . '/lib/KirbyForms.php';
 require_once __DIR__ . '/lib/helpers.php';
-require_once __DIR__ . '/lib/SaveYamlAction.php';
+require_once __DIR__ . '/lib/SaveEntryAction.php';
 
 function kirbyForms() {
   return arnoson\KirbyForms\KirbyForms::getInstance();
@@ -15,14 +16,16 @@ function kirbyForms() {
   'fields' => [
     'form-identifier' => ['extends' => 'slug'],
     'form-email-select' => [],
-    'export-form-entries' => [
+    'form-export' => [
       'props' => [
         'formId' => fn($formId) => $formId,
+        'entryId' => fn($entryId) => $entryId,
       ],
     ],
   ],
 
   'blueprints' => require __DIR__ . '/blueprints/index.php',
+  'pageModels' => require __DIR__ . '/models/index.php',
   'snippets' => require __DIR__ . '/snippets/index.php',
   'translations' => require __DIR__ . '/translations/index.php',
   'options' => [
@@ -53,8 +56,8 @@ function kirbyForms() {
 
   'routes' => [
     [
-      'pattern' => 'kirby-forms/export/(:any)',
-      'action' => function ($formId) {
+      'pattern' => 'kirby-forms/export/(:any)/(:any?)',
+      'action' => function ($formId, $entryId = null) {
         if (!kirby()->user()?->isLoggedIn()) {
           throw new Error('You need to be logged in to export form entries.');
         }
@@ -64,18 +67,26 @@ function kirbyForms() {
           throw new Error("Form page with id '$formId' not found");
         }
 
+        if ($entryId && !($entryPage = page("page://$entryId"))) {
+          throw new Error("Form entry with id '$entryId' not found");
+        }
+
+        $entries = $entryId
+          ? new Collection([$entryPage])
+          : $formPage->children();
+        $columns = array_keys($entries->first()->data()->yaml());
+
         Header::download([
           'mime' => 'application/csv',
-          'name' => $formPage->slug() . '.csv',
+          'name' => $entryId
+            ? $formPage->slug() . "-$entryId.csv"
+            : $formPage->slug() . '.csv',
         ]);
-
-        $entries = $formPage->form_entries()->yaml();
-        $columns = array_keys($entries['0']);
 
         $handle = fopen('php://output', 'w');
         fputcsv($handle, $columns);
         foreach ($entries as $entry) {
-          fputcsv($handle, $entry);
+          fputcsv($handle, $entry->data()->yaml());
         }
         fclose($handle);
 

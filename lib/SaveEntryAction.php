@@ -2,13 +2,17 @@
 
 namespace Uniform\Actions;
 
+use DateTime;
 use Error;
+use Kirby\Toolkit\A;
 use Kirby\Toolkit\I18n;
+use Kirby\Uuid\Uuid;
 
-class SaveYamlAction extends Action {
+class SaveEntryAction extends Action {
   public function perform() {
     try {
       $data = $this->form->data();
+      /** @var \Kirby\Cms\Page */
       $page = $this->option('page');
 
       // We don't need `form_name` (used for email subject) and `form_id` (used
@@ -16,13 +20,17 @@ class SaveYamlAction extends Action {
       unset($data['form_name']);
       unset($data['form_id']);
 
-      $entries = $page->form_entries()->toData('yaml');
-      $entries[] = $data;
-
+      $uuid = Uuid::generate();
       kirby()->impersonate(
         'kirby',
-        fn() => $page->update([
-          'form_entries' => \Kirby\Data\Yaml::encode($entries),
+        fn() => $page->createChild([
+          'slug' => $uuid,
+          'template' => 'form-entry',
+          'draft' => false,
+          'content' => array_merge($data, [
+            'uuid' => $uuid,
+            'form_submitted' => date('c'),
+          ]),
         ])
       );
     } catch (\Exception $e) {

@@ -6,58 +6,39 @@ return function ($kirby) {
   $slug = str_replace('+', '/', $result[1]);
   $formPage = page($slug) ?? site()->index()->drafts()->find($slug);
 
+  $fields = kirbyForms()->formFields($formPage);
+  $columns = array_reduce(
+    array_slice($fields, 0, 4),
+    function ($result, $field) {
+      $result[$field['name']] = ['label' => $field['label']];
+      return $result;
+    },
+    ['title' => ['label' => 'Submitted']]
+  );
+
   $blueprint = [
-    'type' => 'fields',
-    'fields' => [
-      'export_form_entries' => [
-        'type' => 'export-form-entries',
-        'formId' => $formPage?->uuid()->id(),
+    'icon' => 'table',
+    'label' => ['*' => 'arnoson.kirby-forms.entries'],
+    'sections' => [
+      'form_export_fields' => [
+        'type' => 'fields',
+        'fields' => [
+          'form_export' => [
+            'type' => 'form-export',
+            'label' => ['*' => 'arnoson.kirby-forms.export'],
+            'formId' => $formPage?->uuid()->id(),
+          ],
+        ],
       ],
-      'form_entries' => [],
+      'form_entries' => [
+        'type' => 'pages',
+        'layout' => 'table',
+        'search' => true,
+        'image' => false,
+        'columns' => $columns,
+      ],
     ],
   ];
 
-  if (!$formPage) {
-    $blueprint['fields']['form_entries'] = [
-      'type' => 'info',
-      'theme' => 'negative',
-      'text' => "Couldn't find page $slug",
-    ];
-    return $blueprint;
-  }
-
-  $fields = [];
-  foreach ($formPage->form_fields()->toLayouts() as $layout) {
-    foreach ($layout->columns() as $column) {
-      foreach ($column->blocks() as $block) {
-        if (!preg_match('/^form-field-([\w_-]+)/', $block->type(), $match)) {
-          continue;
-        }
-        $content = $block->content();
-        $fields[$content->name()->value()] = array_merge(
-          $block->content()->toArray(),
-          [
-            'type' => $match[1],
-            'required' => $content->required()->toBool(),
-          ]
-        );
-      }
-    }
-  }
-
-  if (empty($fields)) {
-    $blueprint['fields']['form_entries'] = [
-      'label' => 'Entries',
-      'type' => 'info',
-      'text' => 'No fields yet',
-    ];
-    return $blueprint;
-  }
-
-  $blueprint['fields']['form_entries'] = [
-    'label' => 'Entries',
-    'type' => 'structure',
-    'fields' => $fields,
-  ];
   return $blueprint;
 };

@@ -1,4 +1,6 @@
 icon: settings
+label:
+  *: arnoson.kirby-forms.settings
 sections:
   form_submit: sections/form-submit
   form_success: sections/form-success

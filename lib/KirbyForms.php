@@ -9,12 +9,30 @@ use Uniform\Form;
 class KirbyForms {
   protected static $instance = null;
 
-  public static function getInstance() {
+  public static function getInstance(): self {
     return self::$instance ??= new self();
   }
 
   public static function getFormId($page) {
     return Str::slug($page->uuid());
+  }
+
+  function formFields(Page $formPage): array {
+    $formFields = [];
+    foreach ($formPage->form_fields()->toLayouts() as $layout) {
+      foreach ($layout->columns() as $column) {
+        foreach ($column->blocks() as $block) {
+          if (!preg_match('/^form-field-([\w_-]+)/', $block->type(), $match)) {
+            continue;
+          }
+          $field = $block->content()->toArray();
+          $field['type'] = $match[1];
+          $field['required'] = $block->content()->required()->toBool();
+          array_push($formFields, $field);
+        }
+      }
+    }
+    return $formFields;
   }
 
   /**
@@ -96,7 +114,7 @@ class KirbyForms {
       ]);
     }
 
-    $form->SaveYamlAction(['page' => $formPage]);
+    $form->saveEntryAction(['page' => $formPage]);
 
     if ($formPage->sessionStore()->toBool()) {
       $form->sessionStoreAction(['name' => KirbyForms::getFormId($formPage)]);

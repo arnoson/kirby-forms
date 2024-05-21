@@ -8,7 +8,8 @@ foreach (glob(__DIR__ . '/**/*.yml') as $file) {
 }
 
 return array_merge($blueprints, [
-  'sections/form-entries' => require __DIR__ . '/form-entries.php',
+  'pages/form-entry' => require __DIR__ . '/form-entry.php',
+  'tabs/form-entries' => require __DIR__ . '/form-entries.php',
   'fields/form-email-template' => require __DIR__ . '/form-email-template.php',
   'fields/form-email-sender' => require __DIR__ . '/form-email-sender.php',
 ]);

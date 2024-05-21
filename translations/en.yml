@@ -6,6 +6,11 @@ arnoson.kirby-forms.fields: Fields
 arnoson.kirby-forms.message: Message
 arnoson.kirby-forms.page: Page
 arnoson.kirby-forms.enabled: Enabled
+arnoson.kirby-forms.submitted: Submitted
+arnoson.kirby-forms.entries: Entries
+arnoson.kirby-forms.settings: Settings
+arnoson.kirby-forms.export: Export
+arnoson.kirby-forms.create-from-label: Create from label
 
 arnoson.kirby-forms.success-type: Show
 arnoson.kirby-forms.submit-button-label: Button label
