@@ -1,6 +1,10 @@
-<?php $default = $block->default()->isEmpty()
-  ? []
-  : array_map('trim', explode(',', $block->default()->value())); ?>
+<?php
+/** @var Uniform\Form $form */
+use Kirby\Toolkit\Str;
+
+$name = $block->name()->value();
+$values = Str::split($form->old($name, null) ?? $block->default()->value());
+?>
 
 <fieldset>
   <?php snippet('form-legend', [
@@ -17,7 +21,7 @@
     'name' => $block->name() . '[]',
     'id' => $optionId,
     'value' => $value,
-    'checked' => in_array($value, $default) ? true : null,
+    'checked' => in_array($value, $values) ? true : null,
   ];
   ?>
   <div>
