@@ -1,3 +1,9 @@
+<?php
+/** @var Uniform\Form $form */
+$name = $block->name()->value();
+$fieldValue = $form->old($name, null) ?? $block->default()->value();
+?>
+
 <fieldset>
   <?php snippet('form-legend', [
     'label' => $label,
@@ -5,15 +11,15 @@
   ]); ?>
   <?php foreach ($block->options()->toStructure() as $option): ?>
   <?php
-  $value = $option->value();
-  $optionId = "$id/$value";
-  $label = $option->text()->isEmpty() ? $value : $option->text();
+  $optionValue = $option->value();
+  $optionId = "$id/$optionValue";
+  $label = $option->text()->isEmpty() ? $optionValue : $option->text();
   $attributes = [
     'name' => $block->name(),
     'id' => $optionId,
-    'value' => $value,
+    'value' => $optionValue,
     'required' => $block->required()->toBool() ? true : null,
-    'checked' => $value == $block->default()->value() ? true : null,
+    'checked' => $optionValue == $fieldValue ? true : null,
   ];
   ?>
   <div>
