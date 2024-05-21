@@ -30,7 +30,6 @@ if ($kirby->request()->is('POST') && get('form_id') === $formId) {
     'form' => $form,
     'formPage' => $formPage,
     'gridColumns' => option('arnoson.kirby-forms.gridColumns'),
-    'showOldValues' => option('arnoson.kirby-forms.showOldValues'),
   ]); ?>
   <input type="hidden" name="form_name" value="<?= $formPage->title() ?>" />
   <?= csrf_field() ?>

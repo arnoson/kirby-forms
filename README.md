@@ -55,10 +55,6 @@ These global options can only be set in the plugin's config:
 
   // Wether or not to use the `autocomplete` attribute for the form element.
   'autoComplete' => false,
-
-  // Wether ot not to render the previous values in the form (e.g.: in the case
-  // a form submit wasn't successful and the form is shown again to the user)
-  'showOldValues' => true,
 ]
 ```
 

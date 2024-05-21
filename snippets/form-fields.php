@@ -16,7 +16,6 @@
         'block' => $block,
         'id' => $id,
         'label' => $label,
-        'showOldValues' => $showOldValues,
       ]); ?>
       <?php if ($error = $form->error($name)): ?>
       <small class="form-field-error" id="<?= $id ?>/error"><?= $error[0] ?></small>

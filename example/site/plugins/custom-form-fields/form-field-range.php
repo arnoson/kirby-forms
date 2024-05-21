@@ -6,7 +6,6 @@ $attributes = arnoson\KirbyForms\formFieldAttributes(
   $id,
   $block,
   $form,
-  $showOldValues,
 );
 ?>
 

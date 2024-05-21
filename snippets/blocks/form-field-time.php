@@ -1,8 +1,7 @@
 <?php $attributes = arnoson\KirbyForms\formFieldAttributes(
   $id,
   $block,
-  $form,
-  $showOldValues
+  $form
 ); ?>
 
 <?php snippet('form-label', [

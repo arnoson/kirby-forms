@@ -37,9 +37,6 @@ function kirbyForms() {
     // validation done by Kirby Uniform).
     'clientValidation' => true,
 
-    // Wether ot not to show the old values if a form with errors is shown again.
-    'showOldValues' => true,
-
     // How many columns to use for the grid that determines the layout of the
     // form. see: https://getkirby.com/docs/reference/panel/fields/layout#calculate-the-column-span-value
     'gridColumns' => 12,

@@ -7,12 +7,11 @@ namespace arnoson\KirbyForms;
  * @param Kirby\Cms\Block $field
  * @param Uniform\Form $form
  */
-function formFieldAttributes($id, $field, $form, bool $showOldValues): array {
+function formFieldAttributes($id, $field, $form): array {
   $name = $field->name()->value();
   $hasError = !!$form->error($name);
-  $oldValue = $form->old($name);
   $default = $field->default()->value();
-  $value = $showOldValues && $oldValue ? $oldValue : $default;
+  $value = $form->old($name) ?? $default;
 
   $attributes = [
     'name' => $name,
