@@ -3,7 +3,7 @@
 use Kirby\Toolkit\Str;
 
 $name = $block->name()->value();
-$values = Str::split($form->old($name, null) ?? $block->default()->value());
+$fieldValue = Str::split($form->old($name, null) ?? $block->default()->value());
 ?>
 
 <fieldset>
@@ -14,14 +14,14 @@ $values = Str::split($form->old($name, null) ?? $block->default()->value());
   ]); ?>
   <?php foreach ($block->options()->toStructure() as $option): ?>
   <?php
-  $value = $option->value();
-  $optionId = "$id/$value";
-  $label = $option->text()->isEmpty() ? $value : $option->text();
+  $optionValue = $option->value();
+  $optionId = "$id/$optionValue";
+  $label = $option->text()->isEmpty() ? $optionValue : $option->text();
   $attributes = [
     'name' => $block->name() . '[]',
     'id' => $optionId,
-    'value' => $value,
-    'checked' => in_array($value, $values) ? true : null,
+    'value' => $optionValue,
+    'checked' => in_array($optionValue, $fieldValue) ? true : null,
   ];
   ?>
   <div>
