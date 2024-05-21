@@ -19,7 +19,7 @@ function kirbyForms() {
     'form-export' => [
       'props' => [
         'formId' => fn($formId) => $formId,
-        'entryId' => fn($entryId) => $entryId,
+        'entryId' => fn($entryId = null) => $entryId,
       ],
     ],
   ],
@@ -74,7 +74,8 @@ function kirbyForms() {
         $entries = $entryId
           ? new Collection([$entryPage])
           : $formPage->children();
-        $columns = array_keys($entries->first()->data()->yaml());
+
+        $columns = array_keys($entries->first()?->data()->yaml() ?? []);
 
         Header::download([
           'mime' => 'application/csv',
