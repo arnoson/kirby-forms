@@ -6,14 +6,6 @@ Form-fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"label":"Email","nam
 
 ----
 
-Form-entries:
-
-- 
-  email: test@example.com
-  text: Hey there :)
-
-----
-
 Label-submit: Submit
 
 ----
