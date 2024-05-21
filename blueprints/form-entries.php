@@ -32,6 +32,8 @@ return function ($kirby) {
       ],
       'form_entries' => [
         'type' => 'pages',
+        'label' => ['*' => 'arnoson.kirby-forms.entries'],
+        'empty' => ['*' => 'arnoson.kirby-forms.no-entries'],
         'layout' => 'table',
         'search' => true,
         'image' => false,
