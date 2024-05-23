@@ -2,7 +2,6 @@
 
 use Kirby\Cms\Collection;
 use Kirby\Http\Header;
-use Kirby\Http\Response;
 
 require_once __DIR__ . '/lib/KirbyForms.php';
 require_once __DIR__ . '/lib/helpers.php';
@@ -72,7 +71,8 @@ function kirbyForms() {
           ? new Collection([$entryPage])
           : $formPage->children();
 
-        $columns = array_keys($entries->first()?->data()->yaml() ?? []);
+        $fields = kirbyForms()->formFields($formPage);
+        $columns = array_column($fields, 'name');
 
         Header::download([
           'mime' => 'application/csv',
@@ -84,7 +84,11 @@ function kirbyForms() {
         $handle = fopen('php://output', 'w');
         fputcsv($handle, $columns);
         foreach ($entries as $entry) {
-          fputcsv($handle, $entry->data()->yaml());
+          $data = array_map(
+            fn($column) => $entry->content()->get($column)->value(),
+            $columns
+          );
+          fputcsv($handle, $data);
         }
         fclose($handle);
 
