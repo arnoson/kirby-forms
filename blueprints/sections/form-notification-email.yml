@@ -70,8 +70,7 @@ fields:
       notificationEmail_enabled: true
 
   notificationEmail_template:
-    label: Template
-    type: text
+    extends: fields/form-email-template
     required: true
     width: 2/3
     when:
