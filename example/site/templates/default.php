@@ -29,6 +29,19 @@
       flex-direction: column;
     }
 
+    .form-errors {
+      margin-bottom: var(--pico-spacing);
+      padding: var(--pico-spacing);
+      border-radius: var(--pico-border-radius);
+      border: 1px solid var(--pico-del-color);
+      background: #ffe9e9;
+
+      & ul, & p {
+        margin-bottom: 0;
+        color: var(--pico-del-color);
+      }
+    }
+
     .uniform__potty {
       position: absolute;
       left: -9999px;

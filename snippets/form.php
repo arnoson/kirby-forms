@@ -20,6 +20,10 @@ if ($kirby->request()->is('POST') && get('form_id') === $formId) {
 ]); ?>
 <?php else: ?>
 
+<?php if ($hasErrors): ?>
+<?php snippet('form-errors', ['form' => $form, 'formPage' => $formPage]); ?>
+<?php endif; ?>
+
 <form <?= attr([
   'action' => $page->url(),
   'method' => 'POST',
@@ -38,12 +42,5 @@ if ($kirby->request()->is('POST') && get('form_id') === $formId) {
     <?= $formPage->label_submit()->value() ?>
   </button>
 </form>
-
-<?php if ($hasErrors): ?>
-<?php snippet('form-error', [
-  'form' => $form,
-  'error' => $formPage->error_invalidFields()->value(),
-]); ?>
-<?php endif; ?>
 
 <?php endif; ?>
