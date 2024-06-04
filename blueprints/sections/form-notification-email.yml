@@ -15,7 +15,6 @@ fields:
 
   notificationEmail_to:
     type: email
-    extends: fields/form-email-sender
     label:
       *: arnoson.kirby-forms.email-to
     placeholder: info@your-site.com
