@@ -38,7 +38,7 @@ class SaveEntryAction extends Action {
       $this->handleException($e);
     }
   }
-
+  
   /**
    * @param Exception|Error $e
    */
