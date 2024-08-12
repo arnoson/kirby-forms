@@ -7,9 +7,8 @@ export default {
     component: () => 'k-checkboxes-field',
 
     defaultValue() {
-      return this.content.default?.split(',').map(el => el.trim())
-    }
-  }
+      return this.content.default?.split(',').map((el) => el.trim())
+    },
+  },
 }
 </script>
-

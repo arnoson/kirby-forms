@@ -5,8 +5,7 @@ export default {
 
   computed: {
     component: () => 'k-textarea-field',
-    buttons: () => false
-  }
+    buttons: () => false,
+  },
 }
 </script>
-

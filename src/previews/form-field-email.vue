@@ -4,8 +4,7 @@ export default {
   extends: FormField,
 
   computed: {
-    component: () => 'k-email-field'
-  }
+    component: () => 'k-email-field',
+  },
 }
 </script>
-

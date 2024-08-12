@@ -4,8 +4,7 @@ export default {
   extends: FormField,
 
   computed: {
-    component: () => 'k-number-field'
-  }
+    component: () => 'k-number-field',
+  },
 }
 </script>
-
