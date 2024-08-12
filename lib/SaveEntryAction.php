@@ -26,6 +26,7 @@ class SaveEntryAction extends Action {
         fn() => $page->createChild([
           'slug' => $uuid,
           'template' => 'form-entry',
+          'sortby' => date('c'),
           'draft' => false,
           'content' => array_merge($data, [
             'uuid' => $uuid,
