@@ -69,10 +69,11 @@ function kirbyForms() {
 
         $entries = $entryId
           ? new Collection([$entryPage])
-          : $formPage->children();
+          : $formPage->children()->sort('form_submitted', 'desc');
 
         $fields = kirbyForms()->formFields($formPage);
         $columns = array_column($fields, 'name');
+        array_unshift($columns, 'form_submitted');
 
         Header::download([
           'mime' => 'application/csv',
