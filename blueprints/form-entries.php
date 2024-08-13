@@ -38,6 +38,7 @@ return function ($kirby) {
         'search' => true,
         'image' => false,
         'columns' => $columns,
+        'sortBy' => 'form_submitted desc',
       ],
     ],
   ];
