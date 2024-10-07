@@ -2,3 +2,4 @@ type: number
 label:
   en: Min Value
   de: Min. Wert
+  nl: Minimale waarde
