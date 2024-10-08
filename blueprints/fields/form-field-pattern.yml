@@ -1,5 +1,2 @@
 type: text
-label:
-  en: Pattern
-  de: Muster
-  nl: Patroon
+label: arnoson.kirby-forms.pattern

@@ -6,7 +6,7 @@
     class="k-slug-field kf-field-identifier"
   >
     <template v-if="wizard && wizard.text" #options>
-      <k-button :text="wizard.text" icon="wand" @click="onWizard" />
+      <k-button :text="$t(wizard.text)" icon="wand" @click="onWizard" />
     </template>
 
     <k-input
@@ -24,6 +24,13 @@
 <script>
 export default {
   extends: 'k-slug-field',
+
+  computed: {
+    wizardText() {
+      const { text } = this.wizard ?? {}
+      return text.includes('.') ? this.$t(text) : text
+    },
+  },
 }
 </script>
 

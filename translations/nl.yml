@@ -11,6 +11,23 @@ arnoson.kirby-forms.entries: Inzendingen
 arnoson.kirby-forms.settings: Instellingen
 arnoson.kirby-forms.export: Exporteren
 arnoson.kirby-forms.create-from-label: Maak van label
+arnoson.kirby-forms.label: Label
+arnoson.kirby-forms.field-name: Veldnaam
+arnoson.kirby-forms.field-identifier: Naam
+arnoson.kirby-forms.field-identifier-placeholder: veldnaam
+arnoson.kirby-forms.required: Verplicht
+arnoson.kirby-forms.default: Standaard
+arnoson.kirby-forms.max-length: Maximale lengte
+arnoson.kirby-forms.min-length: Minimale lengte
+arnoson.kirby-forms.max-value: Maximale waarde
+arnoson.kirby-forms.max-value: Minimale waarde
+arnoson.kirby-forms.pattern: Patroon
+arnoson.kirby-forms.placeholder: Placeholder
+arnoson.kirby-forms.contact: Contact
+arnoson.kirby-forms.date-and-time: Datum & Tijd
+arnoson.kirby-forms.other: Ander
+arnoson.kirby-forms.form: Formulier
+arnoson.kirby-forms.forms: Formulier
 
 arnoson.kirby-forms.success-type: Weergeven
 arnoson.kirby-forms.submit-button-label: Knoplabel

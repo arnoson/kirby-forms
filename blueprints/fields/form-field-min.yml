@@ -1,5 +1,2 @@
 type: number
-label:
-  en: Min Value
-  de: Min. Wert
-  nl: Minimale waarde
+label: arnoson.kirby-forms.min-value

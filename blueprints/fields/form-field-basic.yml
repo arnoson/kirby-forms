@@ -2,33 +2,21 @@ type: group
 fields:
   label:
     type: text
-    label:
-      en: Label
-      de: Beschriftung
-      nl: Label
-    placeholder:
-      en: Field Name
-      de: Feld Name
-      nl: Veldnaam
+    label: arnoson.kirby-forms.label
+    placeholder: arnoson.kirby-forms.field-name
     width: 5/12
   name:
     type: form-identifier
-    label: Identifier
+    label: arnoson.kirby-forms.field-identifier
     sync: label
-    placeholder:
-      en: field_name
-      de: feld_name
-      nl: veldnaam
+    placeholder: arnoson.kirby-forms.field-identifier-placeholder
     required: true
     width: 5/12
     wizard:
       field: label
-      text: Create from label
+      text: arnoson.kirby-forms.create-from-label
   required:
     type: toggle
-    label:
-      en: Required
-      de: Pflichtfeld
-      nl: Verplicht
+    label: arnoson.kirby-forms.required
     default: false
     width: 2/12

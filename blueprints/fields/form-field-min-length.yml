@@ -1,5 +1,2 @@
 type: number
-label:
-  en: Min length
-  de: Min. Länge
-  nl: Minimale lengte
+label: arnoson.kirby-forms.min-length

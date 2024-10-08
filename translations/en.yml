@@ -11,6 +11,23 @@ arnoson.kirby-forms.entries: Entries
 arnoson.kirby-forms.settings: Settings
 arnoson.kirby-forms.export: Export
 arnoson.kirby-forms.create-from-label: Create from label
+arnoson.kirby-forms.label: Label
+arnoson.kirby-forms.field-name: Field Name
+arnoson.kirby-forms.field-identifier: Name
+arnoson.kirby-forms.field-identifier-placeholder: field_name
+arnoson.kirby-forms.required: Required
+arnoson.kirby-forms.default: Default
+arnoson.kirby-forms.max-length: Max length
+arnoson.kirby-forms.min-length: Min length
+arnoson.kirby-forms.max-value: Max Value
+arnoson.kirby-forms.min-value: Min Value
+arnoson.kirby-forms.pattern: Pattern
+arnoson.kirby-forms.placeholder: Placeholder
+arnoson.kirby-forms.contact: Kontakt
+arnoson.kirby-forms.date-and-time: Date & Time
+arnoson.kirby-forms.other: Sonstige
+arnoson.kirby-forms.form: Form
+arnoson.kirby-forms.forms: Forms
 
 arnoson.kirby-forms.success-type: Show
 arnoson.kirby-forms.submit-button-label: Button label

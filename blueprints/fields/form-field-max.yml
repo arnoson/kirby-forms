@@ -1,5 +1,2 @@
 type: number
-label:
-  en: Max Value
-  de: Max. Wert
-  nl: Maximale waarde
+label: arnoson.kirby-forms.max-value

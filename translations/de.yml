@@ -11,6 +11,23 @@ arnoson.kirby-forms.entries: Einträge
 arnoson.kirby-forms.settings: Einstellungen
 arnoson.kirby-forms.export: Exportieren
 arnoson.kirby-forms.create-from-label: Aus Beschriftung generieren
+arnoson.kirby-forms.label: Beschriftung
+arnoson.kirby-forms.field-name: Feld Name
+arnoson.kirby-forms.field-identifier: Name
+arnoson.kirby-forms.field-identifier-placeholder: feld_name
+arnoson.kirby-forms.required: Pflichtfeld
+arnoson.kirby-forms.default: Standardwert
+arnoson.kirby-forms.max-length: Max. Länge
+arnoson.kirby-forms.min-length: Min. Länge
+arnoson.kirby-forms.max-value: Max. Wert
+arnoson.kirby-forms.min-value: Min. Wert
+arnoson.kirby-forms.pattern: Muster
+arnoson.kirby-forms.placeholder: Platzhalter
+arnoson.kirby-forms.contact: Contact
+arnoson.kirby-forms.date-and-time: Datum & Uhrzeit
+arnoson.kirby-forms.other: Sonstige
+arnoson.kirby-forms.form: Formular
+arnoson.kirby-forms.forms: Formulieren
 
 arnoson.kirby-forms.success-type: Zeige
 arnoson.kirby-forms.submit-button-label: Button Beschriftung

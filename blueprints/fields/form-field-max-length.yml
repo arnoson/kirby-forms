@@ -1,5 +1,2 @@
 type: number
-label:
-  en: Max length
-  de: Max. Länge
-  nl: Maximale lengte
+label: arnoson.kirby-forms.max-length

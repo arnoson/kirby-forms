@@ -1,8 +1,4 @@
-title:
-  en: Forms
-  de: Formulare
-  nl: Formulier
-
+title: arnoson.kirby-forms.forms
 sections:
   pages:
     type: pages

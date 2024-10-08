@@ -5,10 +5,7 @@ fields:
   extends: fields/form-field-basic
   required:
     type: toggle
-    label:
-      en: Required
-      de: Pflichtfeld
-      nl: Verplicht
+    label: arnoson.kirby-forms.required
     default: false
     width: 2/12
     # Html doesn't allow required on a group of checkboxes.
