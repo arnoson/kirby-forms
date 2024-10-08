@@ -23,6 +23,7 @@ fieldsets:
     label:
       en: Contact
       de: Kontakt
+      nl: Contact
     fieldsets:
       - form-field-email
       - form-field-tel
@@ -30,6 +31,7 @@ fieldsets:
     label:
       en: Date & Time
       de: Datum & Uhrzeit
+      nl: Datum & Tijd
     type: group
     fieldsets:
       - form-field-date
@@ -39,5 +41,6 @@ fieldsets:
     label:
       en: Other
       de: Sonstige
+      nl: Ander
     fieldsets:
       - form-field-url

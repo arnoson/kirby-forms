@@ -5,9 +5,11 @@ fields:
     label:
       en: Label
       de: Beschriftung
+      nl: Label
     placeholder:
       en: Field Name
       de: Feld Name
+      nl: Veldnaam
     width: 5/12
   name:
     type: form-identifier
@@ -16,6 +18,7 @@ fields:
     placeholder:
       en: field_name
       de: feld_name
+      nl: veldnaam
     required: true
     width: 5/12
     wizard:
@@ -26,5 +29,6 @@ fields:
     label:
       en: Required
       de: Pflichtfeld
+      nl: Verplicht
     default: false
     width: 2/12

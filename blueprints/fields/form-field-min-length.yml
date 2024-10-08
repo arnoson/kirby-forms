@@ -2,3 +2,4 @@ type: number
 label:
   en: Min length
   de: Min. Länge
+  nl: Minimale lengte

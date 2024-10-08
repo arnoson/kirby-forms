@@ -1,0 +1,49 @@
+arnoson.kirby-forms.submit: Versturen
+arnoson.kirby-forms.success: Succes
+arnoson.kirby-forms.error: Fout
+arnoson.kirby-forms.error-message: Foutmelding
+arnoson.kirby-forms.fields: Velden
+arnoson.kirby-forms.message: Bericht
+arnoson.kirby-forms.page: Pagina
+arnoson.kirby-forms.enabled: Ingeschakeld
+arnoson.kirby-forms.submitted: Ingezonden
+arnoson.kirby-forms.entries: Inzendingen
+arnoson.kirby-forms.settings: Instellingen
+arnoson.kirby-forms.export: Exporteren
+arnoson.kirby-forms.create-from-label: Maak van label
+
+arnoson.kirby-forms.success-type: Weergeven
+arnoson.kirby-forms.submit-button-label: Knoplabel
+
+arnoson.kirby-forms.confirmation-email: Bevestigingsmail
+arnoson.kirby-forms.notification-email: Notificatiemail
+arnoson.kirby-forms.email-from: Van
+arnoson.kirby-forms.email-to: Naar
+arnoson.kirby-forms.email-subject: Onderwerp
+arnoson.kirby-forms.email-content: Inhoud
+
+arnoson.kirby-forms.checkboxes: Checkboxen
+arnoson.kirby-forms.date: Datum
+arnoson.kirby-forms.email: E-mail
+arnoson.kirby-forms.number: Nummer
+arnoson.kirby-forms.radio: Radioknoppen
+arnoson.kirby-forms.select: Selecteer
+arnoson.kirby-forms.tel: Telefoon
+arnoson.kirby-forms.text: Tekst
+arnoson.kirby-forms.textarea: Tekstveld
+arnoson.kirby-forms.time: Tijd
+arnoson.kirby-forms.url: URL
+
+arnoson.kirby-forms.invalid-checkboxes-error: Selecteer één of meer opties
+arnoson.kirby-forms.invalid-date-error: Voer een geldige datum in
+arnoson.kirby-forms.invalid-email-error: Voer een geldig e-mailadres in
+arnoson.kirby-forms.invalid-number-error: Voer een geldig nummer in
+arnoson.kirby-forms.invalid-radio-error: Selecteer een optie
+arnoson.kirby-forms.invalid-select-error: Selecteer een optie
+arnoson.kirby-forms.invalid-tel-error: Voer een geldig telefoonnummer in
+arnoson.kirby-forms.invalid-text-error: Voer een tekst in
+arnoson.kirby-forms.invalid-time-error: Voer een geldige tijd in
+arnoson.kirby-forms.invalid-url-error: Voer een geldige URL in
+
+arnoson.kirby-forms.no-entries: Nog geen inzendingen
+arnoson.kirby-forms.save-error: Er is een fout opgetreden bij het opslaan van de formuliergegevens
