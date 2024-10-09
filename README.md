@@ -44,9 +44,7 @@ snippet('form');
 
 ## Options
 
-Most options can be configured per form in the Panel:
-
-![Screenshot 2023-03-28 at 17-02-32 Contact Form Plugin](https://user-images.githubusercontent.com/15122993/228284465-fbe9b5c8-8710-484c-84b2-06f94c3a7e5f.png)
+Most options (success message, confirmation emails, ...) can be configured per form direcly in the panel in the form's `Settings` tab.
 
 These global options can only be set in the plugin's config:
 
@@ -73,7 +71,8 @@ These global options can only be set in the plugin's config:
 
 Form entries will be saved directly in the form page and can be viewed/deleted/edited in the panel:
 
-![Screenshot 2023-03-28 at 17-08-09 Contact Form Plugin](https://user-images.githubusercontent.com/15122993/228284748-7b3bfa28-2f87-486a-8e9a-005c42a5ff14.png)
+![screely-1728499707485](https://github.com/user-attachments/assets/36a44b02-10ec-4806-870d-2de324604e90)
+
 
 ## Using Different Layouts
 
