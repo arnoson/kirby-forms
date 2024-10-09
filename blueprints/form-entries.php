@@ -6,6 +6,10 @@ return function ($kirby) {
   $slug = str_replace('+', '/', $result[1]);
   $formPage = page($slug) ?? site()->index()->drafts()->find($slug);
 
+  if (null === $formPage) {
+    return [];
+  }
+  
   $fields = kirbyForms()->formFields($formPage);
   $columns = array_reduce(
     array_slice($fields, 0, 4),
