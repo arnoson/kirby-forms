@@ -7,7 +7,7 @@
 
 <h1 align="center">Kirby Forms</h1>
 
-A flexible form builder and handler based on Kirby's layout und block fields and [Kirby Uniform](https://github.com/mzur/kirby-uniform/).
+A flexible form builder and handler based on Kirby's layout and block fields and [Kirby Uniform](https://github.com/mzur/kirby-uniform/).
 
 ## Features
 
