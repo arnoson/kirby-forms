@@ -98,6 +98,6 @@ To show your custom field as an option in the Kirby Forms form builder, you have
 Contributions to the plugin and it's documentation are welcome :~) Please make sure you:
 
 - use prettier to format your code (should happen automatically if you work on this project in VSCode)
-- use [conventional commits](https://www.conventionalcommits.or) (these are used to automatically generate release messages, including credits for your contributions)
+- use [conventional commits](https://www.conventionalcommits.org) (these are used to automatically generate release messages, including credits for your contributions)
 
 To get started have a look at the `package.json`.
