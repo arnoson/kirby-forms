@@ -9,7 +9,7 @@ return function ($kirby) {
   if (null === $formPage) {
     return [];
   }
-  
+
   $fields = kirbyForms()->formFields($formPage);
   $columns = array_reduce(
     array_slice($fields, 0, 4),
