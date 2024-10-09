@@ -1,4 +1,11 @@
-# Kirby Forms
+<p align="center">
+  <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./.github/logo-dark.svg">
+      <img src="./.github/logo-light.svg" alt="" />
+  </picture>
+</p>
+
+<h1 align="center">Kirby Forms</h1>
 
 A flexible form builder and handler based on Kirby's layout und block fields and [Kirby Uniform](https://github.com/mzur/kirby-uniform/).
 
