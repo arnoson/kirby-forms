@@ -21,18 +21,19 @@ class SaveEntryAction extends Action {
       unset($data['form_id']);
 
       $uuid = Uuid::generate();
-      kirby()->impersonate(
-        'kirby',
-        fn() => $page->createChild([
+      kirby()->impersonate('kirby', function () use ($page, $uuid, $data) {
+        $entry = $page->createChild([
           'slug' => $uuid,
           'template' => 'form-entry',
-          'draft' => false,
           'content' => array_merge($data, [
             'uuid' => $uuid,
             'form_submitted' => date('c'),
           ]),
-        ])
-      );
+        ]);
+        $entry = $entry->changeStatus(
+          option('arnoson.kirby-forms.defaultEntryStatus')
+        );
+      });
     } catch (\Exception $e) {
       $this->handleException($e);
     }

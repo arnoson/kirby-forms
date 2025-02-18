@@ -32,6 +32,8 @@ function kirbyForms() {
     // of confirmation and notification emails.
     'fromEmails' => [],
 
+    'defaultEntryStatus' => 'unlisted',
+
     // Wether or not to use client validation (in addition to server-side
     // validation done by Kirby Uniform).
     'clientValidation' => true,
