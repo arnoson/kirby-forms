@@ -131,7 +131,7 @@ class KirbyForms {
       if ($successType === 'page' && $successUrl) {
         go($successUrl, 303);
       } else {
-        // $form->done();
+        $form->done();
       }
     }
   }
