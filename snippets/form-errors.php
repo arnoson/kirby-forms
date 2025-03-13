@@ -7,7 +7,7 @@ use Kirby\Toolkit\A;
 $errors = [];
 $hasFieldError = false;
 $fields = kirbyForms()->formFields($formPage);
-$fieldNames = array_column($fields, 'name');
+$fieldNames = array_keys($fields);
 
 // Individual field errors are handled directly in the corresponding field
 // snippets. We only display non-field errors (like an email action error) and

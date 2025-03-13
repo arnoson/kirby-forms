@@ -2,6 +2,7 @@
 
 namespace Uniform\Actions;
 
+use arnoson\KirbyForms\KirbyForms;
 use DateTime;
 use Error;
 use Kirby\Toolkit\A;
@@ -19,6 +20,18 @@ class SaveEntryAction extends Action {
       // to differentiate multiple forms on a single page) anymore.
       unset($data['form_name']);
       unset($data['form_id']);
+
+      // Some fields like checkboxes need to be stored in a different format.
+      $fields = KirbyForms()->formFields($page);
+      foreach ($data as $name => $value) {
+        $field = $fields[$name] ?? null;
+        if (!$field) {
+          continue;
+        }
+        if ($field['type'] === 'checkboxes') {
+          $data[$name] = implode(',', $value);
+        }
+      }
 
       $uuid = Uuid::generate();
       kirby()->impersonate('kirby', function () use ($page, $uuid, $data) {

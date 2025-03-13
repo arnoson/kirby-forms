@@ -28,7 +28,7 @@ class KirbyForms {
           $field = $block->content()->toArray();
           $field['type'] = $match[1];
           $field['required'] = $block->content()->required()->toBool();
-          array_push($formFields, $field);
+          $formFields[$field['name']] = $field;
         }
       }
     }
@@ -131,7 +131,7 @@ class KirbyForms {
       if ($successType === 'page' && $successUrl) {
         go($successUrl, 303);
       } else {
-        $form->done();
+        // $form->done();
       }
     }
   }
