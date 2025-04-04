@@ -9,8 +9,9 @@
     $name = $block->name()->value();
     $label = $block->label()->isNotEmpty() ? $block->label() : $name;
     $id = "$formSlug/field/$name";
+    $shortType = str_replace('form-field-', '', $block->type());
     ?>
-    <div class="form-field">
+    <div class="form-field" data-field-type="<?= $shortType ?>">
       <?php snippet('blocks/' . $block->type(), [
         'form' => $form,
         'block' => $block,
