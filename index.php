@@ -50,6 +50,11 @@ function kirbyForms() {
     // `formId` can be obtained with `KirbyForms::getFormId($yourFormPage)`
     // https://kirby-uniform.readthedocs.io/en/latest/actions/session-store/
     'sessionStore' => false,
+
+    // Automatically add an empty placeholder to fields without a defined
+    // placeholder in the panel. This is useful for css styling relying on
+    // `input:placeholder-shown`.
+    'addEmptyPlaceholder' => false,
   ],
 
   'routes' => [

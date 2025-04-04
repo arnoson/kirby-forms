@@ -12,11 +12,14 @@ function formFieldAttributes($id, $field, $form): array {
   $hasError = !!$form->error($name);
   $default = $field->default()->value();
   $value = $form->old($name) ?? $default;
+  $defaultPlaceholder = option('arnoson.kirby-forms.addEmptyPlaceholder')
+    ? '  ' // We need two spaces, otherwise kirby will show a warning.
+    : null;
 
   $attributes = [
     'name' => $name,
     'value' => $value ? $value : null,
-    'placeholder' => $field->placeholder()->or(null)->value(),
+    'placeholder' => $field->placeholder()->or($defaultPlaceholder)->value(),
     'step' => $field->step()->or(null)->value(),
     'aria-invalid' => $hasError ? 'true' : null,
     'aria-describedby' => $hasError ? "$id/error" : null,

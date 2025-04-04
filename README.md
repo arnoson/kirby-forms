@@ -20,11 +20,7 @@ A flexible form builder and handler based on Kirby's layout and block fields and
 
 ## Demo
 
-
-
 https://github.com/user-attachments/assets/4c02de74-31c4-4b89-8444-39b5c0e5d6bb
-
-
 
 ## Installation
 
@@ -64,6 +60,11 @@ These global options can only be set in the plugin's config:
 
   // Wether or not to use the `autocomplete` attribute for the form element.
   'autoComplete' => false,
+
+  // Automatically add an empty placeholder to fields without a defined
+  // placeholder in the panel. This is useful for css styling relying on
+  // `input:placeholder-shown`.
+  'addEmptyPlaceholder' => false,
 ]
 ```
 
@@ -72,7 +73,6 @@ These global options can only be set in the plugin's config:
 Form entries will be saved directly in the form page and can be viewed/deleted/edited in the panel:
 
 ![screely-1728499707485](https://github.com/user-attachments/assets/36a44b02-10ec-4806-870d-2de324604e90)
-
 
 ## Using Different Layouts
 
