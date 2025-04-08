@@ -10,7 +10,7 @@ namespace arnoson\KirbyForms;
 function formFieldAttributes($id, $field, $form): array {
   $name = $field->name()->value();
   $errorMessage = $form->error($name)[0] ?? null;
-  $hasError = !!$errorMessage;
+  $hasError = !!$form->error($name);
   $default = $field->default()->value();
   $value = $form->old($name) ?? $default;
   $defaultPlaceholder = option('arnoson.kirby-forms.addEmptyPlaceholder')
