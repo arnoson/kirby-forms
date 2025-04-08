@@ -1,7 +1,7 @@
 {
   "name": "arnoson/kirby-forms",
   "description": "Form builder and handler for Kirby 3",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "type": "kirby-plugin",
   "license": "MIT",
   "authors": [
