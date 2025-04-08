@@ -9,7 +9,8 @@ namespace arnoson\KirbyForms;
  */
 function formFieldAttributes($id, $field, $form): array {
   $name = $field->name()->value();
-  $hasError = !!$form->error($name);
+  $errorMessage = $form->error($name)[0] ?? null;
+  $hasError = !!$errorMessage;
   $default = $field->default()->value();
   $value = $form->old($name) ?? $default;
   $defaultPlaceholder = option('arnoson.kirby-forms.addEmptyPlaceholder')
@@ -22,7 +23,7 @@ function formFieldAttributes($id, $field, $form): array {
     'placeholder' => $field->placeholder()->or($defaultPlaceholder)->value(),
     'step' => $field->step()->or(null)->value(),
     'aria-invalid' => $hasError ? 'true' : null,
-    'aria-describedby' => $hasError ? "$id/error" : null,
+    'aria-describedby' => $errorMessage ? "$id/error" : null,
     'required' => $field->required()->toBool(),
     'min' => $field->min()->or(null)->value(),
     'max' => $field->max()->or(null)->value(),

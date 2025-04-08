@@ -18,8 +18,8 @@
         'id' => $id,
         'label' => $label,
       ]); ?>
-      <?php if ($error = $form->error($name)): ?>
-      <small class="form-field-error" id="<?= $id ?>/error"><?= $error[0] ?></small>
+      <?php if ($error = $form->error($name)[0] ?? null): ?>
+      <small class="form-field-error" id="<?= $id ?>/error"><?= $error ?></small>
       <?php endif; ?>
     </div>
     <?php endforeach; ?>
