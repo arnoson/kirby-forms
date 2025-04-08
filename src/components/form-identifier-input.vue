@@ -30,7 +30,7 @@ export default {
         value,
         [this.slugs, this.$system.ascii],
         this.allow,
-        '_'
+        '_',
       )
     },
   },

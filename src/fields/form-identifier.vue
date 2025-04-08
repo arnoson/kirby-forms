@@ -17,7 +17,13 @@
       theme="field"
       type="form-identifier"
       v-on="$listeners"
+      @focus="inputIsFocused = true"
+      @blur="inputIsFocused = false"
     />
+
+    <k-box v-if="value === 'website'" theme="negative" style="margin-top: 1rem"
+      >{{ $t('arnoson.kirby-forms.reserved-identifier') }}
+    </k-box>
   </k-field>
 </template>
 
@@ -25,10 +31,33 @@
 export default {
   extends: 'k-slug-field',
 
+  data() {
+    return { inputIsFocused: false }
+  },
+
   computed: {
     wizardText() {
       const { text } = this.wizard ?? {}
       return text.includes('.') ? this.$t(text) : text
+    },
+  },
+
+  methods: {
+    onWizard() {
+      const field = this.wizard?.field
+      if (!field) return
+
+      let value = this.formData[field.toLowerCase()]
+      if (value.toLowerCase() === 'website') this.slug = 'website_url'
+      else if (value) this.slug = value
+    },
+  },
+
+  watch: {
+    value(value) {
+      const isHoneypot = value.toLowerCase() === 'website'
+      if (isHoneypot && !this.inputIsFocused) value = 'website_url'
+      this.slug = value
     },
   },
 }

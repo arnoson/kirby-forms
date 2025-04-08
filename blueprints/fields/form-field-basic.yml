@@ -12,6 +12,7 @@ fields:
     placeholder: arnoson.kirby-forms.field-identifier-placeholder
     required: true
     width: 5/12
+    pattern: ^(?!website$).*
     wizard:
       field: label
       text: arnoson.kirby-forms.create-from-label
