@@ -28,7 +28,7 @@ class SaveEntryAction extends Action {
         if (!$field) {
           continue;
         }
-        if ($field['type'] === 'checkboxes') {
+        if ($field['type'] === 'checkboxes' && is_array($value)) {
           $data[$name] = implode(',', $value);
         }
       }
