@@ -1,5 +1,4 @@
-name:
-  *: arnoson.kirby-forms.url
+name: arnoson.kirby-forms.url
 icon: 🔗
 fields:
   extends: fields/form-field-basic
@@ -18,5 +17,4 @@ fields:
     width: 1/3
   error:
     extends: fields/form-error-message
-    placeholder:
-      *: arnoson.kirby-forms.invalid-url-error
+    placeholder: arnoson.kirby-forms.invalid-url-error

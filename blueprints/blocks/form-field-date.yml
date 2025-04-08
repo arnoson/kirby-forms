@@ -1,5 +1,4 @@
-name:
-  *: arnoson.kirby-forms.date  
+name: arnoson.kirby-forms.date
 icon: 📆
 fields:
   extends: fields/form-field-basic
@@ -16,5 +15,4 @@ fields:
     width: 1/2
   error:
     extends: fields/form-error-message
-    placeholder:
-      *: arnoson.kirby-forms.invalid-date-error
+    placeholder: arnoson.kirby-forms.invalid-date-error

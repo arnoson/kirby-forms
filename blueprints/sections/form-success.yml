@@ -2,39 +2,33 @@ type: fields
 fields:
   success_headline:
     type: headline
-    label:
-      *: arnoson.kirby-forms.success
+    label: arnoson.kirby-forms.success
     numbered: false
 
   success_type:
     type: toggles
-    label:
-      *: arnoson.kirby-forms.success-type
+    label: arnoson.kirby-forms.success-type
     width: 5/12
     default: message
     options:
       - value: message
-        text:
-          *: arnoson.kirby-forms.message
+        text: arnoson.kirby-forms.message
         icon: text
       - value: page
-        text:
-          *: arnoson.kirby-forms.page
+        text: arnoson.kirby-forms.page
         icon: share
-  
+
   success_text:
     type: writer
-    label:
-      *: arnoson.kirby-forms.message
+    label: arnoson.kirby-forms.message
     placeholder: Thank you for your registration!
     default: Thank you for your registration!
     width: 7/12
     when:
       success_type: message
-  
+
   success_page:
-    label:
-      *: arnoson.kirby-forms.page
+    label: arnoson.kirby-forms.page
     type: pages
     multiple: false
     width: 7/12

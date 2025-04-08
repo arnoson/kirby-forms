@@ -3,30 +3,26 @@ type: fields
 fields:
   confirmationEmailWorkshop_headline:
     type: headline
-    label:
-      *: arnoson.kirby-forms.confirmation-email
+    label: arnoson.kirby-forms.confirmation-email
     numbered: false
 
   confirmationEmailWorkshop_enabled:
     type: toggle
     default: false
-    label:
-      *: arnoson.kirby-forms.enabled
+    label: arnoson.kirby-forms.enabled
     width: 2/12
 
   confirmationEmailWorkshop_to:
     type: form-email-select
-    label:
-      *: arnoson.kirby-forms.email-to
+    label: arnoson.kirby-forms.email-to
     required: true
     width: 5/12
     when:
-      confirmationEmailWorkshop_enabled: true      
+      confirmationEmailWorkshop_enabled: true
 
   confirmationEmailWorkshop_from:
     extends: fields/form-email-sender
-    label:
-      *: arnoson.kirby-forms.email-from
+    label: arnoson.kirby-forms.email-from
     placeholder: info@your-site.com
     required: true
     width: 5/12
@@ -35,8 +31,7 @@ fields:
 
   confirmationEmailWorkshop_subject:
     type: text
-    label:
-      *: arnoson.kirby-forms.email-subject
+    label: arnoson.kirby-forms.email-subject
     placeholder: 'Thank you for your registration!'
     required: true
     width: 12/12
@@ -49,7 +44,7 @@ fields:
     buttons: false
     required: true
     when:
-      confirmationEmailWorkshop_enabled: true  
+      confirmationEmailWorkshop_enabled: true
 
   confirmationEmailWorkshop_body_waitlist:
     label: Text Waitlist
@@ -57,8 +52,7 @@ fields:
     buttons: false
     required: true
     when:
-      confirmationEmailWorkshop_enabled: true            
+      confirmationEmailWorkshop_enabled: true
 
   confirmationEmailWorkshop_gap:
     type: gap
-

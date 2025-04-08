@@ -4,8 +4,7 @@ title: Workshop
 tabs:
   settings:
     icon: settings
-    label:
-      *: arnoson.kirby-forms.settings
+    label: arnoson.kirby-forms.settings
     sections:
       fields:
         type: fields

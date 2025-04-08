@@ -1,5 +1,4 @@
-name:
-  *: arnoson.kirby-forms.time
+name: arnoson.kirby-forms.time
 icon: ⌚
 fields:
   extends: fields/form-field-basic
@@ -15,5 +14,4 @@ fields:
     width: 1/2
   error:
     extends: fields/form-error-message
-    placeholder:
-      *: arnoson.kirby-forms.invalid-time-error
+    placeholder: arnoson.kirby-forms.invalid-time-error
