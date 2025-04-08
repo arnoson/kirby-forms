@@ -65,3 +65,4 @@ arnoson.kirby-forms.invalid-url-error: Bitte geben Sie eine URL ein
 arnoson.kirby-forms.no-entries: Keine Einträge vorhanden
 arnoson.kirby-forms.save-error: Beim Speichern der Formulardaten ist ein Fehler aufgetreten
 arnoson.kirby-forms.reserved-identifier: Der Name kann nicht „website“ lauten, da dieses Feld zum Schutz vor Spam verwendet wird. Bitte verwenden Sie stattdessen einen anderen Namen wie „website_url“.
+arnoson.kirby-forms.no-comma-in-value: Der Wert darf kein Komma enthalten.

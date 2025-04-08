@@ -65,3 +65,4 @@ arnoson.kirby-forms.invalid-url-error: Voer een geldige URL in
 arnoson.kirby-forms.no-entries: Nog geen inzendingen
 arnoson.kirby-forms.save-error: Er is een fout opgetreden bij het opslaan van de formuliergegevens
 arnoson.kirby-forms.reserved-identifier: De naam kan niet ‘website’ zijn, omdat dit veld wordt gebruikt voor spambeveiliging. Gebruik in plaats daarvan een andere naam zoals ‘website_url’.
+arnoson.kirby-forms.no-comma-in-value: De waarde kan geen komma bevatten.

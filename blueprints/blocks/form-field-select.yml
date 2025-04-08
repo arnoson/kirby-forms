@@ -1,5 +1,4 @@
-name:
-  *: arnoson.kirby-forms.select
+name: arnoson.kirby-forms.select
 icon: ✔️
 fields:
   extends: fields/form-field-basic
@@ -23,10 +22,11 @@ fields:
         type: text
         width: 1/2
         required: true
+        pattern: '^[^,]*$'
+        help: arnoson.kirby-forms.no-comma-in-value
       text:
         type: text
         width: 1/2
   error:
     extends: fields/form-error-message
-    placeholder:
-      *: arnoson.kirby-forms.invalid-select-error
+    placeholder: arnoson.kirby-forms.invalid-select-error
