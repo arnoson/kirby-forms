@@ -26,8 +26,23 @@ class KirbyForms {
             continue;
           }
           $field = $block->content()->toArray();
-          $field['type'] = $match[1];
+          $type = $match[1];
+          $field['type'] = $type;
           $field['required'] = $block->content()->required()->toBool();
+
+          // Options are stored as an array of ['value' => ..., 'text' => ...]
+          // which should be allowed but isn't handled correctly by Kirby.
+          // Instead we have to restructure them as [value => text].
+          if (isset($field['options'])) {
+            $options = [];
+            foreach ($field['options'] as $option) {
+              $value = $option['value'];
+              $text = $option['text'] ?: $value;
+              $options[$value] = $text;
+            }
+            $field['options'] = $options;
+          }
+
           $formFields[$field['name']] = $field;
         }
       }
