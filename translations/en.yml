@@ -66,3 +66,4 @@ arnoson.kirby-forms.no-entries: No entries yet
 arnoson.kirby-forms.save-error: An error occurred while saving the form data
 arnoson.kirby-forms.reserved-identifier: The name cannot be 'website' as this field is used for spam protection. Please use a different name like 'website_url' instead.
 arnoson.kirby-forms.no-comma-in-value: The value cannot contain a comma.
+arnoson.kirby-forms.empty-notification-body: Leave this field empty to send all form data instead.

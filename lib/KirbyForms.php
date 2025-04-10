@@ -111,7 +111,7 @@ class KirbyForms {
             ->confirmationEmail_template()
             ->or(null)
             ->value(),
-          'body' => $formPage->confirmationEmail_body()->value(),
+          'body' => $formPage->confirmationEmail_body()->or(null)->value(),
         ]);
       }
     }
@@ -125,7 +125,7 @@ class KirbyForms {
           ->notificationEmail_template()
           ->or(null)
           ->value(),
-        'body' => $formPage->notificationEmail_body()->value(),
+        'body' => $formPage->notificationEmail_body()->or(null)->value(),
       ]);
     }
 

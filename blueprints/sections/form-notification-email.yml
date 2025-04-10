@@ -57,8 +57,9 @@ fields:
     label: Text
     type: textarea
     buttons: false
-    required: true
+    required: false
     width: 2/3
+    help: arnoson.kirby-forms.empty-notification-body
     when:
       notificationEmail_type: text
       notificationEmail_enabled: true
