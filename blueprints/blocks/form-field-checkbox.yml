@@ -2,8 +2,12 @@ name: arnoson.kirby-forms.checkbox
 icon: ☑️
 fields:
   extends: fields/form-field-basic
-  text:
+  label:
     type: writer
+    label: arnoson.kirby-forms.label
+    placeholder: arnoson.kirby-forms.field-name
+    width: 5/12
+    inline: true
     marks:
       - bold
       - italic

@@ -4,10 +4,7 @@ export default {
   extends: FormField,
 
   computed: {
-    component: () => 'k-checkboxes-field',
-    options() {
-      return [{ text: this.content.text }]
-    },
+    component: () => 'k-choice-input',
   },
 }
 </script>

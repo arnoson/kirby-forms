@@ -4,9 +4,10 @@
   $form
 ); ?>
 
-<?php snippet('form-label', [
-  'id' => $id,
-  'label' => $label,
-  'required' => $block->required()->toBool(),
-]); ?>
-<input id="<?= $id ?>" type="checkbox" <?= attr($attributes) ?> />
+<label>
+  <input id="<?= $id ?>" type="checkbox" <?= attr($attributes) ?> />
+  <?= $label ?>
+  <?php if ($block->required()->toBool()): ?>
+  <span aria-hidden="true">*</span>
+  <?php endif; ?>
+</label>
