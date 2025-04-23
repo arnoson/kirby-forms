@@ -76,7 +76,7 @@ function kirbyForms() {
 
         $entries = $entryId
           ? new Collection([$entryPage])
-          : $formPage->children()->sort('form_submitted', 'desc');
+          : $formPage->childrenAndDrafts()->sort('form_submitted', 'desc');
 
         $fields = kirbyForms()->formFields($formPage);
         $columns = array_column($fields, 'name');
