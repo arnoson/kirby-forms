@@ -13,5 +13,6 @@
 
   'arnoson.kirby-forms' => [
     'fromEmails' => ['noreply@example.com'],
+    'clientValidation' => false,
   ],
 ];

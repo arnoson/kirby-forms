@@ -13,6 +13,7 @@ fieldsets:
       - form-field-textarea
       - form-field-number
       - form-field-select
+      - form-field-checkbox
       - form-field-checkboxes
       - form-field-radio
   contact:

@@ -39,6 +39,7 @@ arnoson.kirby-forms.email-to: Empfänger
 arnoson.kirby-forms.email-subject: Betreff
 arnoson.kirby-forms.email-content: Inhalt
 
+arnoson.kirby-forms.checkbox: Checkbox
 arnoson.kirby-forms.checkboxes: Checkboxen
 arnoson.kirby-forms.date: Datum
 arnoson.kirby-forms.email: Email

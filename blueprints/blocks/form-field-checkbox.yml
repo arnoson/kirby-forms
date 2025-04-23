@@ -1,0 +1,13 @@
+name: arnoson.kirby-forms.checkbox
+icon: ☑️
+fields:
+  extends: fields/form-field-basic
+  text:
+    type: writer
+    marks:
+      - bold
+      - italic
+      - underline
+      - link
+    nodes: false
+  error: fields/form-error-message
