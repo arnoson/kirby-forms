@@ -42,6 +42,8 @@ arnoson.kirby-forms.brevo-update: Bestaande contacten bijwerken
 arnoson.kirby-forms.brevo-list-id: Lijst
 arnoson.kirby-forms.brevo-redirection-url: Bevestigingspagina
 arnoson.kirby-forms.brevo-template-id: Double-opt-in sjabloon
+arnoson.kirby-forms.save: Opslaan
+arnoson.kirby-forms.save-entries: In Kirby opslaan
 
 arnoson.kirby-forms.checkbox: Checkbox
 arnoson.kirby-forms.checkboxes: Checkboxen

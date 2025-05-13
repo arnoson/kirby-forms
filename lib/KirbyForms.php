@@ -134,7 +134,9 @@ class KirbyForms {
       ]);
     }
 
-    $form->saveEntryAction(['page' => $formPage]);
+    if ($formPage->save_entries()->toBool()) {
+      $form->saveEntryAction(['page' => $formPage]);
+    }
 
     if ($formPage->sessionStore()->toBool()) {
       $form->sessionStoreAction(['name' => KirbyForms::getFormId($formPage)]);

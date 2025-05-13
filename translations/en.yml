@@ -42,6 +42,8 @@ arnoson.kirby-forms.brevo-update: Update existing contacts
 arnoson.kirby-forms.brevo-list-id: List
 arnoson.kirby-forms.brevo-redirection-url: Confirmation page
 arnoson.kirby-forms.brevo-template-id: Double-opt-in template
+arnoson.kirby-forms.save: Save
+arnoson.kirby-forms.save-entries: Save in Kirby
 
 arnoson.kirby-forms.checkbox: Checkbox
 arnoson.kirby-forms.checkboxes: Checkboxes

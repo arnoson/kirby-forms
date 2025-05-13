@@ -1,0 +1,14 @@
+type: fields
+fields:
+  save_headline:
+    type: headline
+    label: arnoson.kirby-forms.save
+    numbered: false
+
+  save_entries:
+    type: toggle
+    default: true
+    label: arnoson.kirby-forms.save-entries
+
+  save_gap:
+    type: gap

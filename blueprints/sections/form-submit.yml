@@ -1,5 +1,4 @@
 type: fields
-title: arghh
 fields:
   submit_headline:
     type: headline
