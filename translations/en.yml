@@ -38,6 +38,10 @@ arnoson.kirby-forms.email-from: From
 arnoson.kirby-forms.email-to: To
 arnoson.kirby-forms.email-subject: Subject
 arnoson.kirby-forms.email-content: Content
+arnoson.kirby-forms.brevo-update: Update existing contacts
+arnoson.kirby-forms.brevo-list-id: List
+arnoson.kirby-forms.brevo-redirection-url: Confirmation page
+arnoson.kirby-forms.brevo-template-id: Double-opt-in template
 
 arnoson.kirby-forms.checkbox: Checkbox
 arnoson.kirby-forms.checkboxes: Checkboxes
@@ -68,3 +72,4 @@ arnoson.kirby-forms.save-error: An error occurred while saving the form data
 arnoson.kirby-forms.reserved-identifier: The name cannot be 'website' as this field is used for spam protection. Please use a different name like 'website_url' instead.
 arnoson.kirby-forms.no-comma-in-value: The value cannot contain a comma.
 arnoson.kirby-forms.empty-notification-body: Leave this field empty to send all form data instead.
+arnoson.kirby-forms.brevo-error: Data could not be transmitted to Brevo

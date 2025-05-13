@@ -99,6 +99,10 @@ class KirbyForms {
       }
     }
 
+    if ($formPage->brevo_enabled()->toBool()) {
+      $form->brevoAction(['page' => $formPage]);
+    }
+
     if ($formPage->confirmationEmail_enabled()->toBool()) {
       $toEmailName = $formPage->confirmationEmail_to()->value();
       $toEmail = $form->data($toEmailName);

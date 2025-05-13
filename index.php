@@ -6,6 +6,7 @@ use Kirby\Http\Header;
 require_once __DIR__ . '/lib/KirbyForms.php';
 require_once __DIR__ . '/lib/helpers.php';
 require_once __DIR__ . '/lib/SaveEntryAction.php';
+require_once __DIR__ . '/lib/BrevoAction.php';
 
 function kirbyForms() {
   return arnoson\KirbyForms\KirbyForms::getInstance();
@@ -55,6 +56,9 @@ function kirbyForms() {
     // placeholder in the panel. This is useful for css styling relying on
     // `input:placeholder-shown`.
     'addEmptyPlaceholder' => false,
+
+    // When using the brevo action.
+    'brevoApiKey' => '',
   ],
 
   'routes' => [

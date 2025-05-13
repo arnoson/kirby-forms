@@ -1,0 +1,67 @@
+type: fields
+fields:
+  brevo_headline:
+    type: headline
+    label: Brevo
+    numbered: false
+
+  brevo_enabled:
+    type: toggle
+    default: false
+    label: arnoson.kirby-forms.enabled
+    width: 2/12
+
+  brevo_email:
+    type: form-email-select
+    label: arnoson.kirby-forms.email-to
+    required: true
+    width: 5/12
+    when:
+      brevo_enabled: true
+
+  brevo_listId:
+    type: number
+    label: arnoson.kirby-forms.brevo-list-id
+    required: true
+    before: #
+    placeholder: 1
+    placeholder: 1
+    width: 3/12
+    when:
+      brevo_enabled: true
+
+  brevo_updateEnabled:
+    type: toggle
+    label: arnoson.kirby-forms.brevo-update
+    default: true
+    width: 2/12
+    when:
+      brevo_enabled: true
+
+  brevo_doubleOptIn:
+    type: toggle
+    label: Double-Opt-In
+    default: true
+    width: 2/12
+    when:
+      brevo_enabled: true
+
+  brevo_redirectionUrl:
+    type: url
+    label: arnoson.kirby-forms.brevo-redirection-url
+    required: true
+    width: 5/12
+    when:
+      brevo_enabled: true
+      brevo_doubleOptIn: true
+
+  brevo_templateId:
+    type: number
+    label: arnoson.kirby-forms.brevo-template-id
+    required: true
+    before: #
+    placeholder: 1
+    width: 5/12
+    when:
+      brevo_enabled: true
+      brevo_doubleOptIn: true

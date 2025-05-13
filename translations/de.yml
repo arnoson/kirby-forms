@@ -38,6 +38,10 @@ arnoson.kirby-forms.email-from: Absender
 arnoson.kirby-forms.email-to: Empfänger
 arnoson.kirby-forms.email-subject: Betreff
 arnoson.kirby-forms.email-content: Inhalt
+arnoson.kirby-forms.brevo-update: Bestehende Kontakte updaten
+arnoson.kirby-forms.brevo-list-id: Liste
+arnoson.kirby-forms.brevo-redirection-url: Bestätigungsseite
+arnoson.kirby-forms.brevo-template-id: Double-Opt-In Vorlage
 
 arnoson.kirby-forms.checkbox: Checkbox
 arnoson.kirby-forms.checkboxes: Checkboxen
@@ -68,3 +72,4 @@ arnoson.kirby-forms.save-error: Beim Speichern der Formulardaten ist ein Fehler 
 arnoson.kirby-forms.reserved-identifier: Der Name kann nicht „website“ lauten, da dieses Feld zum Schutz vor Spam verwendet wird. Bitte verwenden Sie stattdessen einen anderen Namen wie „website_url“.
 arnoson.kirby-forms.no-comma-in-value: Der Wert darf kein Komma enthalten.
 arnoson.kirby-forms.empty-notification-body: Lasse dieses Feld leer um stattdessen alle Formulardaten zu senden.
+arnoson.kirby-forms.brevo-error: Daten konnten nicht an Brevo übermittelt werden

@@ -38,6 +38,10 @@ arnoson.kirby-forms.email-from: Van
 arnoson.kirby-forms.email-to: Naar
 arnoson.kirby-forms.email-subject: Onderwerp
 arnoson.kirby-forms.email-content: Inhoud
+arnoson.kirby-forms.brevo-update: Bestaande contacten bijwerken
+arnoson.kirby-forms.brevo-list-id: Lijst
+arnoson.kirby-forms.brevo-redirection-url: Bevestigingspagina
+arnoson.kirby-forms.brevo-template-id: Double-opt-in sjabloon
 
 arnoson.kirby-forms.checkbox: Checkbox
 arnoson.kirby-forms.checkboxes: Checkboxen
@@ -68,3 +72,4 @@ arnoson.kirby-forms.save-error: Er is een fout opgetreden bij het opslaan van de
 arnoson.kirby-forms.reserved-identifier: De naam kan niet ‘website’ zijn, omdat dit veld wordt gebruikt voor spambeveiliging. Gebruik in plaats daarvan een andere naam zoals ‘website_url’.
 arnoson.kirby-forms.no-comma-in-value: De waarde kan geen komma bevatten.
 arnoson.kirby-forms.empty-notification-body: Laat dit veld leeg om in plaats daarvan alle formuliergegevens te verzenden.
+arnoson.kirby-forms.brevo-error: Gegevens konden niet naar Brevo worden verzonden
