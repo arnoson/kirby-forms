@@ -27,7 +27,8 @@ class KirbyForms {
           }
           $field = $block->content()->toArray();
           $type = $match[1];
-          $field['type'] = $type;
+
+          $field['type'] = $field['field'] ?? $type;
           $field['required'] = $block->content()->required()->toBool();
 
           // Options are stored as an array of ['value' => ..., 'text' => ...]

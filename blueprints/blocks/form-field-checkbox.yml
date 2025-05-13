@@ -15,3 +15,6 @@ fields:
       - link
     nodes: false
   error: fields/form-error-message
+  field:
+    type: hidden
+    default: toggle
