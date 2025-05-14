@@ -65,6 +65,10 @@ These global options can only be set in the plugin's config:
   // placeholder in the panel. This is useful for css styling relying on
   // `input:placeholder-shown`.
   'addEmptyPlaceholder' => false,
+
+  // When using the brevo action.
+  // Note: do not hardcode your API key, use an .env file instead.
+  'brevoApiKey' => '1234',
 ]
 ```
 
