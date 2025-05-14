@@ -31,7 +31,7 @@ class BrevoAction extends Action {
       $data = A::merge($data, [
         'includeListIds' => [$page->brevo_listId()->toInt()],
         'redirectionUrl' => $page->brevo_redirectionUrl()->value(),
-        'templateId' => $page->brevo_templateId()->value(),
+        'templateId' => $page->brevo_templateId()->toInt(),
       ]);
     } else {
       // For some reason the field is named differently for non-doi.
@@ -52,7 +52,10 @@ class BrevoAction extends Action {
     ]);
 
     if ($response->code() < 200 || $response->code() >= 300) {
-      $this->fail(t('arnoson.kirby-forms.brevo-error'));
+      $error = json_decode($response->content())['message'] ?? 'unknown error';
+      $message = t('arnoson.kirby-forms.brevo-error');
+      $message = option('debug') ? "$message: $error" : $message;
+      $this->fail($message);
     }
   }
 }
