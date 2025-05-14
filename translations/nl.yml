@@ -68,6 +68,7 @@ arnoson.kirby-forms.invalid-tel-error: Voer een geldig telefoonnummer in
 arnoson.kirby-forms.invalid-text-error: Voer een tekst in
 arnoson.kirby-forms.invalid-time-error: Voer een geldige tijd in
 arnoson.kirby-forms.invalid-url-error: Voer een geldige URL in
+arnoson.kirby-forms.duplicate-name-error: Er bestaat al een veld met de naam „{name}“
 
 arnoson.kirby-forms.no-entries: Nog geen inzendingen
 arnoson.kirby-forms.save-error: Er is een fout opgetreden bij het opslaan van de formuliergegevens

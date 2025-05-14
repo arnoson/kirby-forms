@@ -68,6 +68,7 @@ arnoson.kirby-forms.invalid-tel-error: Please enter a valid telephone number
 arnoson.kirby-forms.invalid-text-error: Please enter a text
 arnoson.kirby-forms.invalid-time-error: Please enter a valid time
 arnoson.kirby-forms.invalid-url-error: Please enter a valid URL
+arnoson.kirby-forms.duplicate-name-error: A field with the name "{name}" already exists
 
 arnoson.kirby-forms.no-entries: No entries yet
 arnoson.kirby-forms.save-error: An error occurred while saving the form data

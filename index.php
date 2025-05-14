@@ -1,7 +1,9 @@
 <?php
 
 use Kirby\Cms\Collection;
+use Kirby\Cms\Layouts;
 use Kirby\Http\Header;
+use Kirby\Toolkit\I18n;
 
 require_once __DIR__ . '/lib/KirbyForms.php';
 require_once __DIR__ . '/lib/helpers.php';
@@ -59,6 +61,40 @@ function kirbyForms() {
 
     // When using the brevo action.
     'brevoApiKey' => '',
+  ],
+
+  'hooks' => [
+    'page.update:before' => function ($values) {
+      // Right now, we only check for the existence of a `form_fields` field to
+      // check wether ot not the page is form page. This could crash if the user
+      // uses a field with the same name in a non-form page.
+      // TODO: find better way detect form pages (e.g. the page is a descendant of the forms page).
+      if ($values['form_fields'] ?? false) {
+        $layouts = Layouts::factory(json_decode($values['form_fields'], true));
+        $keys = [];
+        foreach ($layouts as $layout) {
+          foreach ($layout->columns() as $column) {
+            foreach ($column->blocks() as $block) {
+              if (!str_starts_with($block->type(), 'form-field-')) {
+                continue;
+              }
+              $name = $block->name()->value();
+              if ($keys[$name] ?? false) {
+                throw new Exception(
+                  I18n::template(
+                    'arnoson.kirby-forms.duplicate-name-error',
+                    null,
+                    ['name' => $name]
+                  )
+                );
+              } else {
+                $keys[$name] = true;
+              }
+            }
+          }
+        }
+      }
+    },
   ],
 
   'routes' => [

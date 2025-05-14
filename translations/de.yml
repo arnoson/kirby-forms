@@ -68,6 +68,7 @@ arnoson.kirby-forms.invalid-tel-error: Bitte geben Sie eine gültige Telefonnumm
 arnoson.kirby-forms.invalid-text-error: Bitte geben Sie einen Text ein
 arnoson.kirby-forms.invalid-time-error: Bitte wählen Sie eine gültige Zeit aus
 arnoson.kirby-forms.invalid-url-error: Bitte geben Sie eine URL ein
+arnoson.kirby-forms.duplicate-name-error: Ein Feld mit dem Namen „{name}“ existiert bereits
 
 arnoson.kirby-forms.no-entries: Keine Einträge vorhanden
 arnoson.kirby-forms.save-error: Beim Speichern der Formulardaten ist ein Fehler aufgetreten
