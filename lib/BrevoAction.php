@@ -52,7 +52,7 @@ class BrevoAction extends Action {
     ]);
 
     if ($response->code() < 200 || $response->code() >= 300) {
-      $error = json_decode($response->content())['message'] ?? 'unknown error';
+      $error = json_decode($response->content())->message ?? 'unknown error';
       $message = t('arnoson.kirby-forms.brevo-error');
       $message = option('debug') ? "$message: $error" : $message;
       $this->fail($message);
