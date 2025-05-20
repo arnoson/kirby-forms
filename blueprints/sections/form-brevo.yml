@@ -25,7 +25,6 @@ fields:
     required: true
     before: #
     placeholder: 1
-    placeholder: 1
     width: 3/12
     when:
       brevo_enabled: true
