@@ -16,7 +16,6 @@ return function ($kirby) {
       'changeSlug' => false,
       'changeTitle' => false,
       'changeTemplate' => false,
-      'changeStatus' => false,
       'duplicate' => false,
       'move' => false,
     ],
