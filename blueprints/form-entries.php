@@ -43,6 +43,7 @@ return function ($kirby) {
         'image' => false,
         'columns' => $columns,
         'sortBy' => 'form_submitted desc',
+        'create' => false,
       ],
     ],
   ];
