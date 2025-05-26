@@ -3,6 +3,7 @@
 namespace arnoson\KirbyForms;
 
 use Kirby\Cms\Page;
+use Kirby\Toolkit\A;
 use Kirby\Toolkit\Str;
 use Uniform\Form;
 
@@ -93,7 +94,7 @@ class KirbyForms {
   }
 
   function processRequest(Page $formPage, Form $form) {
-    $customActions = $formPage->actions();
+    $customActions = $formPage->actions()->value;
     if (is_array($customActions)) {
       foreach ($customActions as $action) {
         $form->action($action, ['page' => $formPage]);
@@ -156,5 +157,15 @@ class KirbyForms {
         $form->done();
       }
     }
+  }
+
+  /**
+  * Adds a custom action to be executed at the start of processRequest
+  */
+  function addAction(Page $formPage, $action) {
+    $formPage->actions()->value = A::merge(
+      $formPage->actions()->value ?? [],
+      [$action]
+    );
   }
 }
