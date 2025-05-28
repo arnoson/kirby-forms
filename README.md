@@ -82,6 +82,29 @@ Form entries will be saved directly in the form page and can be viewed/deleted/e
 
 By creating your own `fields/form-fields` blueprint, you can overwrite the possible layouts in the form builder. Use this [file](https://github.com/arnoson/kirby-forms/blob/master/blueprints/fields/form-fields.yml) as a starting point.
 
+## Run Additional Actions
+
+You can run additional actions on a per form basis. Just return an array of actions from the form's page model. See [form-workshop.php](https://github.com/arnoson/kirby-forms/blob/main/example/site/models/form-workshop.php) for a complete example.
+
+```php
+// site/models/form.php
+
+// Define your own action or use any Kirby Uniform action instead.
+class MyAction extends Uniform\Actions\Action {
+  public function perform() {
+    $page = $this->option('page');
+    $form = $this->form;
+    // Do something with the form or form page ...
+  }
+}
+
+class FormPage extends Kirby\Cms\Page {
+  public function actions() {
+    return [MyAction::class];
+  }
+}
+```
+
 ## Adding Custom Fields
 
 The easiest way to add your own custom fields is to start with the [example](https://github.com/arnoson/kirby-forms/tree/master/example/site/plugins/custom-form-fields).
