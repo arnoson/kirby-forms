@@ -3,6 +3,7 @@
 namespace arnoson\KirbyForms;
 
 use Kirby\Cms\Page;
+use Kirby\Toolkit\A;
 use Kirby\Toolkit\Str;
 use Uniform\Form;
 
@@ -25,7 +26,12 @@ class KirbyForms {
           if (!preg_match('/^form-field-([\w_-]+)/', $block->type(), $match)) {
             continue;
           }
-          $field = $block->content()->toArray();
+          // Convert empty values to null to prevent issues (e.g., empty 'min'
+          // crashing Kirby's number field)
+          $field = A::map(
+            $block->content()->toArray(),
+            fn($value) => $value === '' ? null : $value
+          );
           $type = $match[1];
 
           $field['type'] = $field['field'] ?? $type;
