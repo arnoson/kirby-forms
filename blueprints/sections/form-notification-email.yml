@@ -45,10 +45,10 @@ fields:
     width: 1/3
     options:
       - value: text
-        text: Text
+        text: "{{ t('arnoson.kirby-forms.text') }}"
         icon: text
       - value: template
-        text: template
+        text: "{{ t('arnoson.kirby-forms.template') ?? t('template') }}"
         icon: template
     when:
       notificationEmail_enabled: true
