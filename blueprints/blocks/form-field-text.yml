@@ -14,15 +14,15 @@ fields:
   min_length:
     extends: fields/form-field-min-length
     placeholder: 3
-    width: 1/6
+    width: 1/4
   max_length:
     extends: fields/form-field-max-length
     placeholder: 25
-    width: 1/6
+    width: 1/4
   pattern:
     extends: fields/form-field-pattern
     placeholder: '[a-z]+'
-    width: 4/6
+    width: 2/4
   error:
     extends: fields/form-error-message
     placeholder: arnoson.kirby-forms.invalid-text-error
