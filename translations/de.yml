@@ -17,13 +17,20 @@ arnoson.kirby-forms.field-identifier: Name
 arnoson.kirby-forms.field-identifier-placeholder: feld_name
 arnoson.kirby-forms.required: Pflichtfeld
 arnoson.kirby-forms.default: Standardwert
+arnoson-kirby-forms.default-select-placeholder: value
+arnoson-kirby-forms.default-radio-placeholder: value
+arnoson-kirby-forms.default-checkboxes-placeholder: option1, option2
 arnoson.kirby-forms.max-length: Max. Länge
 arnoson.kirby-forms.min-length: Min. Länge
 arnoson.kirby-forms.max-value: Max. Wert
 arnoson.kirby-forms.min-value: Min. Wert
 arnoson.kirby-forms.pattern: Muster
 arnoson.kirby-forms.placeholder: Platzhalter
-arnoson.kirby-forms.contact: Contact
+arnoson.kirby-forms.options: Options
+arnoson.kirby-forms.empty: Allow empty
+arnoson.kirby-forms.value: Value
+arnoson.kirby-forms.basic: Basic
+arnoson.kirby-forms.contact: Kontakt
 arnoson.kirby-forms.date-and-time: Datum & Uhrzeit
 arnoson.kirby-forms.other: Sonstige
 arnoson.kirby-forms.form: Formular
@@ -37,9 +44,13 @@ arnoson.kirby-forms.notification-email: Benachrichtigungs-Email
 arnoson.kirby-forms.email-from: Absender
 arnoson.kirby-forms.email-to: Empfänger
 arnoson.kirby-forms.email-subject: Betreff
+arnoson.kirby-forms.email-subject-placeholder: Thank you for your registration!
 arnoson.kirby-forms.email-content: Inhalt
+arnoson.kirby-forms.email-content-text: Text
+arnoson.kirby-forms.email-content-template: Template
 arnoson.kirby-forms.brevo-update: Bestehende Kontakte updaten
 arnoson.kirby-forms.brevo-list-id: Liste
+arnoson.kirby-forms.brevo-opt-in: Double-opt-in
 arnoson.kirby-forms.brevo-redirection-url: Bestätigungsseite
 arnoson.kirby-forms.brevo-template-id: Double-Opt-In Vorlage
 arnoson.kirby-forms.save: Speichern
@@ -71,6 +82,10 @@ arnoson.kirby-forms.invalid-url-error: Bitte geben Sie eine URL ein
 arnoson.kirby-forms.duplicate-name-error: Ein Feld mit dem Namen „{name}“ existiert bereits
 
 arnoson.kirby-forms.no-entries: Keine Einträge vorhanden
+arnoson.kirby-forms.no-emails: No email addresses found
+arnoson.kirby-forms.no-fields: No fields yet
+arnoson.kirby-forms.form-not-found: Couldn't find form "{name}"
+arnoson.kirby-forms.form-entry-not-found: Couldn't find form entry "{name}"
 arnoson.kirby-forms.save-error: Beim Speichern der Formulardaten ist ein Fehler aufgetreten
 arnoson.kirby-forms.reserved-identifier: Der Name kann nicht „website“ lauten, da dieses Feld zum Schutz vor Spam verwendet wird. Bitte verwenden Sie stattdessen einen anderen Namen wie „website_url“.
 arnoson.kirby-forms.no-comma-in-value: Der Wert darf kein Komma enthalten.

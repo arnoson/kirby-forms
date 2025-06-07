@@ -39,7 +39,7 @@ fields:
 
   brevo_doubleOptIn:
     type: toggle
-    label: Double-Opt-In
+    label: arnoson.kirby-forms.brevo-opt-in
     default: true
     width: 2/12
     when:

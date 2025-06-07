@@ -5,18 +5,21 @@ fields:
   default:
     extends: fields/form-field-default
     type: text
-    placeholder: 'value'
+    placeholder: arnoson-kirby-forms.default-radio-placeholder
   options:
     type: structure
+    label: arnoson.kirby-forms.options
     fields:
       value:
         type: text
+        label: arnoson.kirby-forms.value
         width: 1/2
         required: true
         pattern: '^[^,]*$'
         help: arnoson.kirby-forms.no-comma-in-value
       text:
         type: text
+        label: arnoson.kirby-forms.text
         width: 1/2
   error:
     extends: fields/form-error-message

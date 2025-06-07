@@ -7,12 +7,12 @@ return function () {
     return [
       'type' => 'info',
       'theme' => 'negative',
-      'text' => 'No email addresses found',
+      'text' => t('arnoson.kirby-forms.no-emails'),
     ];
   }
 
   return [
-    'label' => 'Template',
+    'label' => 'arnoson.kirby-forms.email-content-template',
     'type' => 'select',
     'options' => option('arnoson.kirby-forms.fromEmails'),
   ];

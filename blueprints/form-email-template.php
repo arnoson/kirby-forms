@@ -11,7 +11,7 @@ return function (\Kirby\Cms\App $kirby) {
   );
 
   return [
-    'label' => 'Template',
+    'label' => 'arnoson.kirby-forms.email-content-template',
     'type' => 'select',
     'options' => $templates,
   ];
