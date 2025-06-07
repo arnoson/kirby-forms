@@ -12,12 +12,10 @@ fields:
     default: message
     options:
       - value: message
-        text:
-          *: arnoson.kirby-forms.message
+        text: "{{ t('arnoson.kirby-forms.message') }}"
         icon: text
       - value: page
-        text:
-          *: arnoson.kirby-forms.page
+        text: "{{ t('arnoson.kirby-forms.page') }}"
         icon: share
 
   success_text:
