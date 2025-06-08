@@ -79,7 +79,7 @@ arnoson.kirby-forms.invalid-tel-error: Por favor, insira um número de telefone 
 arnoson.kirby-forms.invalid-text-error: Por favor, preencha este campo
 arnoson.kirby-forms.invalid-time-error: Por favor, insira uma hora válida
 arnoson.kirby-forms.invalid-url-error: Por favor, insira um URL válido
-arnoson.kirby-forms.duplicate-name-error: Um campo com o nome "{name}" já existe
+arnoson.kirby-forms.duplicate-name-error: Já existe um campo com o nome "{name}"
 
 arnoson.kirby-forms.no-entries: Nenhuma entrada ainda
 arnoson.kirby-forms.no-emails: Nenhum endereço de email encontrado
@@ -88,6 +88,6 @@ arnoson.kirby-forms.form-not-found: Não foi possível encontrar o formulário "
 arnoson.kirby-forms.form-entry-not-found: Não foi possível encontrar a entrada de formulário "{name}"
 arnoson.kirby-forms.save-error: Ocorreu um erro ao tentar gravar os dados do formulário
 arnoson.kirby-forms.reserved-identifier: O nome 'website' não pode ser utilizado porque este campo serve para proteger contra spam. Por favor, utilize um nome diferente como 'website_url' em alternativa.
-arnoson.kirby-forms.no-comma-in-value: O valor não pode contar uma vírgula
+arnoson.kirby-forms.no-comma-in-value: O valor não pode conter uma vírgula
 arnoson.kirby-forms.empty-notification-body: Deixe este campo vazio para que sejam enviados todos os dados do formulário
 arnoson.kirby-forms.brevo-error: Não foi possível enviar os dados para a Brevo
