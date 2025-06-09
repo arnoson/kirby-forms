@@ -1,5 +1,6 @@
 title: arnoson.kirby-forms.forms
 sections:
   pages:
+    label: arnoson.kirby-forms.forms
     type: pages
     template: form

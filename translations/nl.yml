@@ -17,12 +17,20 @@ arnoson.kirby-forms.field-identifier: Naam
 arnoson.kirby-forms.field-identifier-placeholder: veldnaam
 arnoson.kirby-forms.required: Verplicht
 arnoson.kirby-forms.default: Standaard
+arnoson-kirby-forms.default-select-placeholder: value
+arnoson-kirby-forms.default-radio-placeholder: value
+arnoson-kirby-forms.default-checkboxes-placeholder: option1, option2
 arnoson.kirby-forms.max-length: Maximale lengte
 arnoson.kirby-forms.min-length: Minimale lengte
 arnoson.kirby-forms.max-value: Maximale waarde
 arnoson.kirby-forms.min-value: Minimale waarde
+arnoson.kirby-forms.step: Step
 arnoson.kirby-forms.pattern: Patroon
 arnoson.kirby-forms.placeholder: Placeholder
+arnoson.kirby-forms.options: Options
+arnoson.kirby-forms.empty: Allow empty
+arnoson.kirby-forms.value: Value
+arnoson.kirby-forms.basic: Basic
 arnoson.kirby-forms.contact: Contact
 arnoson.kirby-forms.date-and-time: Datum & Tijd
 arnoson.kirby-forms.other: Ander
@@ -37,9 +45,13 @@ arnoson.kirby-forms.notification-email: Notificatiemail
 arnoson.kirby-forms.email-from: Van
 arnoson.kirby-forms.email-to: Naar
 arnoson.kirby-forms.email-subject: Onderwerp
+arnoson.kirby-forms.email-subject-placeholder: Thank you for your registration!
 arnoson.kirby-forms.email-content: Inhoud
+arnoson.kirby-forms.email-content-text: Text
+arnoson.kirby-forms.email-content-template: Template
 arnoson.kirby-forms.brevo-update: Bestaande contacten bijwerken
 arnoson.kirby-forms.brevo-list-id: Lijst
+arnoson.kirby-forms.brevo-opt-in: Double-opt-in
 arnoson.kirby-forms.brevo-redirection-url: Bevestigingspagina
 arnoson.kirby-forms.brevo-template-id: Double-opt-in sjabloon
 arnoson.kirby-forms.save: Opslaan
@@ -71,6 +83,10 @@ arnoson.kirby-forms.invalid-url-error: Voer een geldige URL in
 arnoson.kirby-forms.duplicate-name-error: Er bestaat al een veld met de naam „{name}“
 
 arnoson.kirby-forms.no-entries: Nog geen inzendingen
+arnoson.kirby-forms.no-emails: No email addresses found
+arnoson.kirby-forms.no-fields: No fields yet
+arnoson.kirby-forms.form-not-found: Couldn't find form "{name}"
+arnoson.kirby-forms.form-entry-not-found: Couldn't find form entry "{name}"
 arnoson.kirby-forms.save-error: Er is een fout opgetreden bij het opslaan van de formuliergegevens
 arnoson.kirby-forms.reserved-identifier: De naam kan niet ‘website’ zijn, omdat dit veld wordt gebruikt voor spambeveiliging. Gebruik in plaats daarvan een andere naam zoals ‘website_url’.
 arnoson.kirby-forms.no-comma-in-value: De waarde kan geen komma bevatten.

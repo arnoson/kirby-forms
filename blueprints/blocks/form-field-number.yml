@@ -20,6 +20,7 @@ fields:
     width: 2/12
   step:
     type: text
+    label: arnoson.kirby-forms.step
     counter: false
     spellcheck: false
     placeholder: '0.01'

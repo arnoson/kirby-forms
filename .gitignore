@@ -1,6 +1,9 @@
 # Vscode
 .vscode/.server-controller-port.log
 
+# PHPStorm
+.idea
+
 # OS files
 .DS_Store
 

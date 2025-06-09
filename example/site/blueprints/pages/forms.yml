@@ -2,6 +2,7 @@ title: arnoson.kirby-forms.forms
 sections:
   pages:
     type: pages
+    label: arnoson.kirby-forms.forms
     templates:
       - form
       - form-workshop
