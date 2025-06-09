@@ -24,6 +24,7 @@ arnoson.kirby-forms.max-length: Max. Länge
 arnoson.kirby-forms.min-length: Min. Länge
 arnoson.kirby-forms.max-value: Max. Wert
 arnoson.kirby-forms.min-value: Min. Wert
+arnoson.kirby-forms.step: Step
 arnoson.kirby-forms.pattern: Muster
 arnoson.kirby-forms.placeholder: Platzhalter
 arnoson.kirby-forms.options: Options

@@ -24,6 +24,7 @@ arnoson.kirby-forms.max-length: Maximale lengte
 arnoson.kirby-forms.min-length: Minimale lengte
 arnoson.kirby-forms.max-value: Maximale waarde
 arnoson.kirby-forms.min-value: Minimale waarde
+arnoson.kirby-forms.step: Step
 arnoson.kirby-forms.pattern: Patroon
 arnoson.kirby-forms.placeholder: Placeholder
 arnoson.kirby-forms.options: Options
