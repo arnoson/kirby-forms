@@ -31,7 +31,7 @@ fields:
   confirmationEmail_subject:
     type: text
     label: arnoson.kirby-forms.email-subject
-    placeholder: 'Thank you for your registration!'
+    placeholder: arnoson.kirby-forms.email-subject-placeholder
     required: true
     width: 12/12
     when:
@@ -53,7 +53,7 @@ fields:
       confirmationEmail_enabled: true
 
   confirmationEmail_body:
-    label: Text
+    label: arnoson.kirby-forms.email-content-text
     type: textarea
     buttons: false
     required: true

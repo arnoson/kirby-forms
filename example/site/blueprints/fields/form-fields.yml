@@ -8,6 +8,7 @@ layouts:
 fieldsets:
   basic:
     type: group
+    label: arnoson.kirby-forms.basic
     fieldsets:
       - form-field-text
       - form-field-textarea

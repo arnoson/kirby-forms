@@ -2,30 +2,34 @@ name: arnoson.kirby-forms.select
 icon: ✔️
 fields:
   extends: fields/form-field-basic
+  default:
+    extends: fields/form-field-default
+    type: text
+    placeholder: arnoson-kirby-forms.default-select-placeholder
+    width: 5/12
   placeholder:
     extends: fields/form-field-placeholder
     placeholder: ' — '
     width: 5/12
-  default:
-    extends: fields/form-field-default
-    type: text
-    width: 5/12
   empty:
-    label: Allow empty
+    label: arnoson.kirby-forms.empty
     type: toggle
     width: 2/12
     default: true
   options:
     type: structure
+    label: arnoson.kirby-forms.options
     fields:
       value:
         type: text
+        label: arnoson.kirby-forms.value
         width: 1/2
         required: true
         pattern: '^[^,]*$'
         help: arnoson.kirby-forms.no-comma-in-value
       text:
         type: text
+        label: arnoson.kirby-forms.text
         width: 1/2
   error:
     extends: fields/form-error-message
