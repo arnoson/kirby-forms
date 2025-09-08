@@ -28,7 +28,9 @@ export default {
       // php variable (e.g.: `$my-field`)
       return this.$helper.slug(
         value,
-        [this.slugs, this.$system.ascii],
+        // Prior to kirby 5 this was `this.$system.ascii`, so we keep this check
+        // for backwards compatibility.
+        [this.slugs, this.$system?.ascii ?? this.$panel.system.ascii],
         this.allow,
         '_',
       )
