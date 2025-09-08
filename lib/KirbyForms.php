@@ -140,7 +140,7 @@ class KirbyForms {
       ]);
     }
 
-    if ($formPage->save_entries()->toBool()) {
+    if ($formPage->save_entries()->or(true)->toBool()) {
       $form->saveEntryAction(['page' => $formPage]);
     }
 
