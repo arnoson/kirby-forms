@@ -70,7 +70,9 @@ function kirbyForms() {
       // uses a field with the same name in a non-form page.
       // TODO: find better way detect form pages (e.g. the page is a descendant of the forms page).
       if ($values['form_fields'] ?? false) {
-        $layouts = Layouts::factory(json_decode($values['form_fields'], true));
+        $formFieldsValue = $values['form_fields'];
+        $formFieldsArray = is_string($formFieldsValue) ? json_decode($formFieldsValue, true) : $formFieldsValue;
+        $layouts = Layouts::factory($formFieldsArray);
         $keys = [];
         foreach ($layouts as $layout) {
           foreach ($layout->columns() as $column) {
