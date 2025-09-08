@@ -34,7 +34,10 @@ return function ($kirby) {
     $blueprint['fields']['form_error'] = [
       'type' => 'info',
       'theme' => 'negative',
-      'text' => tt('arnoson.kirby-forms.form-not-found', replace: ['name' => $slug]),
+      'text' => tt(
+        'arnoson.kirby-forms.form-not-found',
+        replace: ['name' => $slug]
+      ),
     ];
     return $blueprint;
   }
@@ -43,7 +46,10 @@ return function ($kirby) {
     $blueprint['fields']['form_entry_error'] = [
       'type' => 'info',
       'theme' => 'negative',
-      'text' => tt('arnoson.kirby-forms.form-entry-not-found', replace: ['name' => $slug]),
+      'text' => tt(
+        'arnoson.kirby-forms.form-entry-not-found',
+        replace: ['name' => $slug]
+      ),
     ];
     return $blueprint;
   }
